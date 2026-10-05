@@ -1,0 +1,61 @@
+id,type,retrieved,title
+S-DSTU2020,technical standard,True,ДСТУ 4163:2020 Уніфікована система організаційно-розпорядчої документації. Вимоги до оформлення документів
+S-DSTU-slides,technical standard,True,"ДСТУ 4163:2020 (slide deck, Господарський суд Сумської області)"
+S-DIN5008,encyclopedia,True,Geschäftsbrief-Vorlage: Aufbau nach DIN 5008 (easynova.de) plus en.wikipedia.org/wiki/DIN_5008
+S-GBT9704,technical standard,True,"GB/T 9704-2012 Layout key for official document of Party and government organs (draft English translation, chinesestandard.net)"
+S-UNSYM,official guide/manual,True,UN Document Symbols (Dag Hammarskjöld Library research guide)
+S-UNRES,official guide/manual,True,"United Nations Editorial Manual, Resolutions: order of elements (DGACM)"
+S-EUISG,official guide/manual,True,"Interinstitutional Style Guide, section 2 Structure of a legal act (Publications Office of the EU)"
+S-GOSTR,other,False,ГОСТ Р 7.0.97-2016 Организационно-распорядительная документация. Требования к оформлению документов
+S-ECSD,other,False,"Единая государственная система делопроизводства (Основные положения), approved by Постановление ГКНТ СССР No. 435 of 1973-09-04"
+S-ISO15489,technical standard,True,ISO 15489-1:2016 Information and documentation - Records management - Part 1: Concepts and principles
+S-ISO16175,technical standard,True,ISO 16175-2:2011 Principles and functional requirements for records in electronic office environments
+S-MOREQ,other,True,"MoReq2010 - Modular Requirements for Records Systems (specification, Interoperable Europe / joinup)"
+S-ISO24495,official guide/manual,True,ISO 24495-1:2023 Plain language - Part 1: Governing principles and guidelines
+S-DIPLOMATICS,other,True,"Luciana Duranti, Diplomatics (Encyclopedia of Library and Information Sciences entry)"
+S-CONTINUUM,other,True,"Frank Upward, Structuring the Records Continuum Part One (Archives and Manuscripts)"
+S-EIF-RAC,other,True,Rules as Code - An Open approach (Interoperable Europe Portal)
+S-QALQASHANDI,encyclopedia,True,"Al-Qalqashandi (Wikipedia) - Mamluk chancery clerk, Subh al-A'sha, 1412"
+S-FIRMAN,encyclopedia,True,"Firman (Wikipedia) - Ottoman imperial decree: structure, kanun, blank-space rank"
+S-TUGHRA,encyclopedia,True,Tughra (Wikipedia) - Ottoman calligraphic monogram/seal/signature
+S-CSMOP,official guide/manual,True,"Central Secretariat Manual of Office Procedure, 16th ed. 2022 (Government of India)"
+S-BRAZIL,official guide/manual,True,"Manual de Redação da Presidência da República, 3rd ed. 2018 (padrão ofício)"
+S-JIS,technical standard,True,JIS Z 8301 (Rules for the layout and drafting of Japanese Industrial Standards) - overview
+S-EESEAL,encyclopedia,True,"Seal (East Asia) (Wikipedia) - inkan/hanko, authentication by registered seal"
+S-ESTONIA-ID,other,True,"e-Estonia (id.ee) - digital signing, ID-card/Mobile-ID/Smart-ID, DigiDoc"
+S-ESTONIA-STORY,academic/secondary,True,'100% Digital & 0% Bureaucrazy' - Estonia retires government paperwork (estonia.ee)
+S-QUIPU,encyclopedia,True,Quipu (Wikipedia) - Andean knotted-cord record system
+S-SA-RMS,official guide/manual,True,NARSSA - Records Management Policy Manual (National Archives and Records Service of South Africa)
+S-VN,legal/normative text,True,"Nghị định 30/2020/NĐ-CP on công tác văn thư (scope: drafting, management, thể thức) - chinhphu.vn"
+S-VN-IMAS,legal/normative text,True,Thể thức văn bản chuẩn theo Nghị định 30 (14 components) - imas.edu.vn
+S-ID-ANRI,legal/normative text,True,Peraturan ANRI No. 5 Tahun 2025 on Tata Naskah Dinas (National Archives of Indonesia)
+S-TH-SARABUN,legal/normative text,True,ระเบียบสำนักนายกรัฐมนตรีว่าด้วยงานสารบรรณ พ.ศ. 2526 (Thai PM's Office Sarabun regulation)
+S-ET-NALE,encyclopedia,True,National Archives and Library of Ethiopia (Wikipedia)
+S-NG-ACT,legal/normative text,True,National Archives Act (Nigeria)
+S-KE-ACT,legal/normative text,True,"Public Archives and Documentation Service Act, Cap. 19 (Kenya)"
+S-ML-WIKI,encyclopedia,True,Timbuktu Manuscripts (Wikipedia)
+S-ML-AJAMI,other,True,West African manuscripts in Arabic and African languages (Boston University open access)
+S-SA-KSU,official guide/manual,True,دليل المراسلات الكتابية (Saudi guide to written correspondence)
+S-AE-GUIDELINES,official guide/manual,False,"Guidelines index, The Official Platform of the UAE Government"
+S-LU-GUIDE,official guide/manual,True,"Guide de rédaction, Government of Luxembourg (SIP, Ministère d'État)"
+S-FR-AMIENS,official guide/manual,True,Guide pratique de la rédaction administrative (académie d'Amiens)
+S-SN-CIRC,other,True,La circulaire en droit administratif sénégalais (CERACLE)
+S-SN-ARCH,other,True,Direction des Archives du Sénégal (fonds et services)
+S-FR-SORBONNE,legal/normative text,True,"Typologie diplomatique des actes royaux français (XIIIe-XVe s.), École des chartes / ELEC"
+S-AE-TDRA,official guide/manual,True,"دليل الكتابة باللغة العربية v3.0 (TDRA, UAE, 2022)"
+S-QA-ADLIYAH,official guide/manual,True,adliyah.com (Qatar-hosted legal library) re-hosting دليل المراسلات الكتابية
+S-BJ-GPE,other,True,"Leçon 3: Principaux documents utilisés dans l'administration - Les documents de correspondance (gpe-afrique, Bénin)"
+S-BJ-FIN,official guide/manual,True,"Manuel de procédures administratives et techniques, Ministère de l'Économie et des Finances (Bénin)"
+S-SE-ACCESS,encyclopedia,True,Principle of public access to official records (Wikipedia)
+S-SE-FPA,encyclopedia,True,Swedish Freedom of the Press Act (Wikipedia)
+S-WAMPUM,encyclopedia,True,Wampum (Wikipedia)
+S-WAMPUM-2ROW,encyclopedia,True,Two Row Wampum Treaty (Wikipedia)
+S-SU-EDSD,encyclopedia,True,Єдина державна система діловодства (Ukrainian Wikipedia)
+S-SU-GOST638,technical standard,True,ГОСТ 6.38-90 УСОРД: Вимоги до оформлення документів (Ukrainian standard mirror)
+S-SU-OKUD,other,True,ОКУД - загальносоюзний класифікатор управлінської документації (secondary dictionary source)
+S-SU-USD,other,True,Уніфікована система документації (Ukrainian educational source)
+S-SU-GASTEV,encyclopedia,True,Aleksei Gastev / Central Institute of Labour (Wikipedia)
+S-SU-BAILES,other,True,"Kendall Bailes, Alexei Gastev and the Soviet Controversy over Taylorism 1918-1924 (Monoskop)"
+S-SU-COMECON,encyclopedia,True,Comprehensive Program for Socialist Economic Integration (Wikipedia)
+S-SU-NK010,technical standard,True,Класифікатор управлінської документації НК 010:2021 (УНДІАСД; на заміну ДК 010-98)
+S-SU-ORD,academic/secondary,True,Ukrainian textbook classification of ОРД into organisational/dispositive/reference-informational groups

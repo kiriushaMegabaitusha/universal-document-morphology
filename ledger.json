@@ -1,0 +1,1123 @@
+{
+  "project": "05.4_universal_document_morphology",
+  "generated": "2026-10-06",
+  "note": "Every substantive claim in this atlas must point to at least one source here. Sources marked retrieved=false were identified but their primary text could not be fetched from this environment (e.g. Russian hosts are blocked); claims resting on them are provisional.",
+  "sources": [
+    {
+      "id": "S-DSTU2020",
+      "title": "ДСТУ 4163:2020 Уніфікована система організаційно-розпорядчої документації. Вимоги до оформлення документів",
+      "url": "https://zakon.isu.net.ua/sites/default/files/pdf/derzhavna_unifikovana_sistema_d.-3-478646.pdf",
+      "issued": "2020 (in force 2021-09-01)",
+      "retrieved": true
+    },
+    {
+      "id": "S-DSTU-slides",
+      "title": "ДСТУ 4163:2020 (slide deck, Господарський суд Сумської області)",
+      "url": "https://su.arbitr.gov.ua/userfiles/media/new_folder_for_uploads/sud5021/DSTU.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-DIN5008",
+      "title": "Geschäftsbrief-Vorlage: Aufbau nach DIN 5008 (easynova.de) plus en.wikipedia.org/wiki/DIN_5008",
+      "url": "https://www.easynova.de/brief-wissen/brief-vorlage/geschaeftsbrief-vorlage/",
+      "retrieved": true
+    },
+    {
+      "id": "S-GBT9704",
+      "title": "GB/T 9704-2012 Layout key for official document of Party and government organs (draft English translation, chinesestandard.net)",
+      "url": "https://www.chinesestandard.net/PDF/English.aspx/GBT9704-2012",
+      "retrieved": true
+    },
+    {
+      "id": "S-UNSYM",
+      "title": "UN Document Symbols (Dag Hammarskjöld Library research guide)",
+      "url": "https://research.un.org/en/docs/symbols",
+      "retrieved": true
+    },
+    {
+      "id": "S-UNRES",
+      "title": "United Nations Editorial Manual, Resolutions: order of elements (DGACM)",
+      "url": "https://www.un.org/dgacm/en/content/editorial-manual/res-dec-draft-edit",
+      "retrieved": true
+    },
+    {
+      "id": "S-EUISG",
+      "title": "Interinstitutional Style Guide, section 2 Structure of a legal act (Publications Office of the EU)",
+      "url": "https://style-guide.europa.eu/en/",
+      "retrieved": true
+    },
+    {
+      "id": "S-GOSTR",
+      "title": "ГОСТ Р 7.0.97-2016 Организационно-распорядительная документация. Требования к оформлению документов",
+      "url": "https://docs.cntd.ru/document/1200141171",
+      "issued": "2016 (in force 2017-07-01)",
+      "retrieved": false,
+      "retrieved_note": "primary text hosted on Russian services, blocked from this environment"
+    },
+    {
+      "id": "S-ECSD",
+      "title": "Единая государственная система делопроизводства (Основные положения), approved by Постановление ГКНТ СССР No. 435 of 1973-09-04",
+      "url": "https://www.consultant.ru/cons/cgi/online.cgi?req=doc&base=ESU&n=36981",
+      "issued": "1973",
+      "retrieved": false,
+      "retrieved_note": "Soviet primary text hosted on Russian services, blocked from this environment; referenced bibliographically"
+    },
+    {
+      "id": "S-ISO15489",
+      "title": "ISO 15489-1:2016 Information and documentation - Records management - Part 1: Concepts and principles",
+      "url": "https://www.iso.org/standard/62542.html",
+      "retrieved": true
+    },
+    {
+      "id": "S-ISO16175",
+      "title": "ISO 16175-2:2011 Principles and functional requirements for records in electronic office environments",
+      "url": "https://www.iso.org/standard/55791.html",
+      "retrieved": true
+    },
+    {
+      "id": "S-MOREQ",
+      "title": "MoReq2010 - Modular Requirements for Records Systems (specification, Interoperable Europe / joinup)",
+      "url": "https://interoperable-europe.ec.europa.eu/sites/default/files/inline-files/OS15(1).pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-ISO24495",
+      "title": "ISO 24495-1:2023 Plain language - Part 1: Governing principles and guidelines",
+      "url": "https://www.iso.org/standard/78907.html",
+      "retrieved": true
+    },
+    {
+      "id": "S-DIPLOMATICS",
+      "title": "Luciana Duranti, Diplomatics (Encyclopedia of Library and Information Sciences entry)",
+      "url": "https://www.interpares.org/display_file/ip_dissemination_bc_duranti_elis_2010.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-CONTINUUM",
+      "title": "Frank Upward, Structuring the Records Continuum Part One (Archives and Manuscripts)",
+      "url": "https://publications.archivists.org.au/index.php/asa/article/download/8583/8577/",
+      "retrieved": true
+    },
+    {
+      "id": "S-EIF-RAC",
+      "title": "Rules as Code - An Open approach (Interoperable Europe Portal)",
+      "url": "https://interoperable-europe.ec.europa.eu/collection/eugovtech/document/rules-code-open-approach",
+      "retrieved": true
+    },
+    {
+      "id": "S-QALQASHANDI",
+      "title": "Al-Qalqashandi (Wikipedia) - Mamluk chancery clerk, Subh al-A'sha, 1412",
+      "url": "https://en.wikipedia.org/wiki/Al-Qalqashandi",
+      "retrieved": true
+    },
+    {
+      "id": "S-FIRMAN",
+      "title": "Firman (Wikipedia) - Ottoman imperial decree: structure, kanun, blank-space rank",
+      "url": "https://en.wikipedia.org/wiki/Firman",
+      "retrieved": true
+    },
+    {
+      "id": "S-TUGHRA",
+      "title": "Tughra (Wikipedia) - Ottoman calligraphic monogram/seal/signature",
+      "url": "https://en.wikipedia.org/wiki/Tughra",
+      "retrieved": true
+    },
+    {
+      "id": "S-CSMOP",
+      "title": "Central Secretariat Manual of Office Procedure, 16th ed. 2022 (Government of India)",
+      "url": "https://moef.gov.in/uploads/2017/09/CSMOP-2022-Sixteenth-Edition.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-BRAZIL",
+      "title": "Manual de Redação da Presidência da República, 3rd ed. 2018 (padrão ofício)",
+      "url": "https://www.gov.br/cvm/pt-br/assuntos/noticias/anexos/2020/20201222_Manual_Redacao_Presidencia.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-JIS",
+      "title": "JIS Z 8301 (Rules for the layout and drafting of Japanese Industrial Standards) - overview",
+      "url": "https://jis.eomec.com/jisz83012019",
+      "retrieved": true
+    },
+    {
+      "id": "S-EESEAL",
+      "title": "Seal (East Asia) (Wikipedia) - inkan/hanko, authentication by registered seal",
+      "url": "https://en.wikipedia.org/wiki/Seal_(East_Asia)",
+      "retrieved": true
+    },
+    {
+      "id": "S-ESTONIA-ID",
+      "title": "e-Estonia (id.ee) - digital signing, ID-card/Mobile-ID/Smart-ID, DigiDoc",
+      "url": "https://www.id.ee/en/rubriik/e-estonia/",
+      "retrieved": true
+    },
+    {
+      "id": "S-ESTONIA-STORY",
+      "title": "'100% Digital & 0% Bureaucrazy' - Estonia retires government paperwork (estonia.ee)",
+      "url": "https://estonia.ee/stories/100-digital-0-bureaucrazy-estonia-retires-government-paperwork",
+      "retrieved": true
+    },
+    {
+      "id": "S-QUIPU",
+      "title": "Quipu (Wikipedia) - Andean knotted-cord record system",
+      "url": "https://en.wikipedia.org/wiki/Quipu",
+      "retrieved": true
+    },
+    {
+      "id": "S-SA-RMS",
+      "title": "NARSSA - Records Management Policy Manual (National Archives and Records Service of South Africa)",
+      "url": "http://www.national.archives.gov.za/rms/v1_2_records_management_policy_manual.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-VN",
+      "title": "Nghị định 30/2020/NĐ-CP on công tác văn thư (scope: drafting, management, thể thức) - chinhphu.vn",
+      "url": "https://xaydungchinhsach.chinhphu.vn/quy-dinh-ve-cong-tac-van-thu-quan-ly-van-ban-the-thuc-ky-thuat-trinh-bay-van-ban-ban-sao-van-ban-viet-hoa-mau-trinh-bay-van-ban-hanh-chinh-119251023153016706.htm",
+      "retrieved": true
+    },
+    {
+      "id": "S-VN-IMAS",
+      "title": "Thể thức văn bản chuẩn theo Nghị định 30 (14 components) - imas.edu.vn",
+      "url": "https://www.imas.edu.vn/the-thuc-van-ban-chuan",
+      "retrieved": true
+    },
+    {
+      "id": "S-ID-ANRI",
+      "title": "Peraturan ANRI No. 5 Tahun 2025 on Tata Naskah Dinas (National Archives of Indonesia)",
+      "url": "https://peraturan.bpk.go.id/Download/378093/peraturan-anri-no-5-tahun-2025.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-TH-SARABUN",
+      "title": "ระเบียบสำนักนายกรัฐมนตรีว่าด้วยงานสารบรรณ พ.ศ. 2526 (Thai PM's Office Sarabun regulation)",
+      "url": "https://occ.csc.ku.ac.th/dcs/wp-content/uploads/sites/4/2022/05/rule-saraban-2526.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-ET-NALE",
+      "title": "National Archives and Library of Ethiopia (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/National_Archives_and_Library_of_Ethiopia",
+      "retrieved": true
+    },
+    {
+      "id": "S-NG-ACT",
+      "title": "National Archives Act (Nigeria)",
+      "url": "https://www.policyvault.africa/wp-content/uploads/policy/NGA1197.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-KE-ACT",
+      "title": "Public Archives and Documentation Service Act, Cap. 19 (Kenya)",
+      "url": "https://new.kenyalaw.org/akn/ke/act/1965/32/eng@2022-12-31/source",
+      "retrieved": true
+    },
+    {
+      "id": "S-ML-WIKI",
+      "title": "Timbuktu Manuscripts (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Timbuktu_Manuscripts",
+      "retrieved": true
+    },
+    {
+      "id": "S-ML-AJAMI",
+      "title": "West African manuscripts in Arabic and African languages (Boston University open access)",
+      "url": "https://open.bu.edu/bitstreams/69cabac8-d73d-4306-9131-9d7cf0e2ed07/download",
+      "retrieved": true
+    },
+    {
+      "id": "S-SA-KSU",
+      "title": "دليل المراسلات الكتابية (Saudi guide to written correspondence)",
+      "url": "https://faculty.ksu.edu.sa/sites/default/files/190710_dlyl_lmrslt.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-AE-GUIDELINES",
+      "title": "Guidelines index, The Official Platform of the UAE Government",
+      "url": "https://u.ae/en/resources/guidelines",
+      "retrieved": false,
+      "retrieved_note": "JavaScript-only page; no extractable text in this environment"
+    },
+    {
+      "id": "S-LU-GUIDE",
+      "title": "Guide de rédaction, Government of Luxembourg (SIP, Ministère d'État)",
+      "url": "https://sip.gouvernement.lu/dam-assets/publications/guide-manuel/minist-etat/sip/guide-de-redaction/guide-de-redaction.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-FR-AMIENS",
+      "title": "Guide pratique de la rédaction administrative (académie d'Amiens)",
+      "url": "https://sbssa.ac-amiens.fr/IMG/pdf/guide_de_la_redaction_administrative_1_.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-SN-CIRC",
+      "title": "La circulaire en droit administratif sénégalais (CERACLE)",
+      "url": "https://ceracle.com/wp-content/uploads/2022/08/Bre%CC%80ves-re%CC%81flexions-sur-la-circulaire-en-droit-administratif-se%CC%81ne%CC%81galais.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-SN-ARCH",
+      "title": "Direction des Archives du Sénégal (fonds et services)",
+      "url": "https://archivesdusenegal.gouv.sn/?page_id=945",
+      "retrieved": true
+    },
+    {
+      "id": "S-FR-SORBONNE",
+      "title": "Typologie diplomatique des actes royaux français (XIIIe-XVe s.), École des chartes / ELEC",
+      "url": "http://elec.enc.sorbonne.fr/cid/cid1991/art_01",
+      "retrieved": true
+    },
+    {
+      "id": "S-AE-TDRA",
+      "title": "دليل الكتابة باللغة العربية v3.0 (TDRA, UAE, 2022)",
+      "url": "https://assets.u.ae/api/public/content/099a857080a643859f7ad902f2b3c435?v=62991e2b",
+      "retrieved": true
+    },
+    {
+      "id": "S-QA-ADLIYAH",
+      "title": "adliyah.com (Qatar-hosted legal library) re-hosting دليل المراسلات الكتابية",
+      "url": "https://adliyah.com/wp-content/uploads/2026/04/%D8%AF%D9%84%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D8%B1%D8%A7%D8%B3%D9%84%D8%A7%D8%AA-%D8%A7%D9%84%D9%83%D8%AA%D8%A7%D8%A8%D9%8A%D8%A9.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-BJ-GPE",
+      "title": "Leçon 3: Principaux documents utilisés dans l'administration - Les documents de correspondance (gpe-afrique, Bénin)",
+      "url": "https://www.gpe-afrique.com/moodledata/filedir/67/55/6755e68cd59cdbe3145632d59922f6895192ef88",
+      "retrieved": true
+    },
+    {
+      "id": "S-BJ-FIN",
+      "title": "Manuel de procédures administratives et techniques, Ministère de l'Économie et des Finances (Bénin)",
+      "url": "https://www.finances.bj/dsi/wp-content/uploads/2018/08/manuel.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-SE-ACCESS",
+      "title": "Principle of public access to official records (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Principle_of_public_access_to_official_records",
+      "retrieved": true
+    },
+    {
+      "id": "S-SE-FPA",
+      "title": "Swedish Freedom of the Press Act (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Swedish_Freedom_of_the_Press_Act",
+      "retrieved": true
+    },
+    {
+      "id": "S-WAMPUM",
+      "title": "Wampum (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Wampum",
+      "retrieved": true
+    },
+    {
+      "id": "S-WAMPUM-2ROW",
+      "title": "Two Row Wampum Treaty (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Two_Row_Wampum_Treaty",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-EDSD",
+      "title": "Єдина державна система діловодства (Ukrainian Wikipedia)",
+      "url": "https://uk.wikipedia.org/wiki/%D0%84%D0%B4%D0%B8%D0%BD%D0%B0_%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D0%B2%D0%BD%D0%B0_%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D0%B0_%D0%B4%D1%96%D0%BB%D0%BE%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B0",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-GOST638",
+      "title": "ГОСТ 6.38-90 УСОРД: Вимоги до оформлення документів (Ukrainian standard mirror)",
+      "url": "https://ohoronapraci.com/dokument/gost-6.38-90",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-OKUD",
+      "title": "ОКУД - загальносоюзний класифікатор управлінської документації (secondary dictionary source)",
+      "url": "https://yak.koshachek.cx.ua/articles/okud-ce.html",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-USD",
+      "title": "Уніфікована система документації (Ukrainian educational source)",
+      "url": "https://naurok.com.ua/unifikovana-sistema-dokumentaci-483274.html",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-GASTEV",
+      "title": "Aleksei Gastev / Central Institute of Labour (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Aleksei_Gastev",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-BAILES",
+      "title": "Kendall Bailes, Alexei Gastev and the Soviet Controversy over Taylorism 1918-1924 (Monoskop)",
+      "url": "https://monoskop.org/images/1/1c/Bailes_Kendall_A_1977_Alexei_Gastev_and_the_Soviet_Controversy_over_Taylorism_1918-1924.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-COMECON",
+      "title": "Comprehensive Program for Socialist Economic Integration (Wikipedia)",
+      "url": "https://en.wikipedia.org/wiki/Comprehensive_Program_for_Socialist_Economic_Integration",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-NK010",
+      "title": "Класифікатор управлінської документації НК 010:2021 (УНДІАСД; на заміну ДК 010-98)",
+      "url": "https://zakon.isu.net.ua/sites/default/files/normdocs/klasifikator.pdf",
+      "retrieved": true
+    },
+    {
+      "id": "S-SU-ORD",
+      "title": "Ukrainian textbook classification of ОРД into organisational/dispositive/reference-informational groups",
+      "url": "https://yak.koshachek.cx.ua/articles/klasifikacija-ord-organizacijni-rozporjadchi-ta.html",
+      "retrieved": true
+    }
+  ],
+  "claims": [
+    {
+      "id": "C01",
+      "text": "ДСТУ 4163:2020 defines 32 numbered requisites (01-32) for organisational-administrative documents.",
+      "sources": [
+        "S-DSTU2020"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C02",
+      "text": "ДСТУ 4163:2020 clause 4.4 makes requisites 04, 09, 10, 11, 19, 20 and 22 the obligatory minimum for documents created by legal entities.",
+      "sources": [
+        "S-DSTU2020"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C03",
+      "text": "ДСТУ 4163:2020 came into force on 01.09.2021, replacing ДСТУ 4163:2003.",
+      "sources": [
+        "S-DSTU2020",
+        "S-DSTU-slides"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C04",
+      "text": "ДСТУ 4163:2020 limits a document to at most four addressees; a distribution list is used beyond that.",
+      "sources": [
+        "S-DSTU-slides"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C05",
+      "text": "DIN 5008:2020 fixes the layout of a German business letter as nine components: Briefkopf, Anschriftfeld, Informationsblock, Betreff, Anrede, Brieftext, Grußformel, Unterschrift, Anlagenvermerk.",
+      "sources": [
+        "S-DIN5008"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C06",
+      "text": "DIN 5008 defines two letterhead variants: Form A (address field at 32 mm from the top) and Form B (at 50 mm).",
+      "sources": [
+        "S-DIN5008"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C07",
+      "text": "DIN 5008 has been revised repeatedly since 1949; the 2020 edition no longer refers to the typewriter.",
+      "sources": [
+        "S-DIN5008"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C08",
+      "text": "GB/T 9704-2012 structures an official document into a head (版头), main body (主体) and record (版记), plus page numbers and special-format variants (letter, order, minutes).",
+      "sources": [
+        "S-GBT9704"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C09",
+      "text": "GB/T 9704-2012 enumerates the head elements as copy number, secrecy classification and term, urgency, issuing-organ mark, reference number, signatory and red separator line.",
+      "sources": [
+        "S-GBT9704"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C10",
+      "text": "GB/T 9704-2012 replaced GB/T 9704-1999 and applies to documents of Party and government organs at all levels.",
+      "sources": [
+        "S-GBT9704"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C11",
+      "text": "Every UN document carries a unique symbol; all language versions share the same symbol, and the symbol's components encode the issuing organ and its subsidiary bodies.",
+      "sources": [
+        "S-UNSYM"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C12",
+      "text": "The UN Editorial Manual fixes the order of a resolution's elements as: name of the organ, preamble (if any), operative part; preambular paragraphs begin with a participle, operative paragraphs with an operative verb.",
+      "sources": [
+        "S-UNRES"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C13",
+      "text": "The EU Interinstitutional Style Guide fixes the structure of a legal act as title, preamble (citations and recitals) and articles (enacting terms), with annexes.",
+      "sources": [
+        "S-EUISG"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C14",
+      "text": "GOST R 7.0.97-2016 is the current Russian/CIS successor standard for organisational-administrative document formatting, in force from 2017-07-01.",
+      "sources": [
+        "S-GOSTR"
+      ],
+      "verified": false,
+      "note": "provisional - primary text not retrieved"
+    },
+    {
+      "id": "C15",
+      "text": "GOST R 7.0.97-2016 and ДСТУ 4163:2020 descend from a shared Soviet-era ancestor, ЕГСД (Единая государственная система делопроизводства, 1973).",
+      "sources": [
+        "S-GOSTR",
+        "S-ECSD"
+      ],
+      "verified": false,
+      "note": "provisional - ancestral standard referenced bibliographically only"
+    },
+    {
+      "id": "C16",
+      "text": "ЕГСД was approved by Постановление ГКНТ СССР No. 435 of 4 September 1973.",
+      "sources": [
+        "S-ECSD"
+      ],
+      "verified": false,
+      "note": "provisional - cited bibliographically"
+    },
+    {
+      "id": "C17",
+      "text": "ISO 15489-1:2016 is the international standard for records management concepts and principles.",
+      "sources": [
+        "S-ISO15489"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C18",
+      "text": "ISO 16175-2:2011 and MoReq2010 specify functional requirements for electronic records management systems.",
+      "sources": [
+        "S-ISO16175",
+        "S-MOREQ"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C19",
+      "text": "ISO 24495-1:2023 establishes governing principles for plain-language documents - the first ISO standard concerned with comprehension rather than validity.",
+      "sources": [
+        "S-ISO24495"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C20",
+      "text": "Diplomatics, founded in the 17th century and refounded as archival diplomatics by Luciana Duranti, analyses the document's inner constitution as act, persons, procedure and form.",
+      "sources": [
+        "S-DIPLOMATICS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C21",
+      "text": "Archival theory split between the Anglo lifecycle model and the Australian records continuum (Frank Upward).",
+      "sources": [
+        "S-CONTINUUM"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C22",
+      "text": "Rules as Code / digital-ready legislation is an active programme transforming legislation into machine-consumable form.",
+      "sources": [
+        "S-EIF-RAC"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C23",
+      "text": "Al-Qalqashandi (Mamluk chancery clerk) completed Subh al-A'sha, a 14-volume manual on the composition of chancery documents, in 1412.",
+      "sources": [
+        "S-QALQASHANDI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C24",
+      "text": "Subh al-A'sha contains the first published description of a polyalphabetic cipher, quoting Ibn al-Durayhim.",
+      "sources": [
+        "S-QALQASHANDI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C25",
+      "text": "A firman was a royal/imperial decree issued by a sovereign in an Islamic state; Ottoman firmans were collected into kanun.",
+      "sources": [
+        "S-FIRMAN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C26",
+      "text": "The tughra was the calligraphic monogram, seal and signature of an Ottoman sultan, designed at the beginning of his reign.",
+      "sources": [
+        "S-TUGHRA"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C27",
+      "text": "For an Ottoman firman, more blank space at the top of the document signalled greater importance.",
+      "sources": [
+        "S-FIRMAN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C28",
+      "text": "Firman bodies were written in the specialised Divani calligraphic script on elongated parchment scrolls.",
+      "sources": [
+        "S-FIRMAN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C29",
+      "text": "The Central Secretariat Manual of Office Procedure (16th ed., 2022) is the Government of India's nodal rulebook for secretariat work.",
+      "sources": [
+        "S-CSMOP"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C30",
+      "text": "Under CSMOP a file may consist of one or more of: correspondence portion, notes portion, appendix to correspondence, appendix to notes.",
+      "sources": [
+        "S-CSMOP"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C31",
+      "text": "CSMOP defines both a functional (alpha-numeric faceted) file-numbering system and a conventional subject-based one.",
+      "sources": [
+        "S-CSMOP"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C32",
+      "text": "In the Indian eFile system, the file and receipt numbers are appended by the system automatically.",
+      "sources": [
+        "S-CSMOP"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C33",
+      "text": "CSMOP standardises forms of communication including letter, D.O. letter, office memorandum, endorsement, notification and U.O. note.",
+      "sources": [
+        "S-CSMOP"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C34",
+      "text": "The Manual de Redação da Presidência da República (3rd ed., 2018) is the normative style for Brazilian federal official communications.",
+      "sources": [
+        "S-BRAZIL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C35",
+      "text": "The padrão ofício fixes the document parts as cabecalho, identificacao do expediente, local e data, enderecamento, assunto, texto, fechos, identificacao do signatario and page numbering.",
+      "sources": [
+        "S-BRAZIL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C36",
+      "text": "The Brazilian Manual lists document types including oficio, aviso, memorando, exposicao de motivos and mensagem.",
+      "sources": [
+        "S-BRAZIL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C37",
+      "text": "Brazil's Exposicao de Motivos is tied to Sidof, the federal electronic document generation-and-routing system.",
+      "sources": [
+        "S-BRAZIL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C38",
+      "text": "In the Sinosphere seals are pressed on documents to establish authenticity similarly to signatures in the West; Japanese inkan/hanko remain in official use.",
+      "sources": [
+        "S-EESEAL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C39",
+      "text": "Seals can serve as identification because they are more difficult to forge than a signature, and only the owner holds the seal.",
+      "sources": [
+        "S-EESEAL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C40",
+      "text": "Japan is migrating from ink seals toward electronic signatures for document authentication.",
+      "sources": [
+        "S-EESEAL"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C41",
+      "text": "JIS Z 8301 fixes the layout and drafting rules for Japanese Industrial Standards themselves (a meta-document standard).",
+      "sources": [
+        "S-JIS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C42",
+      "text": "As of December 2024 Estonia became the first country to digitise 100% of its government services.",
+      "sources": [
+        "S-ESTONIA-STORY"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C43",
+      "text": "Estonian digital signing runs through the national eID stack (ID-card, Mobile-ID, Smart-ID) with documents in the DigiDoc container; notarisation is moving to an e-notary.",
+      "sources": [
+        "S-ESTONIA-ID",
+        "S-ESTONIA-STORY"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C44",
+      "text": "The khipu (quipu) is an Andean record-keeping device made of knotted cords, used c. 1100-1532 and beyond.",
+      "sources": [
+        "S-QUIPU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C45",
+      "text": "The Inka used a decimal positional system of knots on khipu cords.",
+      "sources": [
+        "S-QUIPU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C46",
+      "text": "Khipu were used for census records, calendrical information and military organisation, and recorded both statistical and narrative information.",
+      "sources": [
+        "S-QUIPU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C47",
+      "text": "Khipu cords are ordered from most important to least important category according to colour and number.",
+      "sources": [
+        "S-QUIPU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C48",
+      "text": "NARSSA sets records-management standards for South African governmental bodies, in collaboration with the SABS.",
+      "sources": [
+        "S-SA-RMS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C49",
+      "text": "South African governmental bodies must create and maintain authentic, reliable and usable records to support service delivery and accountability.",
+      "sources": [
+        "S-SA-RMS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C50",
+      "text": "Nghị định 30/2020/NĐ-CP governs công tác văn thư: drafting, signing and issuing documents, document management, file creation and transfer to archives, and the thể thức / presentation of administrative documents.",
+      "sources": [
+        "S-VN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C51",
+      "text": "Nghị định 30/2020/NĐ-CP details 14 components of the thể thức, beginning with Quốc hiệu và Tiêu ngữ (national name and motto) and including số ký hiệu, tên loại và trích yếu, chữ ký, dấu/chữ ký số and nơi nhận.",
+      "sources": [
+        "S-VN-IMAS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C52",
+      "text": "Peraturan ANRI No. 5/2025 defines Tata Naskah Dinas as the regulation of the types and format of naskah dinas, itself defined as written information used as a tool for official duties.",
+      "sources": [
+        "S-ID-ANRI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C53",
+      "text": "ANRI divides naskah dinas into arahan (directive), korespondensi (internal/external correspondence) and khusus (special); elements include kop, nomor, tanggal, perihal, tembusan, signatory and electronic signature.",
+      "sources": [
+        "S-ID-ANRI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C54",
+      "text": "The Thai PM's Office Regulation on Sarabun work fixes the external letter's elements: ที่, issuing agency, date, เรื่อง, salutation, อ้างถึง, สิ่งที่ส่งมาด้วย, ข้อความ, ลงชื่อ, position, agency and phone.",
+      "sources": [
+        "S-TH-SARABUN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C55",
+      "text": "Thai official letters use ครุฑ (Garuda)-stamped paper with prescribed dimensions; the regulation also prescribes numbered forms and the incoming/outgoing letter registers and receipt forms.",
+      "sources": [
+        "S-TH-SARABUN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C56",
+      "text": "The National Archives and Library of Ethiopia was inaugurated in 1944 by Haile Selassie; the archives was established in 1979; its collections include 14th-15th century manuscripts and letters by kings and empresses, chiefly in Ge'ez and Amharic, and much preservation was monastic.",
+      "sources": [
+        "S-ET-NALE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C57",
+      "text": "The Nigerian National Archives Act covers records management duties, departmental records officers, appraisal criteria for permanent preservation, legal validity of public records, state archives, and private and company records.",
+      "sources": [
+        "S-NG-ACT"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C58",
+      "text": "The Kenya Public Archives and Documentation Service Act (Cap. 19) establishes KNADS and provides for a documentation and retrieval service, public access to public archives, legal validity of public archives, and admissibility of certified copies as evidence.",
+      "sources": [
+        "S-KE-ACT"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C59",
+      "text": "Timbuktu manuscripts were preserved for centuries in private households, are predominantly in Arabic with a significant portion in Ajami, and 4,203 were burned or destroyed during the Mali War.",
+      "sources": [
+        "S-ML-WIKI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C60",
+      "text": "West African manuscripts in Arabic and Ajami include correspondence, private letters and business records; Ajami orthographies exist for Dagbani, Fulfulde, Hausa, Songhay, Tamasheq, Wolof, Yoruba and others.",
+      "sources": [
+        "S-ML-AJAMI"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C61",
+      "text": "The Saudi guide to written correspondence prescribes the elements ترويسة (letterhead), الرقم (number), التاريخ (date), المرسل (sender), المرسل إليه (addressee), الموضوع (subject), التحية (salutation), الصيغة/المتن (body), المرفقات (attachments), التوقيع (signature), الخاتم (seal) and نسخة (copy).",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C62",
+      "text": "Saudi correspondence orders multiple addressees by protocol rank (Custodian of the Two Holy Mosques, Crown Prince, Highnesses, ministers, other Excellencies, then honours), within each class by seniority.",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C63",
+      "text": "The Saudi addressee salutation is rank-dependent (حفظه الله ورعاه / حفظه الله / سلّمه الله) and is followed by the Islamic greeting; it is omitted for internal letters.",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C64",
+      "text": "Saudi official correspondence dates by the Hijri (Umm al-Qura) calendar, with the Gregorian date following as الموافق.",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C65",
+      "text": "When citing a prior instrument, Saudi practice follows a royal decree/high order/Council-of-Ministers decision with القاضي بـ and a mere letter with المتضمن; an error in the cited number may invalidate the letter's content.",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C66",
+      "text": "The Saudi transition into the body is rank-conditioned (مقامكم / سموكم / معاليكم; أفيدكم when the addressee is junior to the sender).",
+      "sources": [
+        "S-SA-KSU"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C67",
+      "text": "The Francophone lettre administrative has a predefined structure: en-tête, destinataire, objet, formule d'appel, corps, formule de politesse, signature; the objet is written Objet / Concerne / Conc.",
+      "sources": [
+        "S-LU-GUIDE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C68",
+      "text": "The Francophone formule d'appel and formule de politesse must match and are built from the recipient's function, not surname; guides provide banks of formules by letter type and by letter part.",
+      "sources": [
+        "S-LU-GUIDE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C69",
+      "text": "French administrative letters use canonical formulas such as «J'ai l'honneur de vous faire connaître que» and «J'ai le regret de vous informer que», and carry legal références and P. J. (pièces jointes).",
+      "sources": [
+        "S-FR-AMIENS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C70",
+      "text": "In Senegalese administrative law a circulaire or instruction de service is a communication by which a hierarchical superior (normally the minister) makes known to subordinates his intentions, and takes the qualification of the issuing authority (présidentielle, primatorale, ministérielle, préfectorale).",
+      "sources": [
+        "S-SN-CIRC"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C71",
+      "text": "The Direction des Archives du Sénégal holds colonial fonds (Sénégal Colonial, Afrique Occidentale Française) and post-1960 fonds, plus the Journal Officiel.",
+      "sources": [
+        "S-SN-ARCH"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C72",
+      "text": "The French royal chancery produced a typology of acts (charte, lettre patente, mandement, lettres closes) distinguished by seal and authentication marks including the royal souscription with monogram, entered in registers (Trésor des chartes).",
+      "sources": [
+        "S-FR-SORBONNE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C73",
+      "text": "The UAE Government publishes correspondence/communication guidelines for its entities.",
+      "sources": [
+        "S-AE-GUIDELINES"
+      ],
+      "verified": false,
+      "note": "provisional - guideline pages are JS-only and were not retrieved"
+    },
+    {
+      "id": "C74",
+      "text": "The UAE TDRA دليل الكتابة باللغة العربية (v3.0, 2022) fixes the writing of the state's name and symbols, the official titles of the rulers, the names of official bodies, citations, and the conventions for numbers, days, months, time and dates.",
+      "sources": [
+        "S-AE-TDRA"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C75",
+      "text": "A guide titled دليل المراسلات الكتابية hosted on the Qatar-based legal library adliyah.com is byte-identical to the Saudi دليل المراسلات الكتابية, i.e. the Saudi guide circulates regionally as a Gulf template.",
+      "sources": [
+        "S-SA-KSU",
+        "S-QA-ADLIYAH"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C76",
+      "text": "The Bénin civil-service course defines the bordereau d'envoi (a table transmitting documents service-to-service/ministry-to-ministry) and the soit-transmis (a simplified bordereau for intra-administration use, titled SOIT-TRANSMIS with an OBSERVATIONS line).",
+      "sources": [
+        "S-BJ-GPE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C77",
+      "text": "The Bénin course states that the note carries neither a formule d'appel nor a formule de politesse - the internal genre is defined by dropping the two formulas that define the external lettre.",
+      "sources": [
+        "S-BJ-GPE"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C78",
+      "text": "The Bénin Ministry of Economy and Finance procedures manual uses document types including procès-verbal, arrêté, décision and bordereau de transfert, and controls imprimés (forms) and tampons (stamps) with a Conseil des Archives.",
+      "sources": [
+        "S-BJ-FIN"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C79",
+      "text": "The principle of public access to official records has existed in Sweden since 1766 and is enshrined in a fundamental law.",
+      "sources": [
+        "S-SE-ACCESS"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C80",
+      "text": "The Swedish Freedom of the Press Act (Tryckfrihetsförordningen), first enacted in 1766, is one of the four Fundamental Laws forming the Swedish constitution.",
+      "sources": [
+        "S-SE-FPA"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C81",
+      "text": "Haudenosaunee wampum belts served as record-keeping and memory aids (recording treaties such as the Two Row Wampum and the Hiawatha Belt) and as a person's credentials or certificate of authority; wampum is made of white and purple shell beads.",
+      "sources": [
+        "S-WAMPUM"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C82",
+      "text": "The Two Row Wampum Treaty (Guswenta/Kaswentha, the Tawagonshi Agreement of 1613) is a mutual agreement of 1613 between the Five Nations and the Dutch; its authenticity rests on the belt and oral recitation, while later written versions are disputed.",
+      "sources": [
+        "S-WAMPUM-2ROW"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C83",
+      "text": "ЄДСД (Єдина державна система діловодства, approved by the USSR State Committee for Science and Technology, 1973) is a system of documentary provision of management - a scientifically ordered complex of rules, norms and recommendations regulating clerical processes.",
+      "sources": [
+        "S-SU-EDSD"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C84",
+      "text": "ЄДСД covers unified rules of composing and formatting documents, rational document-flow principles, a unified registration-reference apparatus, nomenclatures and file formation, preparation of files for storage, and the mechanisation/automation of clerical work.",
+      "sources": [
+        "S-SU-EDSD"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C85",
+      "text": "In Ukraine the ЄДСД-type rules are codified in the Типова інструкція з діловодства (Постанова КМУ No. 1242 of 2011), superseded by Постанова КМУ No. 55 of 2018.",
+      "sources": [
+        "S-SU-EDSD"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C86",
+      "text": "ГОСТ 6.38-90 (УСОРД), in force 1991-01-01, fixes the unified requisite set for organisational-administrative documents (emblem, date, index, addressee, approval and agreement endorsements, heading, text, access restriction) and the rule of no more than four addressees.",
+      "sources": [
+        "S-SU-GOST638"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C87",
+      "text": "ОКУД is an all-Union classifier of management documentation using a three-level hierarchical classification with an 8-digit code (class, subclass, ordinal, check digit), created to register forms, reduce their number, remove non-unified forms and control duplication.",
+      "sources": [
+        "S-SU-OKUD",
+        "S-SU-USD"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C88",
+      "text": "The УСД (unified documentation systems) are documentation systems created by uniform rules; the organisational-administrative system (УСОРД) is one of them and is registered in the state classifier of management documentation.",
+      "sources": [
+        "S-SU-USD"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C89",
+      "text": "In 1920 Aleksei Gastev founded the Central Institute of Labour (CIT) in Moscow to apply the scientific organisation of labour (NOT) - a prehistory of Soviet document and work rationalisation.",
+      "sources": [
+        "S-SU-GASTEV",
+        "S-SU-BAILES"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C90",
+      "text": "Early COMECON efforts to facilitate trade among members concentrated on developing uniform technical, legal and statistical standards.",
+      "sources": [
+        "S-SU-COMECON"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C91",
+      "text": "The Ukrainian national classifier of management documentation НК 010:2021 (in force 2021-04-19, replacing ДК 010-98; developed by УНДІАСД) enumerates management-document types including акт, заява, довідка, наказ, протокол, положення, договір, пояснювальна записка, статут, рішення, правила, подання, лист, інструкція, доручення and доповідна записка.",
+      "sources": [
+        "S-SU-NK010"
+      ],
+      "verified": true
+    },
+    {
+      "id": "C92",
+      "text": "Ukrainian organisational-administrative documentation is classified by function into three groups: organisational (статут, положення, інструкція, договір), dispositive (наказ, вказівка, ухвала, розпорядження, рішення) and reference-informational (акт, протокол, довідка, лист).",
+      "sources": [
+        "S-SU-ORD",
+        "S-SU-NK010"
+      ],
+      "verified": true
+    }
+  ]
+}

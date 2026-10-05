@@ -1,0 +1,29 @@
+system,local_term,gloss_en,genre
+UA,Назва виду документа,Name of the document type,all
+CN,特定格式 (信函/命令/纪要),Specific formats (letter/order/minutes),party-gov docs
+EU,Title of the act,Title of the act,legal act
+IN,Office memorandum,Internal communication form,internal
+IN,D.O. letter,Demi-official letter,semi-official
+ID,Naskah Dinas arahan,Directive document,directive
+ID,Naskah Dinas korespondensi,Correspondence (internal/external),correspondence
+ID,Naskah Dinas khusus,Special document,special
+ET,Imperial letters,Letters of kings and empresses,historical
+SA,المرسوم الملكي / الأمر السامي / القرار,Instrument types (royal decree / high order / decision),instrument
+SA,التعميم,Circular,instrument
+FR,Note de service,Internal note,internal
+FR,Circulaire,Circular,internal
+SN,Circulaire,Circular directive (superior to subordinates),internal
+SN,Instruction de service,Service instruction,internal
+BJ,Lettre (à forme administrative),External formal letter,correspondence
+BJ,Note d'information,Internal information note,internal
+BJ,Note de service,Internal service note (instruction),internal
+BJ,Note verbale,Diplomatic note,diplomatic
+BJ,Procès-verbal,Minutes / record of proceedings,administrative
+BJ,Arrêté / décision,Regulatory order / decision,normative
+SU,"Організаційні документи (статут, положення, інструкція, договір)","Organisational group (statute, regulation, instruction, contract)",classifier
+SU,"Розпорядчі документи (наказ, розпорядження, рішення, вказівка, ухвала)","Dispositive group (order, instruction, decision)",classifier
+SU,"Довідково-інформаційні документи (акт, протокол, довідка, лист)","Reference-informational group (act, minutes, certificate, letter)",classifier
+SU,Наказ,Order / directive (commonest dispositive type),classifier
+SU,Акт,Act / record of a fact,classifier
+SU,Протокол,Minutes / record of proceedings,classifier
+SU,Довідка,Certificate / reference,classifier

@@ -1,0 +1,226 @@
+system,standard,clause,local_term,gloss_en,slot,obligation,genre,note
+UA,ДСТУ 4163:2020,4.1(01),Зображення Державного Герба України,Image of the State Emblem,S4-authority-mark,optional,letterhead,blank-only
+UA,ДСТУ 4163:2020,4.1(02),Зображення емблеми юридичної особи,Corporate emblem or trademark,S4-authority-mark,optional,letterhead,
+UA,ДСТУ 4163:2020,4.1(03),Найменування юридичної особи вищого рівня,Name of superior body,S3-origin,optional,all,
+UA,ДСТУ 4163:2020,4.1(04),Найменування юридичної особи,Name of legal entity,S3-origin,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(05),Найменування структурного підрозділу,Name of structural unit,S3-origin,optional,all,
+UA,ДСТУ 4163:2020,4.1(06),Довідкові дані про юридичну особу,Reference data about the entity,S3-origin,optional,all,
+UA,ДСТУ 4163:2020,4.1(07),Код форми документа,Document form code,S2-identifier,optional,all,
+UA,ДСТУ 4163:2020,4.1(08),Код юридичної особи,Entity code (EDRPOU),S2-identifier,optional,all,
+UA,ДСТУ 4163:2020,4.1(09),Назва виду документа,Name of the document type,S1-identity,mandatory,all,4.4 (not on letters)
+UA,ДСТУ 4163:2020,4.1(10),Дата документа,Date of document,S5-temporal,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(11),Реєстраційний індекс документа,Registration index,S2-identifier,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(12),Посилання на реєстраційний індекс і дату,Reference to index and date of the answered document,S7-reference,optional,all,
+UA,ДСТУ 4163:2020,4.1(13),Місце складення документа,Place of issue,S5-temporal,optional,all,
+UA,ДСТУ 4163:2020,4.1(14),Гриф обмеження доступу,Access restriction marking,S2-identifier,optional,all,
+UA,ДСТУ 4163:2020,4.1(15),Адресат,Addressee,S6-destination,optional,correspondence,max 4 addressees
+UA,ДСТУ 4163:2020,4.1(16),Гриф затвердження документа,Approval endorsement,S12-authentication,optional,all,
+UA,ДСТУ 4163:2020,4.1(17),Резолюція,Managerial resolution/instruction,S11-dispositif,optional,all,handwritten managerial act
+UA,ДСТУ 4163:2020,4.1(18),Відмітка про контроль,Control mark,S14-trace,optional,all,
+UA,ДСТУ 4163:2020,4.1(19),Заголовок до тексту документа,Heading to the text,S8-subject,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(20),Текст документа,Body text,S10-body,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(21),Відмітка про наявність додатків,Annex note,S13-annex,optional,all,
+UA,ДСТУ 4163:2020,4.1(22),Підпис,Signature,S12-authentication,mandatory,all,4.4
+UA,ДСТУ 4163:2020,4.1(23),Відбиток печатки,Seal imprint,S12-authentication,optional,all,
+UA,ДСТУ 4163:2020,4.1(24),Віза документа,Document visa,S12-authentication,optional,all,
+UA,ДСТУ 4163:2020,4.1(25),Гриф погодження (схвалення) документа,Endorsement (agreement/approval),S12-authentication,optional,all,
+UA,ДСТУ 4163:2020,4.1(26),Відмітка про засвідчення копії документа,Certified-copy mark,S14-trace,optional,all,also S12
+UA,ДСТУ 4163:2020,4.1(27),Відомості про виконавця документа,Drafter's details,S14-trace,optional,all,
+UA,ДСТУ 4163:2020,4.1(28),Відмітка про ознайомлення з документом,Acquaintance mark,S14-trace,optional,all,
+UA,ДСТУ 4163:2020,4.1(29),Відмітка про виконання документа,Execution mark,S14-trace,optional,all,
+UA,ДСТУ 4163:2020,4.1(30),Відмітка про надходження документа,Receipt mark,S14-trace,optional,all,
+UA,ДСТУ 4163:2020,4.1(31),Запис про державну реєстрацію,State registration record,S14-trace,optional,all,also S2
+UA,ДСТУ 4163:2020,4.1(32),Відмітка про наявність примірника з носієм,Copy-medium marker,S14-trace,optional,all,
+RU,GOST R 7.0.97-2016,-,(~30 requisites),Approx. 30 requisites (list not retrieved),mixed,unknown,all,"NOT RETRIEVED - primary text is on Russian hosts blocked from this environment; lineage continuous with ДСТУ 4163 via the shared ЕГСД ancestor - verify before citing"
+DE,DIN 5008:2020,-,Briefkopf,"Sender header (company, logo, contact)",S3-origin,mandatory,correspondence,also S4 authority-mark
+DE,DIN 5008:2020,-,Anschriftfeld,Recipient address field,S6-destination,mandatory,correspondence,Form A 32mm / Form B 50mm from top
+DE,DIN 5008:2020,-,Informationsblock (Bezugszeichen),Reference line (your ref / our ref / date),S7-reference,optional,correspondence,also S5 temporal
+DE,DIN 5008:2020,-,Betreff,Subject line,S8-subject,optional,correspondence,"bold, without the word Betreff"
+DE,DIN 5008:2020,-,Anrede,Salutation,S6-destination,optional,correspondence,
+DE,DIN 5008:2020,-,Brieftext,Letter body,S10-body,mandatory,correspondence,
+DE,DIN 5008:2020,-,Grußformel,Closing formula,S12-authentication,optional,correspondence,
+DE,DIN 5008:2020,-,Unterschrift,Signature block,S12-authentication,mandatory,correspondence,
+DE,DIN 5008:2020,-,Anlagenvermerk,Enclosure note,S13-annex,optional,correspondence,
+CN,GB/T 9704-2012,7.2.1,份号,Copy number,S2-identifier,optional,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.2.2,密级和保密期限,Secrecy classification and term,S2-identifier,optional,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.2.3,紧急程度,Urgency,S2-identifier,optional,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.2.4,发文机关标志,Issuing-organ mark,S4-authority-mark,mandatory,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.2.5,发文字号,Document reference number,S2-identifier,mandatory,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.2.6,签发人,Signatory,S12-authentication,conditional,party-gov docs,upward documents only
+CN,GB/T 9704-2012,7.2.7,红色分隔线,Red separator line,structural,mandatory,party-gov docs,version 版头 head
+CN,GB/T 9704-2012,7.3.1,标题,Title,S8-subject,mandatory,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.3.2,主送机关,Principal addressee organ,S6-destination,conditional,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.3.3,正文,Body,S10-body,mandatory,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.3.4,附件说明,Annex description,S13-annex,optional,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.3.5,发文机关署名、成文日期和印章,"Issuing-organ signature, date and seal",S12-authentication,mandatory,party-gov docs,version 主体 body; also S3/S5
+CN,GB/T 9704-2012,7.3.6,附注,Special note,S14-trace,optional,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.3.7,附件,Annex,S13-annex,optional,party-gov docs,version 主体 body
+CN,GB/T 9704-2012,7.4.2,抄送机关,CC organs,S7-reference,optional,party-gov docs,version 版记 record
+CN,GB/T 9704-2012,7.4.3,印发机关和印发日期,Printing organ and date,S14-trace,optional,party-gov docs,version 版记 record
+CN,GB/T 9704-2012,10,特定格式 (信函/命令/纪要),Specific formats (letter/order/minutes),S1-identity,conditional,party-gov docs,genre variants
+UN,UN Editorial Manual,-,Name of the organ,Issuing organ,S3-origin,mandatory,resolution,
+UN,UN Editorial Manual,-,Preamble (preambular paragraphs),Justification/recitals,S9-setting,optional,resolution,paragraphs begin with participle
+UN,UN Editorial Manual,-,Operative part (operative paragraphs),Binding decisions,S11-dispositif,mandatory,resolution,paragraphs begin with operative verb
+UN,UN Editorial Manual,-,Meeting and date of adoption,Adoption record,S5-temporal,mandatory,resolution,also S14 trace
+UN,DHL UN Document Symbols guide,-,Document symbol,Unique document identifier,S2-identifier,mandatory,all UN docs,decomposed into meaningful components
+EU,Interinstitutional Style Guide,2.1,Title of the act,Title of the act,S1-identity,mandatory,legal act,
+EU,Interinstitutional Style Guide,2.2.1,Citations,Legal-basis citations,S9-setting,mandatory,legal act,also S7 reference
+EU,Interinstitutional Style Guide,2.2.2,Recitals,Recitals (whereas clauses),S9-setting,mandatory,legal act,
+EU,Interinstitutional Style Guide,2.3,Articles (enacting terms),Operative articles,S11-dispositif,mandatory,legal act,
+EU,Interinstitutional Style Guide,-,Annexes,Annexes,S13-annex,optional,legal act,
+EU,Interinstitutional Style Guide,-,Signature / authentic-language clause,Authentication,S12-authentication,mandatory,legal act,
+IS,Ṣubḥ al-Aʿshā / Ottoman firman,-,Tughra,Imperial monogram: name + seal + signature in one glyph,S12-authentication,mandatory,imperial edict,fuses S3 origin + S4 authority-mark + S12
+IS,Ottoman firman,-,Top-margin blank space,Prestige marker (scalar),rank-modifier,optional,imperial edict,"more blank space = more important; a gradient, not a slot"
+IS,Ottoman firman,-,Divani script on scroll,Calligraphic body on elongated parchment,S10-body,mandatory,imperial edict,
+IS,Ṣubḥ al-Aʿshā (1412),-,Inshāʾ composition rules,Rules for composing chancery documents,meta-structure,mandatory,chancery manual,composition discipline as a state office
+IN,"CSMOP (16th ed, 2022)",6.x,File (four parts),File: correspondence/notes plus appendices,meta-structure,mandatory,file,"record unit is the file, one level above the document"
+IN,"CSMOP (16th ed, 2022)",6.x,Functional file number,Alpha-numeric faceted file identifier,S2-identifier,mandatory,file,
+IN,"CSMOP (16th ed, 2022)",6.x,Notes portion,Deliberative notes,S10-body,mandatory,file,
+IN,"CSMOP (16th ed, 2022)",6.x,Correspondence portion,Correspondence kept on file,S13-annex,mandatory,file,
+IN,"CSMOP (16th ed, 2022)",Ch.IX,Office memorandum,Internal communication form,S1-identity,mandatory,internal,
+IN,"CSMOP (16th ed, 2022)",Ch.IX,D.O. letter,Demi-official letter,S1-identity,optional,semi-official,
+IN,"CSMOP (16th ed, 2022)",Ch.VII,Draft,Draft for approval,S11-dispositif,optional,file,
+BR,Manual de Redação (2018),5.1.1,Cabeçalho,Header,S4-authority-mark,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.2,Identificação do expediente,Document identification (type and number),S2-identifier,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.3,Local e data,Place and date,S5-temporal,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.4,Endereçamento,Addressing,S6-destination,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.5,Assunto,Subject,S8-subject,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.6,Texto do documento,Body text,S10-body,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.7,Fechos para comunicações,Closings,S12-authentication,optional,padrão ofício,
+BR,Manual de Redação (2018),5.1.8,Identificação do signatário,Signatory identification,S12-authentication,mandatory,padrão ofício,
+BR,Manual de Redação (2018),5.1.9,Numeração das páginas,Page numbering,structural,optional,padrão ofício,
+BR,Manual de Redação (2018),6.2.3,Sidof,National electronic document system,infrastructure,mandatory,digital,format = schema of the national e-document system
+JP,JIS Z 8301 / admin practice,-,Hanko / inkan,Registered seal (authentication),S12-authentication,mandatory,official,impersonal; registered; harder to forge than a signature
+JP,JIS Z 8301 / admin practice,-,Standard-page layout,Layout rules for standard documents,meta-structure,mandatory,document,meta-document standard (analogue of ISO/IEC Directives)
+JP,JIS Z 8301 / admin practice,-,Electronic signature,Migration from hanko to e-signature,S12-authentication,emerging,digital,"same slot, re-encoded"
+EE,e-Estonia / DigiDoc,-,DigiDoc container,Digital document container (ASiC-E),S12-authentication,mandatory,digital,holds signature and document together
+EE,e-Estonia / DigiDoc,-,Automatic identifier,System-assigned document id,S2-identifier,mandatory,digital,slot moves into infrastructure
+EE,e-Estonia / DigiDoc,-,Audit log,System-generated trace,S14-trace,mandatory,digital,
+EE,e-Estonia / DigiDoc,-,e-notary,Digital notarisation,S12-authentication,optional,digital,
+PE,Inka khipu,-,Decimal positional knots,Numeric encoding,S10-body,n/a,record,"encoding morphology, not a document slot"
+PE,Inka khipu,-,Cord hierarchy / colour,Ordering most-to-least important,rank-modifier,mandatory,record,
+PE,Inka khipu,-,Narrative cords,Narrative information,S10-body,supported,record,statistical AND narrative
+ZA,NARSSA,-,Records management standard,"Records must be authentic, reliable, usable",meta-structure,mandatory,regime,"Layer-2: lifecycle, not page slots"
+ZA,NARSSA,-,Electronic records code,Codes of practice for e-records,infrastructure,mandatory,regime,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Quốc hiệu và Tiêu ngữ,National name and motto,S4-authority-mark,mandatory,administrative,no European analogue: state name + constitutional motto
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Tên cơ quan/tổ chức ban hành,Issuing agency,S3-origin,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,"Số, ký hiệu",Number and symbol (agency abbr. + doc type),S2-identifier,mandatory,administrative,identifier grammar like the UN symbol
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Địa danh và thời gian ban hành,Place and time of issue,S5-temporal,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Tên loại và trích yếu nội dung,Document type and subject summary,S8-subject,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Nội dung,Body,S10-body,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,"Chức vụ, họ tên và chữ ký","Position, name and signature",S12-authentication,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,"Dấu, chữ ký số",Seal / digital signature,S12-authentication,mandatory,administrative,digital signature integrated
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Nơi nhận,Recipients (circulation list),S7-reference,mandatory,administrative,
+VN,Nghị định 30/2020/NĐ-CP,Điều 8,Các thành phần khác,"Other components (contact, drafting symbol)",S14-trace,optional,administrative,
+ID,Peraturan ANRI 5/2025,Pasal 3,Naskah Dinas arahan,Directive document,S1-identity,mandatory,directive,functional taxonomy
+ID,Peraturan ANRI 5/2025,Pasal 3,Naskah Dinas korespondensi,Correspondence (internal/external),S1-identity,mandatory,correspondence,
+ID,Peraturan ANRI 5/2025,Pasal 3,Naskah Dinas khusus,Special document,S1-identity,mandatory,special,
+ID,Peraturan ANRI 5/2025,-,Kop naskah dinas,Letterhead,S3-origin,mandatory,correspondence,in capitals
+ID,Peraturan ANRI 5/2025,-,Nomor,Number,S2-identifier,mandatory,correspondence,
+ID,Peraturan ANRI 5/2025,-,Tanggal,Date,S5-temporal,mandatory,correspondence,
+ID,Peraturan ANRI 5/2025,-,Perihal,Subject,S8-subject,mandatory,correspondence,
+ID,Peraturan ANRI 5/2025,-,Tembusan,Copy / CC list,S7-reference,optional,correspondence,left bottom margin
+ID,Peraturan ANRI 5/2025,-,Tanda tangan elektronik,Electronic signature,S12-authentication,mandatory,correspondence,digital signature in the 2025 standard
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,ครุฑ (Garuda),State emblem on official paper,S4-authority-mark,mandatory,official,dimensioned; a property of the paper
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,ที่,Number / owner code,S2-identifier,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,ส่วนราชการเจ้าของหนังสือ,Issuing agency,S3-origin,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,เรื่อง,Subject,S8-subject,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,เรียน,Addressee,S6-destination,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,อ้างถึง,Reference (if any),S7-reference,optional,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,สิ่งที่ส่งมาด้วย,Enclosures (if any),S13-annex,optional,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,ข้อความ,Body,S10-body,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 11,ลงชื่อ,Signature,S12-authentication,mandatory,official,
+TH,PM Office Regulation on Sarabun work B.E.2526,ข้อ 38,ทะเบียนหนังสือรับ/ส่ง,Incoming/outgoing registers,S14-trace,mandatory,official,trace layer prescribed as printed forms
+ET,Ethiopia (imperial chancery / NALE),-,Imperial letters,Letters of kings and empresses,S1-identity,optional,historical,
+ET,Ethiopia (imperial chancery / NALE),-,Ge'ez / Amharic (Fidäl),Indigenous script,S10-body,mandatory,historical,non-Latin script
+ET,Ethiopia (imperial chancery / NALE),-,Monastic custody,Preserved in monasteries and churches,S14-trace,mandatory,historical,"custody by the church, not the state"
+NG,National Archives Act,-,Responsibilities for records management,Recordkeeping duty,S14-trace,mandatory,statutory,
+NG,National Archives Act,-,Departmental records management officer,Designated officer,S14-trace,mandatory,statutory,
+NG,National Archives Act,-,Criteria for permanent preservation,Appraisal criteria,S14-trace,mandatory,statutory,appraisal: the persistence dimension
+NG,National Archives Act,-,Legal validity of public records,Evidential validity,S12-authentication,mandatory,statutory,
+NG,National Archives Act,-,Company and private archives,Non-government records,mixed,optional,statutory,unusual breadth beyond the state
+KE,Public Archives and Documentation Service Act (Cap.19),s.6,Public access to public archives,Right of public access,access,mandatory,statutory,"access: a dimension, not a slot"
+KE,Public Archives and Documentation Service Act (Cap.19),s.10,Legal validity of public archives,Evidential validity,S12-authentication,mandatory,statutory,
+KE,Public Archives and Documentation Service Act (Cap.19),s.11,Certified copies admissible as evidence,Evidential admissibility,S12-authentication,mandatory,statutory,
+WA,Ajami / Timbuktu manuscripts,-,Ajami script,African languages in Arabic script,S10-body,mandatory,historical,independent of European chancery
+WA,Ajami / Timbuktu manuscripts,-,Correspondence and business records,Letters and business records,S10-body,mandatory,historical,
+WA,Ajami / Timbuktu manuscripts,-,Arabic,Language of most manuscripts,S10-body,mixed,historical,
+WA,Ajami / Timbuktu manuscripts,-,Private-household custody,Preserved in family libraries,S14-trace,mandatory,historical,decentralised archive; vulnerable
+SA,دليل المراسلات الكتابية,-,ترويسة,Letterhead,S4-authority-mark,mandatory,correspondence,also S3
+SA,دليل المراسلات الكتابية,-,الرقم,Number,S2-identifier,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,التاريخ,Date,S5-temporal,mandatory,correspondence,"Hijri (Umm al-Qura) first, Gregorian after الموافق"
+SA,دليل المراسلات الكتابية,-,المرسل,Sender,S3-origin,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,المرسل إليه,Addressee,S6-destination,mandatory,correspondence,rank-ordered by protocol
+SA,دليل المراسلات الكتابية,-,الموضوع,Subject,S8-subject,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,التحية,Salutation,S6-destination,mandatory,correspondence,rank-dependent blessing; Islamic greeting; omitted internally
+SA,دليل المراسلات الكتابية,-,الصيغة/المتن,Body,S10-body,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,المرفقات,Attachments,S13-annex,optional,correspondence,
+SA,دليل المراسلات الكتابية,-,التوقيع,Signature,S12-authentication,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,الخاتم,Seal,S12-authentication,mandatory,correspondence,
+SA,دليل المراسلات الكتابية,-,نسخة,Copy,S7-reference,optional,correspondence,
+SA,دليل المراسلات الكتابية,-,المرسوم الملكي / الأمر السامي / القرار,Instrument types (royal decree / high order / decision),S1-identity,mandatory,instrument,hierarchy fixes the citation verb
+SA,دليل المراسلات الكتابية,-,التعميم,Circular,S1-identity,optional,instrument,
+SA,دليل المراسلات الكتابية,-,ترتيب الرتب والصيغ,Rank-ordered address and formula,rank-modifier,mandatory,correspondence,"rank encoded grammatically, not in layout"
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,En-tête,Letterhead,S4-authority-mark,mandatory,lettre administrative,also S3
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Destinataire,Addressee,S6-destination,mandatory,lettre administrative,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Objet,Subject line,S8-subject,mandatory,lettre administrative,written Objet / Concerne / Conc.
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Formule d'appel,Salutation,S6-destination,mandatory,lettre administrative,must match the formule de politesse; built from function
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Corps,Body,S10-body,mandatory,lettre administrative,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Formule de politesse,Complimentary close,S12-authentication,mandatory,lettre administrative,rank- and type-dependent
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Signature,Signature,S12-authentication,mandatory,lettre administrative,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,P. J. (pièces jointes),Attachments,S13-annex,optional,lettre administrative,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Références,"Legal references (décrets, articles)",S7-reference,optional,lettre administrative,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Note de service,Internal note,S1-identity,optional,internal,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Circulaire,Circular,S1-identity,optional,internal,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Bordereau d'envoi,Dispatch slip,S13-annex,optional,internal,
+FR,Guide de rédaction (LU) / Guide pratique (FR),-,Soit-transmis,Transmission endorsement,S13-annex,optional,internal,
+SN,Circulaire / Archives du Sénégal,-,Circulaire,Circular directive (superior to subordinates),S1-identity,mandatory,internal,rank-qualified by issuing authority
+SN,Circulaire / Archives du Sénégal,-,Instruction de service,Service instruction,S1-identity,optional,internal,
+SN,Circulaire / Archives du Sénégal,-,Fonds Afrique Occidentale Française (AOF),Colonial administration fonds,S14-trace,mandatory,archive,
+SN,Circulaire / Archives du Sénégal,-,Journal Officiel,Official gazette,S14-trace,mandatory,archive,
+AE,UAE Guidelines (provisional),-,-,NOT RETRIEVED,mixed,unknown,guidelines,pages are JS-only; content not extractable in this environment
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,اسم الدولة,Name of the state,S4-authority-mark,mandatory,style guide,naming/citation standard
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,رموز الدولة,State symbols,S4-authority-mark,mandatory,style guide,
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,الشيوخ والصفات الرسمية,Rulers and their official titles,rank-modifier,mandatory,style guide,rank/naming discipline
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,الجهات الرسمية,Official bodies (correct names),S3-origin,mandatory,style guide,
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,الاقتباسات,Citations,S7-reference,mandatory,style guide,
+AE,"دليل الكتابة باللغة العربية (TDRA v3.0, 2022)",-,الأرقام/الأيام/الشهور/التوقيت/التاريخ,"Numbers, days, months, time, dates",S5-temporal,mandatory,style guide,
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Lettre (à forme administrative),External formal letter,S1-identity,mandatory,correspondence,carries formule d'appel + politesse
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Bordereau d'envoi,Dispatch slip (transmits documents; a table),S13-annex,mandatory,liaison,title + 3-4 column frame
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Soit-transmis (bordereau simplifié),Simplified dispatch note (intra-administration),S13-annex,mandatory,liaison,SOIT-TRANSMIS title + OBSERVATIONS
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Note d'information,Internal information note,S1-identity,mandatory,internal,"no formule d'appel, no formule de politesse"
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Note de service,Internal service note (instruction),S1-identity,mandatory,internal,
+BJ,"Leçon 3 - documents de correspondance (gpe-afrique, Bénin)",-,Note verbale,Diplomatic note,S1-identity,optional,diplomatic,
+BJ,Manuel de procédures du MEF (Bénin),-,Procès-verbal,Minutes / record of proceedings,S1-identity,mandatory,administrative,
+BJ,Manuel de procédures du MEF (Bénin),-,Arrêté / décision,Regulatory order / decision,S1-identity,mandatory,normative,
+BJ,Manuel de procédures du MEF (Bénin),-,Bordereau de transfert,Transfer slip (to archives),S13-annex,mandatory,archival,
+BJ,Manuel de procédures du MEF (Bénin),-,Imprimés et tampons,Printed forms and stamps,S14-trace,mandatory,administrative,controlled via Conseil des Archives
+SE,Tryckfrihetsförordningen / offentlighetsprincipen,1,Principle of public access to official records,Right of public access to official records (since 1766),access,mandatory,constitutional,"world's first, 1766"
+SE,Tryckfrihetsförordningen / offentlighetsprincipen,-,Freedom of the Press Act (1766),Fundamental law guaranteeing free communication,meta-structure,mandatory,constitutional,one of four Fundamental Laws
+HN,Haudenosaunee wampum,-,Wampum belt,Woven shell-bead record (treaty / credentials),meta-structure,mandatory,record,non-documentary record system
+HN,Haudenosaunee wampum,-,Two Row Wampum (Guswenta),Treaty belt recording the 1613 agreement,meta-structure,mandatory,record,authoritative vs disputed written copies
+HN,Haudenosaunee wampum,-,Credentials / certificate of authority,A person's credentials,S12-authentication,optional,record,non-documentary authority
+SU,ЄДСД (1973),-,Єдині правила складання та оформлення документів,Unified rules for composing and formatting documents,meta-structure,mandatory,regime,whole-system doctrine
+SU,ЄДСД (1973),-,Раціональні принципи документообігу,Rational principles of document flow,meta-structure,mandatory,regime,
+SU,ЄДСД (1973),-,Реєстраційно-довідковий апарат,Unified registration-reference apparatus,S14-trace,mandatory,regime,
+SU,ЄДСД (1973),-,Номенклатури і формування справ,Nomenclatures and file formation,S14-trace,mandatory,regime,
+SU,ЄДСД (1973),-,Підготовка справ до зберігання,Preparation of files for storage,S14-trace,mandatory,regime,
+SU,ЄДСД (1973),-,Механізація та автоматизація діловодства,Mechanisation and automation of clerical work,infrastructure,mandatory,regime,automation in doctrine since 1973
+SU,ГОСТ 6.38-90,-,Державний герб СРСР/республіки,State emblem of the USSR/republic,S4-authority-mark,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Дата,Date,S5-temporal,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Реєстраційний індекс,Registration index,S2-identifier,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Адресат,Addressee,S6-destination,optional,standard,no more than four addressees
+SU,ГОСТ 6.38-90,-,Гриф затвердження (УТВЕРЖДАЮ),Approval endorsement,S12-authentication,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Заголовок до тексту,Heading to the text,S8-subject,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Текст,Body,S10-body,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Гриф погодження,Agreement endorsement,S12-authentication,mandatory,standard,
+SU,ГОСТ 6.38-90,-,Гриф обмеження доступу,Access restriction,S2-identifier,optional,standard,
+SU,ОКУД (all-Union classifier),-,Код форми документа (8 цифр),Document-form code (8 digits incl. check digit),S2-identifier,mandatory,classifier,class+subclass+ordinal+check
+SU,ОКУД (all-Union classifier),-,Ієрархічна класифікація форм,Hierarchical classification of document forms,meta-structure,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,"Організаційні документи (статут, положення, інструкція, договір)","Organisational group (statute, regulation, instruction, contract)",S1-identity,mandatory,classifier,functional group; successor to the all-Union ОКУД
+SU,Класифікатор управлінської документації НК 010:2021,-,"Розпорядчі документи (наказ, розпорядження, рішення, вказівка, ухвала)","Dispositive group (order, instruction, decision)",S1-identity,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,"Довідково-інформаційні документи (акт, протокол, довідка, лист)","Reference-informational group (act, minutes, certificate, letter)",S1-identity,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,Наказ,Order / directive (commonest dispositive type),S1-identity,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,Акт,Act / record of a fact,S1-identity,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,Протокол,Minutes / record of proceedings,S1-identity,mandatory,classifier,
+SU,Класифікатор управлінської документації НК 010:2021,-,Довідка,Certificate / reference,S1-identity,mandatory,classifier,
