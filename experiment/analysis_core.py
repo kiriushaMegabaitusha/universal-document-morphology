@@ -20,7 +20,7 @@ from collections import defaultdict
 
 import numpy as np
 
-SESOI_PP = 0.05      # pre-registered smallest effect size of interest
+SESOI_PP = 0.10      # pre-registered smallest effect size of interest (PREREGISTRATION.md §7)
 BOOT = 20000         # bootstrap resamples
 PERM_SEED = 20261006
 

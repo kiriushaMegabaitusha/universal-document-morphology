@@ -60,12 +60,32 @@ def cost_table(recs):
 
 
 def main():
-    recs = load_records()
-    if not recs:
+    recs_all = load_records()
+    if not recs_all:
         print("no data at %s - run experiment/machine_arm.py first" % RAW)
         return 1
+    # one record per cell: the last win (a deviation pass supersedes a failed cell)
+    by_cell = {}
+    for r in recs_all:
+        by_cell[(r["model"], r["document"], r["item"], r["lang"], r["register"])] = r
+    recs = list(by_cell.values())
+    by_setting = defaultdict(lambda: {"calls": 0, "parsed": 0, "errors": 0})
+    for r in recs_all:
+        s = by_setting[r.get("setting_max_tokens", 40)]
+        s["calls"] += 1
+        s["errors"] += 1 if r.get("error") else 0
+        s["parsed"] += 1 if (r.get("correct") is not None) else 0
 
     obs = A.load_machine(RAW)
+    # guard against a cell appearing twice (should not happen; kept cheap)
+    seen, dedup = set(), []
+    for o in obs:
+        k = (o["reader"], o["item"], o["lang"], o["register"], o["document"])
+        if k in seen:
+            dedup = [x for x in dedup if (x["reader"], x["item"], x["lang"], x["register"], x["document"]) != k]
+        seen.add(k)
+        dedup.append(o)
+    obs = dedup
     n_raw = len(recs)
     n_parsed = len(obs)
     compliance = n_parsed / n_raw if n_raw else float("nan")
@@ -92,6 +112,7 @@ def main():
         "n_calls": n_raw, "n_parsed": n_parsed, "n_errors": errors,
         "strict_json_compliance": strict / n_raw if n_raw else None,
         "parse_compliance": compliance,
+        "compliance_by_setting": {str(k): v for k, v in sorted(by_setting.items())},
         "report": rep,
         "per_model": per_model,
         "cost": {"per_model": costs, "estimated_total_usd": round(total_usd, 4)},
@@ -112,6 +133,12 @@ def main():
     L.append("**Status: exploratory.** Per the pre-registration (§7) this arm is underpowered "
              "for the effect sizes of interest and issues no confirmatory verdict; it "
              "measures machine legibility, not comprehension.")
+    L.append("")
+    L.append("**Compliance by completion budget** (the registered setting is `max_tokens=40`; "
+             "deviation #1 re-runs one model's empty-content cells at 1024):")
+    L.append("")
+    for st, s in sorted(by_setting.items()):
+        L.append("- `max_tokens=%d`: %d calls, %d parsed, %d errors" % (st, s["calls"], s["parsed"], s["errors"]))
     L.append("")
     L.append("## Pre-registered quantities")
     L.append("")

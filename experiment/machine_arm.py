@@ -166,6 +166,10 @@ def main():
     ap.add_argument("--models", default=",".join(REGISTERED_MODELS))
     ap.add_argument("--limit", type=int, default=0, help="use only the first N models")
     ap.add_argument("--workers", type=int, default=6)
+    ap.add_argument("--max-tokens", type=int, default=40,
+                    help="registered setting is 40; raising it is a documented deviation")
+    ap.add_argument("--redo-errors", action="store_true",
+                    help="re-run cells whose recorded attempt failed (deviation pass)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
@@ -182,18 +186,29 @@ def main():
     if unknown:
         print("WARNING: not in the OpenRouter catalogue, will skip:", unknown)
     models = [m for m in models if m in meta]
+    meta_all = {}
+    if os.path.exists(MODELS_OUT):
+        try:
+            meta_all = json.load(open(MODELS_OUT, encoding="utf-8"))
+        except Exception:
+            meta_all = {}
+    meta_all.update({m: meta[m] for m in models})
     with open(MODELS_OUT, "w", encoding="utf-8") as f:
-        json.dump({m: meta[m] for m in models}, f, ensure_ascii=False, indent=2)
+        json.dump(meta_all, f, ensure_ascii=False, indent=2)
 
-    # resume: skip cells already recorded
+    # resume: skip cells already recorded (with --redo-errors, re-run failed cells)
     done = set()
     if os.path.exists(RAW):
         for line in open(RAW, encoding="utf-8"):
             try:
                 r = json.loads(line)
-                done.add((r["model"], r["document"], r["item"], r["lang"], r["register"]))
             except Exception:
-                pass
+                continue
+            cell = (r["model"], r["document"], r["item"], r["lang"], r["register"])
+            if r.get("error") and args.redo_errors:
+                done.discard(cell)
+                continue
+            done.add(cell)
     jobs = [(m, c) for m in models for c in todo if (m, c["document"], c["item"], c["lang"], c["register"]) not in done]
     print("models=%d cells/model=%d total_cells=%d already_done=%d to_run=%d"
           % (len(models), len(todo), len(models) * len(todo), len(done), len(jobs)))
@@ -205,12 +220,13 @@ def main():
     def run_one(job):
         model, c = job
         prompt = build_prompt(c["_doc"], c["_item"], c["lang"])
-        payload = {"model": model, "temperature": 0, "max_tokens": 40,
+        payload = {"model": model, "temperature": 0, "max_tokens": args.max_tokens,
                    "messages": [{"role": "system", "content": SYSTEM},
                                 {"role": "user", "content": prompt}]}
         rec = {"model": model, "document": c["document"], "item": c["item"],
                "register": c["register"], "lang": c["lang"], "kind": c["kind"],
-               "answer_key": c["answer_key"], "ts": time.strftime("%Y-%m-%dT%H:%M:%S")}
+               "answer_key": c["answer_key"], "setting_max_tokens": args.max_tokens,
+               "ts": time.strftime("%Y-%m-%dT%H:%M:%S")}
         last_err = None
         for attempt in range(4):
             t0 = time.time()

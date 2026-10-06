@@ -1,6 +1,6 @@
 # 05.4 — Universal document morphology
 
-**Version 1.0.1 — frozen 2026-10-06.** A comparative atlas of how the world
+**Version 1.1 — frozen 2026-10-06.** A comparative atlas of how the world
 formats official documents, and whether a universal document structure exists.
 
 A one-page overview is in `EXECUTIVE_SUMMARY.md`.
@@ -42,6 +42,7 @@ the khipu and wampum, bound it). See `morphology.md`.
 | `check_claims.py` | the gate |
 | `analysis/` | `findings.md` (slot census, complementarity, similarity, evidence base) · `qualitative_analysis.md` (implication rules, thematic coding, onomastics, diachrony) · CSVs: `slot_matrix`, `slot_similarity`, `theme_matrix`, `document_types`, `evidence_base` |
 | `analysis/recompute.py` | rebuilds `slot_matrix`, `slot_similarity` and `evidence_base` from the frozen data, then fails if any figure quoted in `findings.md`, `qualitative_analysis.md` or `EXECUTIVE_SUMMARY.md` has drifted from it |
+| `experiment/` | the empirical test of finding 5: pre-registration, stimuli, analysis code, machine-arm data and the participant instrument — see `experiment/README.md` |
 | `sources/` | retrieved primary/near-primary texts (PDFs + extracted text) |
 
 ## The gate
@@ -92,7 +93,10 @@ all 28 of them against the prose, so the two can no longer drift apart.
   not derivable from the CSVs, so `recompute.py` checks the figures it can
   derive and leaves those tables alone.
 - "Efficiency" is measured nowhere in the standards; `morphology.md` §6 states
-  what an empirical test would require.
+  what an empirical test would require. That test is now designed, pre-registered
+  and half-run (`experiment/`): the machine arm found no detectable register effect
+  and hit a ceiling for 9 of 12 reader models, so it is reported as exploratory and
+  says nothing about human comprehension; the human arm still needs participants.
 
 ## Version history
 
@@ -107,6 +111,7 @@ all 28 of them against the prose, so the two can no longer drift apart.
 | 0.7 | structural + qualitative analyses → `analysis/` | 28 |
 | 1.0 | onomastic gap closed (НК 010:2021); gate extended to `analysis/`; frozen | 28 |
 | 1.0.1 | analysis figures resynced to the 225-row data (S1 census, SU density, Jaccard, script census, evidence base); `analysis/recompute.py` added as a second gate | 28 |
+| 1.1 | finding 5 given an empirical test (`experiment/`): pre-registered design, stimuli, analysis code, machine arm run over 12 reader models (no detectable register effect; item set at ceiling for 9 of them); human instrument built and awaiting participants | 28 |
 
 ## Method and provenance
 

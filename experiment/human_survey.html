@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Розуміння офіційних документів / Understanding official documents</title>
+<style>
+  :root { --fg:#111; --bg:#fbfbf9; --muted:#555; --line:#bbb; --accent:#1a4f8a; }
+  html { font-size: 18px; }
+  body { margin:0; background:var(--bg); color:var(--fg);
+         font-family: "DejaVu Serif", Georgia, "Times New Roman", serif;
+         line-height:1.65; }
+  main { max-width: 46rem; margin: 0 auto; padding: 1.5rem 1.25rem 5rem; }
+  h1 { font-size:1.5rem; line-height:1.3; margin:0 0 .5rem; }
+  h2 { font-size:1.15rem; margin:1.6rem 0 .4rem; }
+  .muted { color:var(--muted); font-size:.92rem; }
+  .doc { border:1px solid var(--line); background:#fff; padding:1rem 1.1rem;
+         margin:.9rem 0 1.2rem; white-space:pre-wrap; font-size:1.02rem; }
+  fieldset { border:0; padding:0; margin:1.1rem 0 0; }
+  legend { font-weight:bold; padding:0 0 .35rem; }
+  label.opt { display:block; padding:.5rem .6rem; border:1px solid var(--line);
+              border-radius:.25rem; margin:.35rem 0; background:#fff; cursor:pointer; }
+  label.opt:hover { border-color:var(--accent); }
+  label.opt input { margin-right:.55rem; }
+  button { font:inherit; padding:.6rem 1.1rem; border:1px solid var(--accent);
+           background:var(--accent); color:#fff; border-radius:.25rem; cursor:pointer; }
+  button.secondary { background:#fff; color:var(--accent); }
+  button:focus, label.opt:focus-within, input:focus { outline:3px solid #ffbf47; outline-offset:2px; }
+  .bar { height:.4rem; background:#e3e3e0; border-radius:.2rem; overflow:hidden; margin:.6rem 0 1.4rem; }
+  .bar > i { display:block; height:100%; background:var(--accent); width:0; }
+  .conf { display:flex; gap:.6rem; flex-wrap:wrap; margin-top:.4rem; }
+  .conf label { border:1px solid var(--line); border-radius:.25rem; padding:.35rem .6rem; background:#fff; cursor:pointer; }
+  textarea { width:100%; height:9rem; font-family:ui-monospace, monospace; font-size:.85rem; }
+  .skip { background:none; border:0; color:var(--accent); text-decoration:underline; padding:.2rem 0; cursor:pointer; }
+  details { margin-top:1rem; }
+  .big { font-size:1.2rem; }
+</style>
+</head>
+<body>
+<main id="app" aria-live="polite"></main>
+<script>
+const STIM = {
+ "meta": {
+  "project": "05.4_universal_document_morphology",
+  "study": "Finding 5 comprehension test — does formal/legally-valid register reduce comprehension of the same obligation?",
+  "created": "2026-10-06",
+  "design": "within-item; 6 obligations x 4 registers = 24 documents; register in {formal, plain} x language in {en, uk}",
+  "items_per_document": 2,
+  "chance_level": 0.25,
+  "number_policy": "All numerals are written as digits in all four registers. Number form is deliberately held constant so the manipulation is style and syntax only, never the encoding of the fact itself.",
+  "register_conventions": {
+   "formal_en": "UN/EU legislative drafting: modal 'shall', impersonal subject, subordinate clauses, nominalisation, no direct address.",
+   "plain_en": "ISO 24495-1:2023 principles (relevant, findable, understandable, usable): short sentences, one idea per sentence, active voice, direct address, common words.",
+   "formal_uk": "ДСТУ/наказ chancery style: impersonal third person, reflexive verbs in -ся, 'у разі', 'протягом', nominalisation, no direct address.",
+   "plain_uk": "Same ISO principles rendered in Ukrainian: short sentences, active voice, direct address ('ви'), common words."
+  },
+  "plain_language_basis": "The four principles are taken from the International Plain Language Federation's page on the ISO standard (retrieved: sources/iplf_iso_standard.html); the standard text itself (ISO 24495-1:2023) is paywalled and is cited by catalogue entry, not quoted.",
+  "provenance_rule": "Every obligation is CONSTRUCTED for this test in the manner of the cited atlas source (verbatim=false). None is a quotation. The fact tuples are modelled on the real regimes catalogued in the atlas so that the register contrast is ecologically realistic."
+ },
+ "documents": [
+  {
+   "id": "D1",
+   "registers": {
+    "en-formal": "Incoming documents shall be registered by the records service on the day of their receipt. Documents received after 17:00 shall be registered on the following working day. The registration record shall contain the date of receipt, the name of the correspondent and the registration index assigned in accordance with the nomenclature of files of the structural unit responsible for the examination of the document.",
+    "en-plain": "Register incoming documents on the day you receive them. If a document arrives after 17:00, register it on the next working day. Your registration record needs three things: the date of receipt, the correspondent's name and the registration index.",
+    "uk-formal": "Вхідні документи реєструються службою діловодства у день їх надходження. Документи, що надійшли після 17:00, реєструються наступного робочого дня. У записі про реєстрацію зазначаються дата надходження, найменування кореспондента та реєстраційний індекс, що формується відповідно до номенклатури справ структурного підрозділу, який відповідає за розгляд документа.",
+    "uk-plain": "Вхідні документи реєструйте в день надходження. Якщо документ надійшов після 17:00, зареєструйте його наступного робочого дня. У записі про реєстрацію потрібні три речі: дата надходження, назва кореспондента і реєстраційний індекс."
+   },
+   "items": [
+    {
+     "id": "D1-Q1",
+     "kind": "extraction",
+     "answer": "B",
+     "q_uk": "Документ надійшов о 18:00. Коли його потрібно зареєструвати?",
+     "q_en": "A document arrives at 18:00. When must it be registered?",
+     "options_uk": [
+      "Того самого дня",
+      "Наступного робочого дня",
+      "Протягом 3 робочих днів",
+      "У день підписання"
+     ],
+     "options_en": [
+      "On the same day",
+      "On the next working day",
+      "Within 3 working days",
+      "On the day it was signed"
+     ]
+    },
+    {
+     "id": "D1-Q2",
+     "kind": "extraction",
+     "answer": "A",
+     "q_uk": "Що обов'язково зазначають у записі про реєстрацію?",
+     "q_en": "What must the registration record contain?",
+     "options_uk": [
+      "Дату надходження, назву кореспондента і реєстраційний індекс",
+      "Лише реєстраційний індекс",
+      "Посаду і підпис керівника",
+      "Строк зберігання документа"
+     ],
+     "options_en": [
+      "The date of receipt, the correspondent's name and the registration index",
+      "Only the registration index",
+      "The head's position and signature",
+      "The document's retention period"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D2",
+   "registers": {
+    "en-formal": "An application shall be examined within a period not exceeding 30 calendar days from the date of its receipt. Where additional documents are required to be requested, the period of examination shall be extended by 15 calendar days. The applicant shall be notified of the extension within 3 working days from the date on which the decision to extend was taken.",
+    "en-plain": "You must answer an application within 30 calendar days of the day you receive it. If you need more documents, you can extend that period by 15 calendar days. Once you decide to extend, tell the applicant within 3 working days.",
+    "uk-formal": "Звернення розглядається у строк, що не перевищує 30 календарних днів з дня його надходження. У разі необхідності витребування додаткових документів строк розгляду продовжується на 15 календарних днів. Про продовження строку заявник повідомляється протягом 3 робочих днів з дня прийняття відповідного рішення.",
+    "uk-plain": "Відповісти на звернення треба протягом 30 календарних днів від дня, коли ви його отримали. Якщо потрібні додаткові документи, строк можна продовжити на 15 календарних днів. Коли ви вирішили продовжити строк, повідомте заявника протягом 3 робочих днів."
+   },
+   "items": [
+    {
+     "id": "D2-Q1",
+     "kind": "extraction",
+     "answer": "C",
+     "q_uk": "Який максимальний строк розгляду звернення без продовження?",
+     "q_en": "What is the longest period for examining an application before any extension?",
+     "options_uk": [
+      "10 календарних днів",
+      "15 календарних днів",
+      "30 календарних днів",
+      "45 календарних днів"
+     ],
+     "options_en": [
+      "10 calendar days",
+      "15 calendar days",
+      "30 calendar days",
+      "45 calendar days"
+     ]
+    },
+    {
+     "id": "D2-Q2",
+     "kind": "inference",
+     "answer": "D",
+     "q_uk": "Ви вирішили продовжити строк. Коли треба повідомити заявника?",
+     "q_en": "You decide to extend the period. When must you tell the applicant?",
+     "options_uk": [
+      "Одразу після надходження звернення",
+      "Протягом 15 календарних днів від дня цього рішення",
+      "Разом із остаточною відповіддю",
+      "Протягом 3 робочих днів від дня цього рішення"
+     ],
+     "options_en": [
+      "Immediately after the application arrives",
+      "Within 15 calendar days of that decision",
+      "Together with the final answer",
+      "Within 3 working days of that decision"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D3",
+   "registers": {
+    "en-formal": "This Act shall enter into force on the day following its publication in the Official Bulletin. The provisions relating to fees shall apply from 1 January 2027. The Act shall be binding in its entirety and directly applicable.",
+    "en-plain": "This Act starts to apply the day after it is published in the Official Bulletin. The rules about fees start on 1 January 2027. The whole Act is binding, and you apply it directly.",
+    "uk-formal": "Цей акт набирає чинності з дня, наступного за днем його опублікування в офіційному бюлетені. Положення щодо плати застосовуються з 1 січня 2027 року. Акт є обов'язковим у повному обсязі та підлягає прямому застосуванню.",
+    "uk-plain": "Цей акт починає діяти наступного дня після публікації в офіційному бюлетені. Правила про плату починають діяти з 1 січня 2027 року. Акт обов'язковий повністю, і його застосовують напряму."
+   },
+   "items": [
+    {
+     "id": "D3-Q1",
+     "kind": "extraction",
+     "answer": "B",
+     "q_uk": "Коли акт набирає чинності?",
+     "q_en": "When does the Act enter into force?",
+     "options_uk": [
+      "У день його опублікування",
+      "Наступного дня після опублікування",
+      "Через 30 днів після опублікування",
+      "З 1 січня 2027 року"
+     ],
+     "options_en": [
+      "On the day of its publication",
+      "On the day after its publication",
+      "30 days after its publication",
+      "From 1 January 2027"
+     ]
+    },
+    {
+     "id": "D3-Q2",
+     "kind": "extraction",
+     "answer": "C",
+     "q_uk": "З якої дати застосовують положення про плату?",
+     "q_en": "From when do the fee provisions apply?",
+     "options_uk": [
+      "З дня опублікування",
+      "З наступного дня після опублікування",
+      "З 1 січня 2027 року",
+      "Вони не застосовуються"
+     ],
+     "options_en": [
+      "From the day of publication",
+      "From the day after publication",
+      "From 1 January 2027",
+      "They do not apply"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D4",
+   "registers": {
+    "en-formal": "An appeal shall be lodged within 10 working days from the day on which the person became aware of the decision. Where that period has been missed for a valid reason supported by documentary evidence, the body may nevertheless accept the appeal for examination. A decision on the appeal shall be taken within 20 calendar days.",
+    "en-plain": "File your appeal within 10 working days of the day you learn about the decision. If you miss that deadline for a good reason and can prove it with documents, the body can still accept your appeal. The body decides on the appeal within 20 calendar days.",
+    "uk-formal": "Скарга подається протягом 10 робочих днів з дня, коли особі стало відомо про рішення. У разі пропущення цього строку з поважної причини, підтвердженої документально, орган може прийняти скаргу до розгляду. Рішення за скаргою приймається протягом 20 календарних днів.",
+    "uk-plain": "Подайте скаргу протягом 10 робочих днів від дня, коли ви дізналися про рішення. Якщо ви пропустили строк з поважної причини і підтвердили її документами, орган може прийняти скаргу. Рішення за скаргою ухвалюють протягом 20 календарних днів."
+   },
+   "items": [
+    {
+     "id": "D4-Q1",
+     "kind": "extraction",
+     "answer": "B",
+     "q_uk": "Скільки часу має особа, щоб подати скаргу?",
+     "q_en": "How long does a person have to file an appeal?",
+     "options_uk": [
+      "10 календарних днів від дня, коли дізналася про рішення",
+      "10 робочих днів від дня, коли дізналася про рішення",
+      "20 календарних днів від дня рішення",
+      "30 календарних днів від дня рішення"
+     ],
+     "options_en": [
+      "10 calendar days from learning of the decision",
+      "10 working days from learning of the decision",
+      "20 calendar days from the decision",
+      "30 calendar days from the decision"
+     ]
+    },
+    {
+     "id": "D4-Q2",
+     "kind": "inference",
+     "answer": "D",
+     "q_uk": "Строк пропущено з поважної причини, яку підтверджено документами. Що може зробити орган?",
+     "q_en": "The deadline was missed for a valid reason that is confirmed by documents. What can the body do?",
+     "options_uk": [
+      "Відмовити автоматично",
+      "Продовжити строк на 20 календарних днів",
+      "Передати скаргу до суду",
+      "Може все одно прийняти скаргу до розгляду"
+     ],
+     "options_en": [
+      "Refuse the appeal automatically",
+      "Extend the deadline by 20 calendar days",
+      "Forward the appeal to a court",
+      "It may still accept the appeal"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D5",
+   "registers": {
+    "en-formal": "Documents of temporary storage, being those marked for retention for a period of up to 10 years inclusive, shall be kept for 5 years. Personnel documents shall be kept for 75 years. The destruction of documents shall be permitted only by decision of the expert commission, which shall be recorded in an act.",
+    "en-plain": "Keep temporary documents, those marked up to 10 years inclusive, for 5 years. Keep personnel documents for 75 years. You may destroy documents only if the expert commission agrees, and you must record that decision in an act.",
+    "uk-formal": "Документи тимчасового зберігання, строк зберігання яких становить до 10 років включно, зберігаються 5 років. Документи з особового складу зберігаються 75 років. Знищення документів допускається виключно за рішенням експертної комісії, яке оформлюється актом.",
+    "uk-plain": "Документи тимчасового зберігання (до 10 років включно) зберігайте 5 років. Документи з особового складу зберігайте 75 років. Знищити документи можна лише за рішенням експертної комісії, і це рішення треба оформити актом."
+   },
+   "items": [
+    {
+     "id": "D5-Q1",
+     "kind": "extraction",
+     "answer": "C",
+     "q_uk": "Скільки зберігають документи з особового складу?",
+     "q_en": "How long are personnel documents kept?",
+     "options_uk": [
+      "5 років",
+      "10 років",
+      "75 років",
+      "Постійно"
+     ],
+     "options_en": [
+      "5 years",
+      "10 years",
+      "75 years",
+      "Permanently"
+     ]
+    },
+    {
+     "id": "D5-Q2",
+     "kind": "inference",
+     "answer": "A",
+     "q_uk": "Хто може дозволити знищення документів?",
+     "q_en": "Who may authorise the destruction of documents?",
+     "options_uk": [
+      "Експертна комісія, рішення якої оформлюють актом",
+      "Будь-який працівник підрозділу",
+      "Одноосібно керівник установи",
+      "Архів іншої установи"
+     ],
+     "options_en": [
+      "The expert commission, whose decision is recorded in an act",
+      "Any employee of the unit",
+      "The head of the institution alone",
+      "The archive of another institution"
+     ]
+    }
+   ]
+  },
+  {
+   "id": "D6",
+   "registers": {
+    "en-formal": "In the absence of the head, documents shall be signed by the deputy head. The deputy's authority to sign shall be valid only where the head has issued a written order designating that deputy. Responsibility for the documents so signed shall rest with the deputy head.",
+    "en-plain": "When the head is away, the deputy signs. The deputy can sign only if the head has issued a written order naming that deputy. The deputy is responsible for the documents they sign.",
+    "uk-formal": "У разі відсутності керівника документи підписує заступник керівника. Повноваження заступника на підписання є чинними виключно за наявності письмового розпорядження керівника, яким визначено відповідного заступника. Відповідальність за підписані документи несе заступник керівника.",
+    "uk-plain": "Коли керівник відсутній, документи підписує заступник. Заступник може підписувати лише тоді, коли керівник видав письмове розпорядження і назвав у ньому цього заступника. За підписані документи відповідає заступник."
+   },
+   "items": [
+    {
+     "id": "D6-Q1",
+     "kind": "inference",
+     "answer": "A",
+     "q_uk": "За якої умови підпис заступника чинний?",
+     "q_en": "On what condition is the deputy's signature valid?",
+     "options_uk": [
+      "Якщо керівник видав письмове розпорядження і назвав цього заступника",
+      "Завжди, коли керівник відсутній",
+      "Якщо заступник має понад п'ять років стажу",
+      "Якщо заступник погодився усно"
+     ],
+     "options_en": [
+      "If the head has issued a written order naming that deputy",
+      "Always, whenever the head is absent",
+      "If the deputy has more than five years' service",
+      "If the deputy agreed verbally"
+     ]
+    },
+    {
+     "id": "D6-Q2",
+     "kind": "inference",
+     "answer": "D",
+     "q_uk": "Хто відповідає за підписані заступником документи?",
+     "q_en": "Who is responsible for the documents the deputy signs?",
+     "options_uk": [
+      "Керівник",
+      "Служба діловодства",
+      "Ніхто",
+      "Заступник"
+     ],
+     "options_en": [
+      "The head",
+      "The records service",
+      "Nobody",
+      "The deputy"
+     ]
+    }
+   ]
+  }
+ ]
+};
+const KEY = "udm_comp_test_v1";
+const S = { step: "intro", i: 0, order: [], regOrder: {}, started: null, finished: null,
+            pid: null, lang: "uk", answers: {}, conf: {} };
+
+/* ---------- deterministic per-participant permutation ---------- */
+function hash(str){ let h=2166136261; for(let i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,16777619);} return h>>>0; }
+function mulberry(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
+function shuffled(arr, rnd){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+function buildOrder(){
+  const rnd = mulberry(hash(S.pid));
+  S.order = shuffled(STIM.documents.map(d=>d.id), rnd);
+  S.regOrder = {};
+  for(const id of S.order){
+    const first = rnd() < 0.5 ? ["formal","plain"] : ["plain","formal"];
+    S.regOrder[id] = first;
+  }
+}
+
+/* ---------- persistence ---------- */
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+function load(){
+  let raw=null; try{ raw=localStorage.getItem(KEY); }catch(e){}
+  if(!raw) return false;
+  try{ const o=JSON.parse(raw); Object.assign(S,o); return S.step!=="intro"; }catch(e){ return false; }
+}
+function resetAll(){ try{ localStorage.removeItem(KEY); }catch(e){}
+  location.reload(); }
+
+/* ---------- helpers ---------- */
+const el = (t,a={},...kids)=>{ const n=document.createElement(t); for(const k in a){ if(k==="class"){n.className=a[k];} else {n.setAttribute(k,a[k]);} } kids.forEach(k=>n.append(k)); return n; };
+const t = (txt)=>document.createTextNode(txt);
+function T(uk, en){ return S.lang==="uk" ? uk : en; }
+function trialKey(docId, reg, itemId){ return docId+"|"+reg+"|"+itemId; }
+function answeredCount(){ return Object.keys(S.answers).filter(k=>S.answers[k]).length; }
+function totalTrials(){ return STIM.documents.length*2*STIM.meta.items_per_document; }
+
+/* ---------- screens ---------- */
+function render(){
+  const app = document.getElementById("app");
+  app.innerHTML = "";
+  window.scrollTo(0,0);
+  if(S.step==="intro") return renderIntro(app);
+  if(S.step==="task")  return renderTask(app);
+  if(S.step==="done")  return renderDone(app);
+}
+
+function renderIntro(app){
+  app.append(el("h1",{}, t(T("Розуміння офіційних документів",
+                             "Understanding official documents"))));
+  app.append(el("p",{class:"muted"}, t(T(
+    "Дослідження до атласу стандартів оформлення документів (проєкт 05.4). Ви прочитаєте 12 коротких фрагментів офіційних документів і відповісте на 24 запитання. Це займе приблизно 10–15 хвилин.",
+    "A study for the official-document standards atlas (project 05.4). You will read 12 short passages of official documents and answer 24 questions. This takes about 10–15 minutes."))));
+  app.append(el("h2",{}, t(T("Що важливо знати","What you should know"))));
+  const ul = el("ul",{});
+  [
+    T("Участь добровільна, ім'я не потрібне. Нічого не надсилається автоматично: відповіді зберігаються лише у вашому браузері, і наприкінці ви завантажуєте файл із результатами.",
+      "Participation is voluntary and anonymous. Nothing is sent anywhere: your answers stay in this browser, and at the end you download a results file."),
+    T("Прочитайте фрагмент уважно, але не повертайтеся назад: кожен документ показується один раз.",
+      "Read each passage carefully, but you cannot go back: each document is shown once."),
+    T("Запитання мають 4 варіанти відповіді; правильна лише одна. Якщо не знаєте — оберіть найближчий варіант або натисніть «пропустити».",
+      "Each question has 4 options and exactly one correct answer. If unsure, pick the closest option or press skip."),
+    T("Немає обмеження часу і немає «правильної швидкості».",
+      "There is no time limit and no \"right\" speed.")
+  ].forEach(x=>ul.append(el("li",{},t(x))));
+  app.append(ul);
+  app.append(el("h2",{}, t(T("Мова","Language"))));
+  const langs = el("div",{class:"conf",role:"radiogroup","aria-label":T("Мова","Language")});
+  [["uk","Українська"],["en","English"]].forEach(([code,label])=>{
+    const id="lang_"+code;
+    const l=el("label",{for:id}, el("input",{type:"radio",name:"lang",id:id,value:code,checked:S.lang===code?"checked":null}), t(label));
+    l.querySelector("input").addEventListener("change",()=>{S.lang=code; save();});
+    langs.append(l);
+  });
+  app.append(langs);
+  app.append(el("p",{}, el("button",{id:"start"}, t(T("Почати","Start")))));
+  app.append(el("p",{class:"muted small"}, t(T(
+    "Продовжуючи, ви погоджуєтеся взяти участь. Ви можете закрити сторінку будь-коли; щоб почати заново, натисніть «Скинути».",
+    "By continuing you agree to take part. You can close the page at any time; to start over, press reset."))));
+  document.getElementById("start").addEventListener("click", ()=>{
+    if(!S.pid){ S.pid = (new URLSearchParams(location.search)).get("pid") || "p"+Math.random().toString(36).slice(2,10); }
+    buildOrder(); S.started = new Date().toISOString(); S.step="task"; S.i=0; save(); render();
+  });
+  app.append(el("p",{}, el("button",{class:"skip",id:"reset"}, t(T("Скинути збережений прогрес","Reset saved progress")))));
+  document.getElementById("reset").addEventListener("click", resetAll);
+}
+
+function renderTask(app){
+  const docId = S.order[S.i];
+  const doc = STIM.documents.find(d=>d.id===docId);
+  const regs = S.regOrder[docId];
+  const reg = regs[S.regCursor||0];
+  const shown = new Date();
+  const pct = Math.round(100*answeredCount()/totalTrials());
+  app.append(el("h1",{}, t(T("Документ","Document")) + " " + (S.i+1) + "/" + S.order.length));
+  app.append(el("div",{class:"bar",role:"progressbar","aria-valuenow":pct,"aria-valuemin":"0","aria-valuemax":"100"},
+    el("i",{style:"width:"+pct+"%"})));
+  app.append(el("div",{class:"doc",lang:S.lang==="uk"?"uk":"en"}, t(doc.registers[S.lang+"-"+reg])));
+  doc.items.forEach((it, qi)=>{
+    const fs = el("fieldset",{});
+    fs.append(el("legend",{}, t(it["q_"+S.lang])));
+    const opts = it["options_"+S.lang];
+    opts.forEach((o, oi)=>{
+      const letter="ABCD"[oi], id=trialKey(docId,reg,it.id)+"_"+letter;
+      const l = el("label",{class:"opt",for:id});
+      const input = el("input",{type:"radio",name:trialKey(docId,reg,it.id),id:id,value:letter});
+      const prev = S.answers[trialKey(docId,reg,it.id)];
+      if(prev===letter) input.setAttribute("checked","checked");
+      input.addEventListener("change",()=>{ S.answers[trialKey(docId,reg,it.id)]=letter; save(); updateProgress(); });
+      l.append(input, t(letter + ". " + o));
+      fs.append(l);
+    });
+    const skip = el("button",{class:"skip",type:"button"}, t(T("пропустити це запитання","skip this question")));
+    skip.addEventListener("click", ()=>{ S.answers[trialKey(docId,reg,it.id)]="SKIP"; save(); updateProgress(); });
+    fs.append(skip);
+    app.append(fs);
+  });
+  app.append(el("h2",{}, t(T("Наскільки впевнено ви відповіли?","How confident are you in your answers?"))));
+  const conf = el("div",{class:"conf",role:"radiogroup","aria-label":T("Впевненість","Confidence")});
+  [["1",T("1 — зовсім не впевнено","1 — not at all")],["2","2"],["3","3"],["4","4"],
+   ["5",T("5 — цілком впевнено","5 — completely")]].forEach(([v,lbl])=>{
+    const id="conf_"+v;
+    const l=el("label",{for:id});
+    const input=el("input",{type:"radio",name:"conf_"+(docId+reg),id:id,value:v});
+    if(S.conf[docId+"|"+reg]===v) input.setAttribute("checked","checked");
+    input.addEventListener("change",()=>{ S.conf[docId+"|"+reg]=v; save(); });
+    l.append(input, t(lbl));
+    conf.append(l);
+  });
+  app.append(conf);
+  const next = el("p",{}, el("button",{id:"next"}, t(
+    (S.i===S.order.length-1 && (S.regCursor||0)===regs.length-1)
+      ? T("Завершити","Finish") : T("Далі","Next"))));
+  app.append(next);
+  const rt = ()=> Math.round(performance.now() - shown.getTime());
+  document.getElementById("next").addEventListener("click", ()=>{
+    const key = docId+"|"+reg;
+    const now = new Date().getTime();
+    doc.items.forEach(it=>{
+      const k = trialKey(docId,reg,it.id);
+      const rec = S.answers[k];
+      S.answers[k] = rec || "SKIP";
+      S.answers["rt_"+key] = now - shown.getTime();
+    });
+    save();
+    if((S.regCursor||0) === regs.length-1){ S.regCursor = 0; S.i += 1; } else { S.regCursor = (S.regCursor||0)+1; }
+    if(S.i >= S.order.length){ S.step="done"; S.finished=new Date().toISOString(); }
+    save(); render();
+  });
+}
+
+function updateProgress(){
+  const pct = Math.round(100*answeredCount()/totalTrials());
+  const bar=document.querySelector(".bar");
+  if(bar){ bar.setAttribute("aria-valuenow",pct); bar.querySelector("i").style.width=pct+"%"; }
+}
+
+function exportObject(){
+  const trials=[];
+  for(const docId of STIM.documents.map(d=>d.id)){
+    const doc = STIM.documents.find(d=>d.id===docId);
+    ["formal","plain"].forEach(reg=>{
+      doc.items.forEach(it=>{
+        const k = trialKey(docId,reg,it.id);
+        const resp = S.answers[k];
+        const idx = "ABCD".indexOf(resp);
+        trials.push({
+          item: it.id, document: docId, register: reg, lang: S.lang, kind: it.kind,
+          response: (resp==="SKIP"||resp===undefined) ? null : resp,
+          correct: (idx>=0 && resp===it.answer) ? 1 : 0,
+          keyed: it.answer,
+          rt_ms: S.answers["rt_"+docId+"|"+reg] || null,
+          confidence: S.conf[docId+"|"+reg] || null
+        });
+      });
+    });
+  }
+  trials.sort((a,b)=> (a.document+a.register+a.item).localeCompare(b.document+b.register+b.item));
+  const attempted = trials.filter(t=>t.response!==null).length;
+  return { participant: S.pid, lang: S.lang, started: S.started, finished: S.finished,
+           n_trials: trials.length, n_attempted: attempted,
+           duration_min: S.started ? Math.round((new Date(S.finished||Date.now()) - new Date(S.started))/6000)/10 : null,
+           design: "within: both registers of every obligation",
+           stimuli_version: STIM.meta.created, trials: trials };
+}
+
+function renderDone(app){
+  const obj = exportObject();
+  const json = JSON.stringify(obj, null, 1);
+  app.append(el("h1",{}, t(T("Дякую! Це все.","Thank you — that is everything."))));
+  app.append(el("p",{class:"big"}, t(T("Завантажте файл із результатами й надішліть його досліднику.",
+                                       "Download the results file and send it back to the researcher."))));
+  const dl = el("button",{id:"dl"}, t(T("Завантажити результати (JSON)","Download results (JSON)")));
+  dl.addEventListener("click", ()=>{
+    const blob = new Blob([json], {type:"application/json"});
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "comprehension_"+S.pid+".json";
+    document.body.append(a); a.click(); a.remove();
+  });
+  app.append(el("p",{}, dl));
+  app.append(el("details",{}, el("summary",{}, t(T("Або скопіюйте вміст файлу вручну","Or copy the file contents manually"))),
+    el("textarea",{readonly:"readonly","aria-label":"results json"}, t(json))));
+  app.append(el("p",{class:"muted"}, t(T("Відповідей: ","Answered: ") + obj.n_attempted + "/" + obj.n_trials +
+      " · " + T("ідентифікатор учасника","participant id") + ": " + S.pid)));
+  app.append(el("p",{}, el("button",{class:"secondary",id:"again"}, t(T("Почати заново (скидання)","Start over (reset)")))));
+  document.getElementById("again").addEventListener("click", resetAll);
+}
+
+/* ---------- boot ---------- */
+(function(){
+  const resumed = load();
+  if(resumed && S.step==="task" && (!S.order || !S.order.length)) buildOrder();
+  if(resumed && S.step==="task" && !S.regOrder) buildOrder();
+  render();
+})();
+</script>
+</body>
+</html>

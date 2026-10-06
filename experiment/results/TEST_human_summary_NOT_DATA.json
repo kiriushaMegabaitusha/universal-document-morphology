@@ -1,0 +1,143 @@
+{
+  "n_participants": 1,
+  "excluded": [],
+  "verdict": "FIXTURE (machine-generated test record, N=1): pipeline check only, no inferential claim",
+  "confirmatory": false,
+  "fixture": true,
+  "report": {
+    "arm": "human",
+    "n_obs": 24,
+    "n_items": 12,
+    "n_readers": 1,
+    "items": [
+      "D1-Q1",
+      "D1-Q2",
+      "D2-Q1",
+      "D2-Q2",
+      "D3-Q1",
+      "D3-Q2",
+      "D4-Q1",
+      "D4-Q2",
+      "D5-Q1",
+      "D5-Q2",
+      "D6-Q1",
+      "D6-Q2"
+    ],
+    "item_diffs": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "accuracy_by_register": {
+      "formal": [
+        3,
+        12,
+        0.25
+      ],
+      "plain": [
+        3,
+        12,
+        0.25
+      ]
+    },
+    "accuracy_by_lang_register": {
+      "uk|formal": [
+        3,
+        12,
+        0.25
+      ],
+      "uk|plain": [
+        3,
+        12,
+        0.25
+      ]
+    },
+    "accuracy_by_kind_register": {
+      "extraction|formal": [
+        1,
+        7,
+        0.14285714285714285
+      ],
+      "extraction|plain": [
+        1,
+        7,
+        0.14285714285714285
+      ],
+      "inference|formal": [
+        2,
+        5,
+        0.4
+      ],
+      "inference|plain": [
+        2,
+        5,
+        0.4
+      ]
+    },
+    "permutation": {
+      "n": 12,
+      "mean": 0.0,
+      "p": 1.0,
+      "exact": true
+    },
+    "bootstrap_ci": [
+      0.0,
+      0.0
+    ],
+    "equivalence": {
+      "equivalent": true,
+      "p_lower": 0.0,
+      "p_upper": 0.0
+    },
+    "logit_fe": {
+      "coef": {
+        "register_plain": {
+          "beta": -13.811330076746325,
+          "se": 974.0796586804775,
+          "z": -0.014178850727111619,
+          "p": 0.9886872929669206,
+          "or": 1.0041892316189361e-06
+        }
+      },
+      "ame_pp": -0.04166675961703095,
+      "n_obs": 24,
+      "n_items": 12,
+      "n_readers": 1
+    },
+    "secondary_pvalues": [
+      [
+        "register x language (uk)",
+        0.9992188860294577
+      ],
+      [
+        "register x item type (inference)",
+        0.9970806851331426
+      ]
+    ],
+    "secondary_bh": [
+      [
+        0.9992188860294577,
+        0.9992188860294577,
+        false
+      ],
+      [
+        0.9970806851331426,
+        0.9992188860294577,
+        false
+      ]
+    ],
+    "reader_cluster_boot_beta": [
+      NaN,
+      NaN
+    ]
+  }
+}
