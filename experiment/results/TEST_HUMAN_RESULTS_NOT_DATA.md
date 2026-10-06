@@ -6,6 +6,8 @@
 
 FIXTURE (machine-generated test record, N=1): pipeline check only, no inferential claim
 
+*Reading this: SUPPORTED = a plain-language advantage of at least 10 pp is supported. FALSIFIED = the data exclude an advantage of 10 pp or more, which is not the same as formal beating plain. INCONCLUSIVE = neither, so the estimate and its confidence interval are the report. The pre-registered rule is in PREREGISTRATION.md section 6.*
+
 ## Pre-registered quantities
 
 | quantity | value |

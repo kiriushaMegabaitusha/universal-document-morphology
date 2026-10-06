@@ -75,6 +75,8 @@ def main():
     ap.add_argument("--min-n", type=int, default=20)
     ap.add_argument("--fixture", action="store_true",
                     help="input is the machine-generated fixture, not participant data")
+    ap.add_argument("--outdir", default=None,
+                    help="write outputs here instead of results/ (for dry runs)")
     args = ap.parse_args()
 
     paths = list(args.files)
@@ -93,7 +95,8 @@ def main():
     report_name = "%sHUMAN_RESULTS%s.md" % (tag, suffix)
 
     keys, kinds = key_table()
-    os.makedirs(RESULTS, exist_ok=True)
+    outdir = args.outdir or RESULTS
+    os.makedirs(outdir, exist_ok=True)
 
     rows, excluded, kept = [], [], []
     for p in paths:
@@ -131,7 +134,7 @@ def main():
                 "keyed": ans, "rt_ms": tr.get("rt_ms"), "confidence": tr.get("confidence"),
             })
 
-    tidy = os.path.join(RESULTS, tidy_name)
+    tidy = os.path.join(outdir, tidy_name)
     with open(tidy, "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=["participant", "item", "document", "register",
                                           "lang", "kind", "response", "correct", "keyed",
@@ -176,7 +179,7 @@ def main():
         verdict = "INCONCLUSIVE (mean %+.3f, p = %.4f, CI [%+.3f, %+.3f])" % (
             perm["mean"], perm["p"], rep["bootstrap_ci"][0], rep["bootstrap_ci"][1])
 
-    with open(os.path.join(RESULTS, summary_name), "w", encoding="utf-8") as f:
+    with open(os.path.join(outdir, summary_name), "w", encoding="utf-8") as f:
         json.dump({"n_participants": len(kept), "excluded": excluded, "verdict": verdict,
                    "confirmatory": confirmatory, "fixture": bool(args.fixture),
                    "report": rep}, f, ensure_ascii=False, indent=2)
@@ -185,6 +188,11 @@ def main():
          "**Participants kept:** %d (excluded %d) · **item-administrations:** %d · "
          "**confirmatory:** %s" % (len(kept), len(excluded), len(rows), confirmatory), "",
          "## Verdict", "", verdict, "",
+         "*Reading this: SUPPORTED = a plain-language advantage of at least 10 pp is "
+         "supported. FALSIFIED = the data exclude an advantage of 10 pp or more, which is "
+         "not the same as formal beating plain. INCONCLUSIVE = neither, so the estimate and "
+         "its confidence interval are the report. The pre-registered rule is in "
+         "PREREGISTRATION.md section 6.*", "",
          "## Pre-registered quantities", "",
          "| quantity | value |", "|---|---|"]
     for k, (c, n, p) in sorted(rep["accuracy_by_register"].items()):
@@ -213,12 +221,12 @@ def main():
     L += ["", "## Item-level differences", "", "| item | difference |", "|---|---|"]
     for it, d in zip(rep["items"], rep["item_diffs"]):
         L.append("| %s | %+.3f |" % (it, d))
-    with open(os.path.join(RESULTS, report_name), "w", encoding="utf-8") as f:
+    with open(os.path.join(outdir, report_name), "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
 
     print("\nVERDICT: %s" % verdict)
     print("wrote %s and %s" % (os.path.relpath(tidy, os.path.dirname(HERE)),
-                               os.path.relpath(os.path.join(RESULTS, report_name),
+                               os.path.relpath(os.path.join(outdir, report_name),
                                                os.path.dirname(HERE))))
     return 0
 

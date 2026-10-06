@@ -57,6 +57,7 @@ python3 experiment/check_stimuli.py       # structure, content preservation, ans
 python3 experiment/simulate_data.py       # registered pipeline on simulated data, power/MDE
 python3 experiment/build_survey.py        # regenerate human_survey.html from stimuli.json
 python3 experiment/test_survey_headless.py  # drive the instrument in Chromium (needs playwright)
+python3 experiment/dryrun_confirmatory.py   # exercise the confirmatory path at N=36 on synthetic data
 
 python3 experiment/machine_arm.py         # collect the machine arm (needs OPENROUTER_API_KEY
                                           # in ~/.hermes/.env; ~$0.02, ~5 minutes, resumable)
@@ -78,7 +79,8 @@ python3 experiment/analyze.py             # -> results/RESULTS.md + machine_summ
    the pre-registered exclusions are applied. Writes `results/human_tidy.csv` and
    `results/HUMAN_RESULTS.md` with the pre-registered verdict:
    supported / falsified / inconclusive. Below `--min-n` participants the arm is
-   reported as exploratory instead.
+   reported as exploratory instead. "Falsified" means the data exclude a plain
+   advantage of 10 pp or more — it is not a finding that formal beats plain.
 4. Target **N = 36** complete sessions (registered; ~10–15 minutes each).
 
 ## Files
@@ -95,6 +97,7 @@ python3 experiment/analyze.py             # -> results/RESULTS.md + machine_summ
 | `build_survey.py` | generates the participant instrument from `stimuli.json` |
 | `human_survey.html` | the instrument (generated — do not hand-edit) |
 | `test_survey_headless.py` | dev harness: drives the instrument in Chromium |
+| `dryrun_confirmatory.py` | dev harness: runs the confirmatory path at N = 36 on synthetic data and asserts the decision rule (SESOI-sized effect detected; sub-SESOI and null never "supported"; all three branches reachable) |
 | `score_human.py` | scores participant exports, applies exclusions, writes the human report |
 | `DEVIATIONS.md` | deviation and erratum log (both entries reported side by side) |
 | `results/` | raw JSONL, summaries, reports, manipulation check, cost table |
