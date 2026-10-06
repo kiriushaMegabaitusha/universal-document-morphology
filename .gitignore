@@ -1,1 +1,4 @@
-# nothing to ignore: the retrieved sources are the evidence base of the atlas
+# nothing in sources/ is ignored: the retrieved texts are the evidence base of the atlas
+__pycache__/
+*.pyc
+*.pyo
