@@ -4,7 +4,7 @@
     "study": "Finding 5 comprehension test — does formal/legally-valid register reduce comprehension of the same obligation?",
     "created": "2026-10-06",
     "design": "within-item; 6 obligations x 4 registers = 24 documents; register in {formal, plain} x language in {en, uk}",
-    "items_per_document": 2,
+    "items_per_document": 3,
     "chance_level": 0.25,
     "number_policy": "All numerals are written as digits in all four registers. Number form is deliberately held constant so the manipulation is style and syntax only, never the encoding of the fact itself.",
     "register_conventions": {
@@ -14,7 +14,12 @@
       "plain_uk": "Same ISO principles rendered in Ukrainian: short sentences, active voice, direct address ('ви'), common words."
     },
     "plain_language_basis": "The four principles are taken from the International Plain Language Federation's page on the ISO standard (retrieved: sources/iplf_iso_standard.html); the standard text itself (ISO 24495-1:2023) is paywalled and is cited by catalogue entry, not quoted.",
-    "provenance_rule": "Every obligation is CONSTRUCTED for this test in the manner of the cited atlas source (verbatim=false). None is a quotation. The fact tuples are modelled on the real regimes catalogued in the atlas so that the register contrast is ecologically realistic."
+    "provenance_rule": "Every obligation is CONSTRUCTED for this test in the manner of the cited atlas source (verbatim=false). None is a quotation. The fact tuples are modelled on the real regimes catalogued in the atlas so that the register contrast is ecologically realistic.",
+    "version": 2,
+    "supersedes": "v1 (commit 3c1469e), revised before any data collection: instrument testing showed the two registers of one obligation were read back to back, and the machine-arm pilot showed the item set at ceiling",
+    "session": "12 screens x 3 items = 36 questions, about 15-20 minutes",
+    "presentation": "the two registers of one obligation are placed in different halves of the session, at least 4 screens apart, so a pair is never read consecutively; each participant receives one formal and one plain screen per obligation, and which half carries which register is randomised per pair",
+    "item_gradient": "per obligation: Q1 extraction, Q2 two-fact inference, Q3 harder (date arithmetic, conditional application, or two-fact combination)"
   },
   "documents": [
     {
@@ -87,6 +92,25 @@
             "Строк зберігання документа"
           ],
           "answer": "A"
+        },
+        {
+          "id": "D1-Q3",
+          "kind": "inference",
+          "q_en": "A document arrives on Friday at 18:00. The institution works Monday to Friday. When will it be registered?",
+          "q_uk": "Документ надійшов у п'ятницю о 18:00. Установа працює з понеділка по п'ятницю. Коли його зареєструють?",
+          "options_en": [
+            "On Friday",
+            "On Saturday",
+            "On Monday",
+            "On Tuesday"
+          ],
+          "options_uk": [
+            "У п'ятницю",
+            "У суботу",
+            "У понеділок",
+            "У вівторок"
+          ],
+          "answer": "C"
         }
       ]
     },
@@ -158,6 +182,25 @@
             "Протягом 15 календарних днів від дня цього рішення",
             "Разом із остаточною відповіддю",
             "Протягом 3 робочих днів від дня цього рішення"
+          ],
+          "answer": "D"
+        },
+        {
+          "id": "D2-Q3",
+          "kind": "inference",
+          "q_en": "An application is received and additional documents are requested, so the period is extended. How many calendar days in total does the body then have to answer?",
+          "q_uk": "Звернення надійшло, витребувано додаткові документи, тому строк продовжено. Скільки календарних днів усього має орган на відповідь?",
+          "options_en": [
+            "15 calendar days",
+            "30 calendar days",
+            "48 calendar days",
+            "45 calendar days"
+          ],
+          "options_uk": [
+            "15 календарних днів",
+            "30 календарних днів",
+            "48 календарних днів",
+            "45 календарних днів"
           ],
           "answer": "D"
         }
@@ -232,6 +275,25 @@
             "Вони не застосовуються"
           ],
           "answer": "C"
+        },
+        {
+          "id": "D3-Q3",
+          "kind": "inference",
+          "q_en": "The Act is published in the Official Bulletin on 15 December 2026. When does it enter into force?",
+          "q_uk": "Акт опубліковано в офіційному бюлетені 15 грудня 2026 року. Коли він набирає чинності?",
+          "options_en": [
+            "On 15 December 2026",
+            "On 16 December 2026",
+            "On 1 January 2027",
+            "On 15 January 2027"
+          ],
+          "options_uk": [
+            "15 грудня 2026 року",
+            "16 грудня 2026 року",
+            "1 січня 2027 року",
+            "15 січня 2027 року"
+          ],
+          "answer": "B"
         }
       ]
     },
@@ -304,6 +366,25 @@
             "Може все одно прийняти скаргу до розгляду"
           ],
           "answer": "D"
+        },
+        {
+          "id": "D4-Q3",
+          "kind": "inference",
+          "q_en": "A person learned of the decision on 1 May and filed an appeal on 1 July. There is no valid reason for the delay. What must the body do?",
+          "q_uk": "Особа дізналася про рішення 1 травня, а скаргу подала 1 липня. Поважної причини пропуску немає. Що має зробити орган?",
+          "options_en": [
+            "Accept the appeal and decide on its merits",
+            "Refuse it: the deadline was missed and there is no valid reason",
+            "Extend the period for deciding by 20 calendar days",
+            "Forward the appeal to a court"
+          ],
+          "options_uk": [
+            "Прийняти скаргу й розглянути по суті",
+            "Відмовити: строк пропущено, поважної причини немає",
+            "Продовжити строк розгляду на 20 календарних днів",
+            "Передати скаргу до суду"
+          ],
+          "answer": "B"
         }
       ]
     },
@@ -378,6 +459,25 @@
             "Архів іншої установи"
           ],
           "answer": "A"
+        },
+        {
+          "id": "D5-Q3",
+          "kind": "extraction",
+          "q_en": "How long are temporary-storage documents kept, and how long are personnel documents kept?",
+          "q_uk": "Скільки зберігають документи тимчасового зберігання і скільки — документи з особового складу?",
+          "options_en": [
+            "5 years and 75 years",
+            "10 years and 75 years",
+            "5 years and 10 years",
+            "75 years and 5 years"
+          ],
+          "options_uk": [
+            "5 років і 75 років",
+            "10 років і 75 років",
+            "5 років і 10 років",
+            "75 років і 5 років"
+          ],
+          "answer": "A"
         }
       ]
     },
@@ -447,6 +547,25 @@
             "Заступник"
           ],
           "answer": "D"
+        },
+        {
+          "id": "D6-Q3",
+          "kind": "inference",
+          "q_en": "The head is on leave and no written order has been issued. A document must be signed today. What follows?",
+          "q_uk": "Керівник у відпустці, письмового розпорядження про підписання не видано. Документ потрібно підписати сьогодні. Що з цього випливає?",
+          "options_en": [
+            "The deputy has no authority to sign until a written order exists",
+            "The deputy may sign if the head agrees by telephone",
+            "The deputy may sign because the post carries that authority",
+            "The records service signs instead"
+          ],
+          "options_uk": [
+            "Заступник не має права підписувати, доки немає письмового розпорядження",
+            "Заступник може підписати, якщо керівник погодиться телефоном",
+            "Заступник може підписати, бо це випливає з посади",
+            "Замість нього підписує служба діловодства"
+          ],
+          "answer": "A"
         }
       ]
     }

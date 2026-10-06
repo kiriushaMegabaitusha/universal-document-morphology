@@ -33,8 +33,13 @@ import analysis_core as A  # noqa: E402
 HERE = os.path.dirname(os.path.abspath(__file__))
 RESULTS = os.path.join(HERE, "results")
 SEED = 20261006
-OBLIGATIONS = ["D%d" % i for i in range(1, 7)]
-ITEMS = {d: ["%s-Q1" % d, "%s-Q2" % d] for d in OBLIGATIONS}
+
+# The simulation mirrors the real instrument's structure, read from the stimuli, so
+# that adding or removing items updates the power numbers automatically.
+_STIM = json.load(open(os.path.join(HERE, "stimuli.json"), encoding="utf-8"))
+OBLIGATIONS = [d["id"] for d in _STIM["documents"]]
+ITEMS = {d["id"]: [(i["id"], i["kind"]) for i in d["items"]] for d in _STIM["documents"]}
+NI = sum(len(v) for v in ITEMS.values())          # items per participant per register
 
 
 def simulate(seed, effect_pp, n_readers=4, item_sd=0.12, reader_sd=0.10,
@@ -61,13 +66,12 @@ def simulate(seed, effect_pp, n_readers=4, item_sd=0.12, reader_sd=0.10,
             else:
                 regs = [["plain", "formal"][(j + r) % 2]]
             for reg in regs:
-                for q in ITEMS[it]:
+                for q, kind in ITEMS[it]:
                     p = base + (effect_pp if reg == "plain" else 0.0) + item_eff[it] + reader_eff[r]
                     p = min(0.99, max(0.01, p))
                     obs.append({
                         "model": "sim-r%d" % r, "item": q, "document": it,
-                        "register": reg, "lang": lang,
-                        "kind": "inference" if q.endswith("Q2") else "extraction",
+                        "register": reg, "lang": lang, "kind": kind,
                         "correct": int(rng.random() < p),
                         "latency_ms": int(rng.normal(1200, 250)),
                     })
@@ -127,9 +131,9 @@ def main():
                 hits += 1
         return hits / n_sims
 
-    print("\n3. POWER FOR THE HUMAN ARM (6 obligations, 12 items)")
-    print("   A = split: each participant reads each obligation in ONE register (12 trials)")
-    print("   B = both : each participant reads BOTH registers of every obligation (24 trials)")
+    print("\n3. POWER FOR THE HUMAN ARM (%d obligations, %d items)" % (len(OBLIGATIONS), NI))
+    print("   A = split: each participant reads each obligation in ONE register (%d trials)" % NI)
+    print("   B = both : each participant reads BOTH registers of every obligation (%d trials)" % (2 * NI))
     print("   %-7s %-14s %-14s" % ("true pp", "A split N=24", "B both N=24"))
     for eff in (0.05, 0.10, 0.15):
         print("   %-7.2f %-14.2f %-14.2f"

@@ -112,6 +112,7 @@ all 28 of them against the prose, so the two can no longer drift apart.
 | 1.0 | onomastic gap closed (НК 010:2021); gate extended to `analysis/`; frozen | 28 |
 | 1.0.1 | analysis figures resynced to the 225-row data (S1 census, SU density, Jaccard, script census, evidence base); `analysis/recompute.py` added as a second gate | 28 |
 | 1.1 | finding 5 given an empirical test (`experiment/`): pre-registered design, stimuli, analysis code, machine arm run over 12 reader models (no detectable register effect; item set at ceiling for 9 of them); human instrument built and awaiting participants | 28 |
+| 1.2 | test revised to v2 before any data: 18 items instead of 12 (harder reasoning items added), and the two registers of an obligation are no longer presented consecutively; instrument bugs fixed (language switch, skip control); power at the pre-registered SESOI now 0.92 at N = 24, 0.98 at N = 36; machine arm re-run on v2 (still no detectable register effect, still near ceiling for 6 of 12 readers) | 28 |
 
 ## Method and provenance
 

@@ -14,39 +14,39 @@ rather than a citation.
 
 | item | state |
 |---|---|
-| design + pre-registration | done, committed **before** any data (`3c1469e`) |
-| stimuli (6 obligations × 4 registers, 12 items) | done, gated by `check_stimuli.py` |
-| analysis code, run on simulated data first | done (`simulate_data.py`) |
-| human instrument | built and end-to-end tested headlessly; **no participants yet** |
-| machine arm (12 reader models) | **run** — exploratory; result below |
+| design + pre-registration | done, committed **before** any data (`3c1469e`); revised to v2 pre-collection (`DEVIATIONS.md` Revision 1) |
+| stimuli (6 obligations × 4 registers, 18 items) | done, gated by `check_stimuli.py` |
+| analysis code, run on simulated data first | done (`simulate_data.py`); power at the 10 pp SESOI is 0.92 at N = 24 and 0.98 at N = 36 |
+| human instrument | built, and end-to-end tested headlessly (19 checks incl. regressions for the two v1 GUI bugs); **no participants yet** |
+| machine arm (12 reader models, 864 item-administrations) | **run on v2** — exploratory; result below |
 | **human arm (N = 36 target)** | **not run — waiting on participants** |
 
 ## What the machine arm found (exploratory, not evidence about people)
 
-575 of 576 item-administrations parsed (compliance 99.8%, strict JSON 95.8%;
-one re-run pass at a higher token budget — see `DEVIATIONS.md`). Cost: **$0.0198**
-in total for all 12 reader models.
+860 of 864 item-administrations parsed (compliance 99.5%, strict JSON 95.1%; one
+re-run pass at a higher token budget — see `DEVIATIONS.md`). Cost: **$0.0314** in
+total for all 12 reader models.
 
-- accuracy: formal **0.937** vs plain **0.944** — mean item-level difference
-  **+0.7 pp**, exact sign-flip p = **0.50**, 95% CI [+0.0, +1.8] pp;
+- accuracy: formal **0.928** vs plain **0.926** — mean item-level difference
+  **−0.2 pp**, exact sign-flip p = **1.00**, 95% CI [−1.8, +1.2] pp;
 - TOST against the pre-registered ±10 pp margin: **equivalent**;
-- the item-fixed-effects logistic model does show a small positive coefficient
-  (β = +0.86, OR 2.4, Wald p = 0.005, AME +5.3 pp), driven entirely by the cells
-  where a weak model was still guessing — the pre-registered primary test does not
-  corroborate it;
-- **9 of 12 reader models scored 100%** on every item, in both registers. Only
-  llama-3.2-1b (43.8%), llama-3.1-8b (91.7%) and qwen-2.5-7b (93.8%) had any
-  headroom.
+- the item-fixed-effects logistic model still reports a small positive coefficient
+  (β = +0.62, OR 1.9, Wald p = 0.009, AME +4.5 pp) while the pre-registered primary
+  test reports nothing — the same pooling artefact as on v1, driven by the cells
+  where the weakest reader is guessing;
+- the harder inference items do bite (extraction 0.948 vs inference 0.910) but
+  **6 of 12 reader models still scored 100%** in both registers, and only
+  llama-3.2-1b (41.7%) and llama-3.1-8b (88.9%) have real headroom;
+- two of the new hard items (D2-Q3, D5-Q3) show formal *better* by 8.3 pp — one
+  model's worth of difference, i.e. noise at this reader count, and reported as such.
 
-**Reading.** For capable machine readers this item set is at ceiling, so it cannot
-measure a register effect; the honest conclusion is that the machine arm neither
-supports nor refutes anything about human comprehension — and that, as a proxy, it
-was the wrong instrument at this difficulty. It does say something useful for the
-human arm: the items are easy for a competent reader, so human accuracy may sit
-near ceiling too, which is exactly the risk the pre-registered power analysis
-assumed away (it modelled a base rate of 0.72). If human accuracy lands above ~0.90
-the registered MDE will not be met, and the honest move is a harder stimulus
-version (v2), not a reinterpretation.
+**Reading.** For capable machine readers the item set is still near ceiling, so the
+arm cannot measure a register effect: it neither supports nor refutes anything about
+human comprehension, and as a proxy it is the wrong instrument at this difficulty.
+What it does say is that formal register does not impede machine extraction of these
+obligations — the documents are already machine-legible in either register. For the
+human arm the useful signal is the difficulty gradient: the reasoning items
+discriminate (0.91 vs 0.95), which is the headroom the registered MDE needs.
 
 ## Running the pieces
 
@@ -66,11 +66,16 @@ python3 experiment/analyze.py             # -> results/RESULTS.md + machine_summ
 
 ## Running the human arm
 
-1. Send participants `human_survey.html` (29 KB, single file, works offline; it is
+A session is 12 screens of three questions each (36 questions, 15–20 minutes). Each
+participant reads each obligation in both registers, but the two readings are placed
+in different halves of the session, never fewer than four screens apart, so the
+formal and plain versions are never seen back to back.
+
+1. Send participants `human_survey.html` (35 KB, single file, works offline; it is
    generated from `stimuli.json`, so no text is retyped).
-2. Each participant picks Ukrainian or English, reads 12 documents (each obligation
-   in both registers, order randomised per participant), answers 24 questions plus a
-   confidence rating, and downloads a JSON file.
+2. Each participant picks Ukrainian or English, reads 12 screens (each obligation
+   in both registers, order randomised per participant), answers 36 questions plus a
+   confidence rating per screen, and downloads a JSON file.
 3. Collect the JSONs and score them:
    ```bash
    python3 experiment/score_human.py --dir exports/ --min-n 20

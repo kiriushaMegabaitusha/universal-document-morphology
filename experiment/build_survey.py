@@ -63,20 +63,39 @@ HTML = r"""<!DOCTYPE html>
 <script>
 const STIM = @@STIMULI@@;
 const KEY = "udm_comp_test_v1";
-const S = { step: "intro", i: 0, order: [], regOrder: {}, started: null, finished: null,
-            pid: null, lang: "uk", answers: {}, conf: {} };
+const MIN_SEPARATION = 4;   // screens between the two registers of one obligation
+const S = { step: "intro", i: 0, order: [], started: null, finished: null,
+            pid: null, lang: "uk", answers: {}, conf: {}, skipped: {} };
+const PAINT = {};   // per-question repaint callbacks (skip toggle <-> option radios)
 
 /* ---------- deterministic per-participant permutation ---------- */
 function hash(str){ let h=2166136261; for(let i=0;i<str.length;i++){ h^=str.charCodeAt(i); h=Math.imul(h,16777619);} return h>>>0; }
 function mulberry(a){ return function(){ a|=0; a=a+0x6D2B79F5|0; let t=Math.imul(a^a>>>15,1|a); t=t+Math.imul(t^t>>>7,61|t)^t; return ((t^t>>>14)>>>0)/4294967296; }; }
 function shuffled(arr, rnd){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){ const j=Math.floor(rnd()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+/* One obligation's two registers are never adjacent: the first half of the session
+   holds one register of each obligation and the second half the other, offset by a
+   random shift, so at least MIN_SEPARATION screens separate a pair. Each pair also
+   gets a random order, so formal-first and plain-first balance within a participant. */
 function buildOrder(){
   const rnd = mulberry(hash(S.pid));
-  S.order = shuffled(STIM.documents.map(d=>d.id), rnd);
-  S.regOrder = {};
-  for(const id of S.order){
-    const first = rnd() < 0.5 ? ["formal","plain"] : ["plain","formal"];
-    S.regOrder[id] = first;
+  const ids = STIM.documents.map(d=>d.id);
+  const a = shuffled(ids, rnd);                    // first half: one register each
+  let b = shuffled(ids, rnd);                      // second half: the other register
+  let tries = 0;
+  const minDist = () => Math.min(...a.map((id, i) => (6 + b.indexOf(id)) - (i + 1)));
+  while (minDist() < MIN_SEPARATION && tries++ < 400) b = shuffled(ids, rnd);
+  if (minDist() < MIN_SEPARATION)                  // deterministic fallback, still valid
+    b = a.map((_, i) => a[((i - 5) % 6 + 6) % 6]);
+  S.order = [];
+  for (let i = 0; i < a.length; i++) {
+    const flip = rnd() < 0.5;
+    S.order.push({ doc: a[i], reg: flip ? "formal" : "plain", pairPos: 1 });
+  }
+  for (let i = 0; i < b.length; i++) {
+    const id = b[i];
+    const firstReg = S.order.find(s => s.doc === id).reg;
+    S.order.push({ doc: id, reg: firstReg === "formal" ? "plain" : "formal", pairPos: 2 });
   }
 }
 
@@ -112,8 +131,8 @@ function renderIntro(app){
   app.append(el("h1",{}, t(T("Розуміння офіційних документів",
                              "Understanding official documents"))));
   app.append(el("p",{class:"muted"}, t(T(
-    "Дослідження до атласу стандартів оформлення документів (проєкт 05.4). Ви прочитаєте 12 коротких фрагментів офіційних документів і відповісте на 24 запитання. Це займе приблизно 10–15 хвилин.",
-    "A study for the official-document standards atlas (project 05.4). You will read 12 short passages of official documents and answer 24 questions. This takes about 10–15 minutes."))));
+    "Дослідження до атласу стандартів оформлення документів (проєкт 05.4). Ви прочитаєте 12 коротких фрагментів офіційних документів і відповісте на 36 запитань (по три на кожен фрагмент). Це займе приблизно 15–20 хвилин. Деякі фрагменти близькі за змістом — розглядайте кожен окремо й відповідайте лише за тим текстом, який перед вами.",
+    "A study for the official-document standards atlas (project 05.4). You will read 12 short passages of official documents and answer 36 questions (three per passage). This takes about 15-20 minutes. Some passages are close in content - please treat each one on its own and answer only from the passage in front of you."))));
   app.append(el("h2",{}, t(T("Що важливо знати","What you should know"))));
   const ul = el("ul",{});
   [
@@ -131,9 +150,10 @@ function renderIntro(app){
   const langs = el("div",{class:"conf",role:"radiogroup","aria-label":T("Мова","Language")});
   [["uk","Українська"],["en","English"]].forEach(([code,label])=>{
     const id="lang_"+code;
-    const l=el("label",{for:id}, el("input",{type:"radio",name:"lang",id:id,value:code,checked:S.lang===code?"checked":null}), t(label));
-    l.querySelector("input").addEventListener("change",()=>{S.lang=code; save();});
-    langs.append(l);
+    const input=el("input",{type:"radio",name:"lang",id:id,value:code});
+    if(S.lang===code) input.setAttribute("checked","checked");
+    input.addEventListener("change",()=>{ S.lang=code; save(); render(); });
+    langs.append(el("label",{for:id}, input, t(label)));
   });
   app.append(langs);
   app.append(el("p",{}, el("button",{id:"start"}, t(T("Почати","Start")))));
@@ -149,10 +169,10 @@ function renderIntro(app){
 }
 
 function renderTask(app){
-  const docId = S.order[S.i];
+  const screen = S.order[S.i];
+  const docId = screen.doc;
+  const reg = screen.reg;
   const doc = STIM.documents.find(d=>d.id===docId);
-  const regs = S.regOrder[docId];
-  const reg = regs[S.regCursor||0];
   const shown = new Date();
   const pct = Math.round(100*answeredCount()/totalTrials());
   app.append(el("h1",{}, t(T("Документ","Document")) + " " + (S.i+1) + "/" + S.order.length));
@@ -163,18 +183,41 @@ function renderTask(app){
     const fs = el("fieldset",{});
     fs.append(el("legend",{}, t(it["q_"+S.lang])));
     const opts = it["options_"+S.lang];
+    const k = trialKey(docId,reg,it.id);
     opts.forEach((o, oi)=>{
-      const letter="ABCD"[oi], id=trialKey(docId,reg,it.id)+"_"+letter;
+      const letter="ABCD"[oi], id=k+"_"+letter;
       const l = el("label",{class:"opt",for:id});
-      const input = el("input",{type:"radio",name:trialKey(docId,reg,it.id),id:id,value:letter});
-      const prev = S.answers[trialKey(docId,reg,it.id)];
+      const input = el("input",{type:"radio",name:k,id:id,value:letter});
+      const prev = S.answers[k];
       if(prev===letter) input.setAttribute("checked","checked");
-      input.addEventListener("change",()=>{ S.answers[trialKey(docId,reg,it.id)]=letter; save(); updateProgress(); });
+      input.addEventListener("change",()=>{
+        S.answers[k]=letter; S.skipped[k]=false;
+        if(PAINT[k]) PAINT[k]();
+        save(); updateProgress();
+      });
       l.append(input, t(letter + ". " + o));
       fs.append(l);
     });
-    const skip = el("button",{class:"skip",type:"button"}, t(T("пропустити це запитання","skip this question")));
-    skip.addEventListener("click", ()=>{ S.answers[trialKey(docId,reg,it.id)]="SKIP"; save(); updateProgress(); });
+    const skip = el("button",{class:"skip",type:"button"});
+    PAINT[k] = ()=>{
+      const on = !!S.skipped[k];
+      skip.textContent = on
+        ? T("↺ повернутися до цього запитання", "↺ go back to this question")
+        : T("пропустити це запитання", "skip this question");
+      fs.style.opacity = on ? "0.55" : "1";
+      fs.dataset.skipped = on ? "1" : "";
+    };
+    skip.addEventListener("click", ()=>{
+      const was = !!S.skipped[k];
+      S.skipped[k] = !was;
+      if(!was){                                  // skipping supersedes a chosen option
+        fs.querySelectorAll("input[type=radio]").forEach(r=>{ r.checked = false; });
+        S.answers[k] = "SKIP";
+      }
+      PAINT[k]();
+      save(); updateProgress();
+    });
+    PAINT[k]();
     fs.append(skip);
     app.append(fs);
   });
@@ -192,21 +235,20 @@ function renderTask(app){
   });
   app.append(conf);
   const next = el("p",{}, el("button",{id:"next"}, t(
-    (S.i===S.order.length-1 && (S.regCursor||0)===regs.length-1)
-      ? T("Завершити","Finish") : T("Далі","Next"))));
+    (S.i === S.order.length - 1) ? T("Завершити","Finish") : T("Далі","Next"))));
   app.append(next);
-  const rt = ()=> Math.round(performance.now() - shown.getTime());
   document.getElementById("next").addEventListener("click", ()=>{
     const key = docId+"|"+reg;
     const now = new Date().getTime();
     doc.items.forEach(it=>{
       const k = trialKey(docId,reg,it.id);
-      const rec = S.answers[k];
-      S.answers[k] = rec || "SKIP";
+      if(!S.skipped[k] && !S.answers[k]) S.answers[k] = "SKIP";
       S.answers["rt_"+key] = now - shown.getTime();
+      S.answers["pos_"+key] = S.i + 1;
+      S.answers["pair_"+key] = screen.pairPos;
     });
     save();
-    if((S.regCursor||0) === regs.length-1){ S.regCursor = 0; S.i += 1; } else { S.regCursor = (S.regCursor||0)+1; }
+    S.i += 1;
     if(S.i >= S.order.length){ S.step="done"; S.finished=new Date().toISOString(); }
     save(); render();
   });
@@ -226,12 +268,16 @@ function exportObject(){
       doc.items.forEach(it=>{
         const k = trialKey(docId,reg,it.id);
         const resp = S.answers[k];
+        const skipped = (resp === "SKIP") || !!S.skipped[k];
         const idx = "ABCD".indexOf(resp);
         trials.push({
           item: it.id, document: docId, register: reg, lang: S.lang, kind: it.kind,
-          response: (resp==="SKIP"||resp===undefined) ? null : resp,
-          correct: (idx>=0 && resp===it.answer) ? 1 : 0,
+          response: (skipped || resp===undefined) ? null : resp,
+          skipped: skipped ? 1 : 0,
+          correct: (!skipped && idx>=0 && resp===it.answer) ? 1 : 0,
           keyed: it.answer,
+          position: S.answers["pos_"+docId+"|"+reg] || null,
+          pair_pos: S.answers["pair_"+docId+"|"+reg] || null,
           rt_ms: S.answers["rt_"+docId+"|"+reg] || null,
           confidence: S.conf[docId+"|"+reg] || null
         });
@@ -274,7 +320,8 @@ function renderDone(app){
 (function(){
   const resumed = load();
   if(resumed && S.step==="task" && (!S.order || !S.order.length)) buildOrder();
-  if(resumed && S.step==="task" && !S.regOrder) buildOrder();
+  // a session saved by the pre-v2 instrument stored document ids, not screens
+  if(resumed && S.step==="task" && S.order.length && typeof S.order[0] === "string") buildOrder();
   render();
 })();
 </script>

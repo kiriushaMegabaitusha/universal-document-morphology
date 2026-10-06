@@ -1,4 +1,4 @@
-Invitation to take part in a short study (10-15 minutes)
+Invitation to take part in a short study (15-20 minutes)
 
 Hello!
 
@@ -6,14 +6,17 @@ I am studying how people read official documents - part of a comparative atlas o
 official-document standards. I am looking for participants and would be very
 grateful for your help.
 
-What it involves (10-15 minutes):
+What it involves (15-20 minutes):
 
 1. Open human_survey.html in a browser (double-clicking is enough; no internet
    needed and nothing to install).
 2. Choose a language - Ukrainian or English, whichever you prefer.
-3. Read 12 short passages of official documents and answer 24 multiple-choice
-   questions (two per document).
+3. Read 12 short passages of official documents and answer 36 multiple-choice
+   questions (three per passage).
 4. At the end press "Download results (JSON)" and send that file back to me.
+
+Some passages are close in content - that is expected. Please treat each one on its
+own and answer only from the passage in front of you.
 
 Please note:
 

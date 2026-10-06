@@ -78,7 +78,7 @@ Grounding tiers differ and are flagged per case.
 Resolve the RU column; a two-coder thematic pass; deeper regional coverage
 (Indigenous North America beyond wampum; more of Africa and Central Asia). The
 comprehension test of finding 5 is now designed and pre-registered in
-`experiment/`: the machine arm has been run (no detectable register effect, and
-the item set sits at ceiling for 9 of 12 reader models, so it is reported as
-exploratory), while the human arm — target N = 36, instrument ready — still needs
-participants.
+`experiment/`: the machine arm has been run twice (v1 and the revised v2 stimuli —
+no detectable register effect either time, and the item set still sits at ceiling
+for half the reader models, so it is reported as exploratory), while the human arm —
+target N = 36, instrument ready — still needs participants.

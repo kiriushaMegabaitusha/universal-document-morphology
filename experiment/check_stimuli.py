@@ -49,6 +49,14 @@ EXPECTED_ANSWER_TEXT = {
     "D6-Q1": ("If the head has issued a written order naming that deputy",
               "Якщо керівник видав письмове розпорядження і назвав цього заступника"),
     "D6-Q2": ("The deputy", "Заступник"),
+    "D1-Q3": ("On Monday", "У понеділок"),
+    "D2-Q3": ("45 calendar days", "45 календарних днів"),
+    "D3-Q3": ("On 16 December 2026", "16 грудня 2026 року"),
+    "D4-Q3": ("Refuse it: the deadline was missed and there is no valid reason",
+              "Відмовити: строк пропущено, поважної причини немає"),
+    "D5-Q3": ("5 years and 75 years", "5 років і 75 років"),
+    "D6-Q3": ("The deputy has no authority to sign until a written order exists",
+              "Заступник не має права підписувати, доки немає письмового розпорядження"),
 }
 EXPECTED_ANSWERS = EXPECTED_ANSWER_TEXT  # alias kept for readability below
 

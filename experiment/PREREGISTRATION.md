@@ -7,6 +7,26 @@ human participant is recruited. The commit hash and date are the registration
 timestamp. There is no external registry entry; that limitation is stated in §10
 (and an OSF registration is the obvious follow-up if the human arm is run).
 
+**Revision 1 (pre-collection, v1 → v2).** The first registration (commit `3c1469e`)
+was superseded **before any data existed** — human or machine — after the machine
+arm was piloted and the instrument was tested by hand. Two problems were found:
+
+1. **The manipulation was recognisable.** The two registers of one obligation were
+   presented on consecutive screens, so a participant saw the formal and the plain
+   version of the same content back to back. That invites the obvious inference
+   ("this is about formal vs plain language") and, worse, lets the second version be
+   answered from memory of the first rather than from reading it.
+2. **The item set was too easy.** Every capable machine reader scored 100% in both
+   registers, and manual reading suggested people would too — a ceiling leaves no
+   variance for a register effect to show up in.
+
+What changed: the two registers of an obligation now sit in different halves of the
+session, at least four screens apart (§3); and each obligation gained a harder third
+item — date arithmetic, conditional application, or a two-fact combination — giving
+18 items per participant (§3, §7). What did **not** change: the hypotheses, the
+decision rule, the 10 pp SESOI, the exclusions, the target N. Logged in
+`DEVIATIONS.md` as Revision 1.
+
 Author of the study design: Kyrylo Yasuda. Analysis code written and executed by
 the project's Hermes agent; the same agent is the analyst (§10).
 
@@ -78,9 +98,21 @@ point to the correct option text in both languages. **Numbers are written as dig
 in all four registers**, deliberately, so that number form is never a second
 manipulation.
 
-**Items.** Two per obligation, four options, exactly one correct: Q1 typically an
-extraction item, Q2 an inference item (applying two facts together). Answer key is
-balanced 3/3/3/3 across A–D to blunt response bias.
+**Items.** Three per obligation, four options, exactly one correct, with a
+deliberate gradient: Q1 typically an extraction item, Q2 an inference item that
+combines two stated facts, Q3 the hard item — a date computed from a stated rule, a
+conditional application of the rule, or a two-fact combination. 18 items per
+participant per register. The answer key is balanced across A–D (5/5/4/4) to blunt
+response bias.
+
+**Presentation (revised in v2).** The two registers of one obligation are placed in
+different halves of the session and never fewer than four screens apart, so a
+participant never reads the same obligations's two versions consecutively. Which
+half carries the formal version is randomised per pair, and the order of screens is
+randomised per participant from a seed derived from the participant id. Screen order
+and exposure index (first or second reading of that obligation) are recorded per
+trial, so the analysis can report accuracy by exposure and check that the register
+contrast is not an artefact of reading order. Condition labels are never shown.
 
 **Arm M (machine).** Each reader model answers every item of every document: 6
 obligations × 4 registers × 2 items = 48 item-administrations per model; with R
@@ -116,6 +148,8 @@ sessions are counted and reported.
 | `lang` | H, M | en / uk |
 | `kind` | H, M | extraction / inference |
 | `item`, `document` | H, M | identifiers of the stimulus cell |
+| `position`, `pair_pos` | H | screen index (1–12) and whether this was the first or second reading of that obligation |
+| `skipped` | H | 1 if the participant used the skip control on that question |
 | `reader` | H, M | participant id / model id |
 | `rt_ms` | H, M | milliseconds from document display to answer submit |
 | `confidence` | H | 1–5, self-reported after each document |
@@ -141,6 +175,10 @@ All code is registered and was run on simulated data before collection
 3. **Equivalence.** TOST against the SESOI (±10 pp, §7) on the item-level
    differences: reported as support for "no decision-relevant difference" only if
    both one-sided tests reject at α = 0.05.
+4. **Exposure robustness (locked).** Accuracy is reported by exposure (first vs
+   second reading of an obligation) for each register, and the primary estimate is
+   repeated using first exposures only. If the two diverge materially, the
+   first-exposure estimate is the one to quote; both are always reported.
 
 **Locked (secondary family).** H2 and H3, each tested as an interaction coefficient
 in `logit_fe` (register × language; register × item kind), p-values corrected by
@@ -160,6 +198,13 @@ and correctness in arm H.
 p < 0.05, and the point estimate ≥ 10 pp. Falsified if the TOST rejects differences
 of ±10 pp. Otherwise **inconclusive** — reported as such, with the CI, and no claim.
 
+The rule is a threshold on the **observed** estimate, so a true effect just below
+the SESOI will occasionally draw an estimate above 10 pp and be declared supported.
+That is boundary noise, not a defect, and it is why the estimate and its confidence
+interval are always reported next to the verdict. The dry-run harness therefore
+asserts detection rates over repeated draws rather than single-draw verdicts
+(`dryrun_confirmatory.py`).
+
 **Multiple testing.** Two hypotheses families, corrected separately: the
 confirmatory family is a single test (H1), so no correction; the secondary family
 {H2, H3} uses BH-FDR at α = 0.05. Arm M results are exploratory and carry no
@@ -167,32 +212,34 @@ corrected p-value claims.
 
 ## 7. SESOI and power (from the registered simulation)
 
-`simulate_data.py` (seeded, run before collection) gives, for a true plain
+`simulate_data.py` (seeded; re-run for v2's 18 items) gives, for a true plain
 advantage, the rejection rate of the primary test at α = 0.05:
 
 | design | shape | power at 5 pp | at 10 pp | at 15 pp |
 |---|---|---|---|---|
-| A | split: each participant reads each obligation in one register (12 trials) | 0.10 | 0.32 | 0.62 |
-| B | both: each participant reads both registers of every obligation (24 trials) | 0.18 | 0.75 | 0.98 |
+| A | split: each participant reads each obligation in one register (18 trials) | 0.23 | 0.63 | 0.90 |
+| B | both: each participant reads both registers of every obligation (36 trials) | 0.37 | 0.92 | 1.00 |
 
-(all at N = 24; design B reaches ≥ 0.80 power at a true 10 pp gap by N = 36)
+(all at N = 24; design B reaches ≥ 0.80 power at a true 10 pp gap by N = 24)
+
+Design B by sample size, at a true 10 pp gap: N = 12 → 0.47, N = 24 → 0.82,
+N = 36 → 0.98.
 
 Consequences, decided before data collection:
 
 - **Design B is pre-registered** for arm H.
-- **SESOI = 10 pp.** A 5 pp gap is not detectable at any feasible sample size
-  (power 0.35 at N = 36), so it cannot be the smallest effect of interest here.
-  10 pp is the smallest gap this design can test at the planned N, and is
-  decision-relevant for document-format policy: on a 4-option item, moving a
-  reader from 70% to 80% correct is roughly a one-third reduction in the error rate.
-- **Target N = 36** in arm H.
+- **SESOI = 10 pp.** A 5 pp gap remains undetectable at any feasible sample size
+  (power 0.50 at N = 36), so it cannot be the smallest effect of interest here.
+  10 pp is decision-relevant for document-format policy: on a 4-option item, moving
+  a reader from 70% to 80% correct is roughly a one-third reduction in the error rate.
+- **Target N = 36** in arm H, where power at the SESOI is 0.98.
 - **Arm M is exploratory**, not confirmatory: the machine-arm shape with 4 reader
-  models has power 0.15 at a 10 pp gap — with 12 models it is ≈ 0.40. Using the
-  machine arm to claim a comprehension effect would be a misuse of a design that
-  cannot support it.
+  models has power 0.24 at a 10 pp gap — more readers help, but it stays far short of
+  a confirmatory test. Using the machine arm to claim a comprehension effect would be
+  a misuse of a design that cannot support it.
 
-Null calibration (200 simulated datasets, true effect 0): rejection rate 0.020 at
-α = 0.05 — conservative, as expected for an exact test with 12 discrete paired units.
+Null calibration (200 simulated datasets, true effect 0): rejection rate 0.030 at
+α = 0.05 — conservative, as expected for an exact test with 18 discrete paired units.
 
 ## 8. Contingencies
 
@@ -223,8 +270,9 @@ never replaced. Deviations so far: none (see the results file for the deviation 
    Demand characteristics cannot be eliminated, only unlabelled (the instrument
    never names the conditions) and bounded by the fact that the correct answers are
    verifiable against the document, not against expectations.
-3. **Twelve items.** The design tests twelve wordings of six obligations. Generalising
-   to "official documents" would need a wider item sample.
+3. **Eighteen items.** The design tests eighteen wordings of six obligations — a
+   narrow item sample, even if a much better one than v1's twelve. Generalising to
+   "official documents" as a class would need a wider item sample still.
 4. **Convenience sample.** Ukrainian-/English-reading students and colleagues;
    results describe them, not the public.
 5. **No external registration.** A git commit is auditable but is not a third-party
@@ -234,3 +282,12 @@ never replaced. Deviations so far: none (see the results file for the deviation 
    proxy for one thing the atlas's cybernetic framing cares about (documents as
    state-machine-readable control records), and it is never presented as evidence
    about human understanding.
+7. **Every participant reads each obligation twice** — once per register, four or
+   more screens apart. The second reading benefits from the first regardless of
+   register, which compresses the gap between conditions. Three things bound the
+   problem: the hard items are reasoning items that cannot be answered from memory
+   of the wording alone; exposure order is recorded per trial; and accuracy by
+   exposure, plus the primary estimate on first exposures only, are reported (§6.4).
+   The design that removes the problem entirely — each participant reads each
+   obligation once — was measured (design A, §7) and rejected for losing about a
+   third of the power at the pre-registered N.

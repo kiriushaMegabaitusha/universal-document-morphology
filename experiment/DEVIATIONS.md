@@ -7,8 +7,44 @@ hypothesis?), and the effect on **validity** (does the inference improve or
 degrade?). Both the registered and the deviated analysis are reported; the
 registered one is never replaced.
 
-Two entries so far. Neither touches a hypothesis, a stimulus, an item, the answer
-key, the primary test or the SESOI.
+Three entries so far: one pre-collection revision of the stimuli and presentation,
+one deviation in how the machine arm was run, and one erratum in the analysis code.
+None of them touches a hypothesis, the decision rule, the SESOI, the exclusions or
+the target N. The revision does change the stimulus set, and says so explicitly.
+
+---
+
+## Revision 1 — v1 → v2 of the stimuli and presentation (pre-collection)
+
+*Logged 2026-10-06, before any data existed, human or machine.*
+
+- **What.** Three changes: (1) each obligation gained a third, harder item (date
+  arithmetic, conditional application, or two-fact combination), taking the item set
+  from 12 to 18; (2) the two registers of an obligation are no longer presented
+  consecutively — they are placed in different halves of the session, at least four
+  screens apart; (3) per-trial records gained `position`, `pair_pos` and `skipped`,
+  and the analysis gained a locked exposure-robustness check (§6.4 of the
+  pre-registration).
+- **Why.** The instrument was tested by hand and the machine arm piloted, both
+  before any human data. Two defects surfaced. Back-to-back presentation made the
+  manipulation visible and let the second version be answered from memory of the
+  first; and the item set sat at ceiling (9 of 12 machine readers scored 100% in
+  both registers; every capable reader did), leaving no variance for an effect to
+  appear in. Both are validity problems, not result-dependent adjustments: no
+  outcome was known when the change was made.
+- **Severity.** Increased. Eighteen items instead of twelve, with three of them
+  reasoning items, give the primary test more independent paired units (18 vs 12)
+  and a wider spread of difficulty; the power simulation puts the design at 0.92
+  power at the SESOI for N = 24 and 0.98 at N = 36 (v1: 0.75 and 0.83).
+- **Validity.** Improved on both counts: the register contrast is less discoverable
+  and less answerable from memory, and the items now discriminate rather than
+  ceiling. The residual threat — every participant still reads each obligation twice
+  — is declared in §10.7 and bounded by the locked exposure check.
+- **Both reported.** The machine arm was piloted on v1. The register texts themselves
+  are unchanged between v1 and v2 (only items and metadata changed), so the v1
+  observations for items Q1–Q2 remain valid measurements of the same stimuli and are
+  kept; the v2 collection adds the new Q3 cells. `results/RESULTS.md` says which
+  cells came from which pass.
 
 ---
 

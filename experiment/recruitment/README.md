@@ -28,9 +28,10 @@ with the invitation.
 ## Collection window
 
 Target **N = 36** complete sessions (registered); the pre-registered minimum for a
-confirmatory analysis is 20. Two weeks is a sensible window. Ask participants not to
-discuss the task content during it — in a convenience sample of students they will
-otherwise swap notes between sessions.
+confirmatory analysis is 20. Two weeks is a sensible window. A session is 12 screens
+of three questions, roughly 15-20 minutes. Ask participants not to discuss the task
+content during it — in a convenience sample of students they will otherwise swap
+notes between sessions.
 
 ## Do not edit the instrument during collection
 

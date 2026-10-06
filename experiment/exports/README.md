@@ -8,7 +8,8 @@ harder to follow.
 ## Quick check when a file arrives
 
 - it is a `.json` file, not a screenshot or a pasted message;
-- it parses as JSON and has a `trials` list of 24 entries;
+- it parses as JSON and has a `trials` list of 36 entries (6 obligations × 2
+  registers × 3 items);
 - its `duration_min` looks plausible (the pre-registration excludes sessions under
   8 minutes or over 60).
 
