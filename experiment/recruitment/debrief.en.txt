@@ -1,0 +1,37 @@
+Debrief (send this once the person has sent their results file back)
+
+Thank you for taking part! Now that you have finished, here is what it was about.
+
+What was being tested. I am testing the claim that official documents are written
+for legal validity rather than for understanding. So every obligation in the study
+was presented in two registers:
+
+- formal - in the style of the Ukrainian state standard (DSTU/nakaz) and of EU and
+  UN acts;
+- plain - following ISO 24495-1, the plain-language standard (short sentences,
+  active voice, direct address).
+
+The content is identical in both versions: the same actors, deadlines, numbers and
+conditions. Only the way it is expressed changes. You read each obligation in both
+registers, in random order, and answered the same questions.
+
+What I measure. The share of correct answers in the formal and plain versions. If
+the gap reaches 10 percentage points or more, that supports the claim that formal
+register genuinely impedes understanding. If the data exclude such a gap, that is
+a result too: it would mean register is not what matters here. The analysis plan
+was fixed in advance, before any data was collected, so that the conclusion could
+not be fitted to the result.
+
+What happens next. The results feed into the "Universal document morphology"
+project (an atlas of official-document standards). Happy to send you a summary
+when it is done.
+
+Two requests:
+
+1. Please do not pass on the task content to others until data collection closes
+   (roughly two weeks).
+2. If you have already sent the file but would like to withdraw, write to me and I
+   will delete your file. It carries only a random identifier, so I can find it
+   from what you sent.
+
+Thank you again - this was a real contribution.

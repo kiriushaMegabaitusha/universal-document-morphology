@@ -100,6 +100,8 @@ python3 experiment/analyze.py             # -> results/RESULTS.md + machine_summ
 | `dryrun_confirmatory.py` | dev harness: runs the confirmatory path at N = 36 on synthetic data and asserts the decision rule (SESOI-sized effect detected; sub-SESOI and null never "supported"; all three branches reachable) |
 | `score_human.py` | scores participant exports, applies exclusions, writes the human report |
 | `DEVIATIONS.md` | deviation and erratum log (both entries reported side by side) |
+| `recruitment/` | the pack to send: bilingual invitation and debrief, plus the no-priming rule and order of contact |
+| `exports/` | where returned participant JSON files go, with the collection note and `MANIFEST.csv` |
 | `results/` | raw JSONL, summaries, reports, manipulation check, cost table |
 
 ## Honest limitations

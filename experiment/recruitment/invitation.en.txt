@@ -1,0 +1,38 @@
+Invitation to take part in a short study (10-15 minutes)
+
+Hello!
+
+I am studying how people read official documents - part of a comparative atlas of
+official-document standards. I am looking for participants and would be very
+grateful for your help.
+
+What it involves (10-15 minutes):
+
+1. Open human_survey.html in a browser (double-clicking is enough; no internet
+   needed and nothing to install).
+2. Choose a language - Ukrainian or English, whichever you prefer.
+3. Read 12 short passages of official documents and answer 24 multiple-choice
+   questions (two per document).
+4. At the end press "Download results (JSON)" and send that file back to me.
+
+Please note:
+
+- Participation is voluntary and anonymous: no name is needed, and nothing is sent
+  anywhere automatically - your answers stay in your browser until you download
+  the file.
+- There is no time limit and no score for speed.
+- It is best to finish in one sitting. If you close the page by accident, reopen
+  the file from the same place and your progress should still be there.
+- Please do not discuss the task content with others until I have closed data
+  collection: participants read different versions of the same documents, and
+  discussion spoils the measurement.
+- You are free to withdraw: if you change your mind after finishing, simply do not
+  send the file.
+
+There are two kinds of question: some answers are stated directly in the text,
+others require putting two facts together. If you are unsure, pick the closest
+option or press "skip".
+
+If you have any questions, or something will not open, write to me and I will help.
+
+Thank you!

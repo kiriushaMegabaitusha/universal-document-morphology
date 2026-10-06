@@ -1,0 +1,2 @@
+participant_id,file,date_returned,lang,duration_min,usable,exclusion_reason,notes
+EXAMPLE-REMOVE-ME,comprehension_EXAMPLE-REMOVE-ME.json,2026-10-06,uk,12.4,yes,,delete this row when the first real file arrives
