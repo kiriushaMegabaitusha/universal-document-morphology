@@ -16,6 +16,7 @@ replaced.
   registered (both recorded in the header of `PREREGISTRATION.md`): the status
   header, and the §5.2 block-source widening to the README §Coverage grouping.
 
-**Deviations from the registered analysis: none so far.** The registered analysis
-runs once after registration; any departure will be appended here before the
-deviated result is examined.
+**Deviations from the registered analysis: none.** The registered analysis ran
+once, immediately after registration (commit `2d262cf`, 2026-10-15), exit 0, with
+both input-hash assertions and all eight margin assertions passing. Results:
+`results.json`, `RESULTS.md`.
