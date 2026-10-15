@@ -29,8 +29,13 @@ authentication · annex · trace. Two **declensions** by genre:
 - Epistolary (correspondence): fills destination + reference, drops the preamble.
 - Normative (act): fills the preamble + dispositif, drops the destination.
 
-The fork is a **formal negation**: the preamble (S9) never co-occurs with
-authority-mark, addressee, reference, subject, body or trace.
+The fork is a **formal negation of the pattern**: as a census fact the preamble
+(S9) carries none of authority-mark, addressee, reference, subject, body or
+trace — and a registered exact-null audit (`audit/RESULTS.md`, 2026-10-15)
+regrades it as ONE joint population-level pattern: the joint all-six rejects
+independence (exact p = 10/300), no individual edge does (each becomes
+informative only at 44–94 systems), and a tradition-blocked null does not
+(p = 1/3 over 6 placements) — the surprise is between-tradition.
 
 ## Coverage (28 systems)
 

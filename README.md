@@ -1,6 +1,6 @@
 # 05.4 — Universal document morphology
 
-**Version 1.1 — frozen 2026-10-06.** A comparative atlas of how the world
+**Version 1.3 — frozen 2026-10-15.** A comparative atlas of how the world
 formats official documents, and whether a universal document structure exists.
 
 A one-page overview is in `EXECUTIVE_SUMMARY.md`.
@@ -121,6 +121,7 @@ all 28 of them against the prose, so the two can no longer drift apart.
 | 1.0.1 | analysis figures resynced to the 225-row data (S1 census, SU density, Jaccard, script census, evidence base); `analysis/recompute.py` added as a second gate | 28 |
 | 1.1 | finding 5 given an empirical test (`experiment/`): pre-registered design, stimuli, analysis code, machine arm run over 12 reader models (no detectable register effect; item set at ceiling for 9 of them); human instrument built and awaiting participants | 28 |
 | 1.2 | test revised to v2 before any data: 18 items instead of 12 (harder reasoning items added), and the two registers of an obligation are no longer presented consecutively; instrument bugs fixed (language switch, skip control); power at the pre-registered SESOI now 0.92 at N = 24, 0.98 at N = 36; machine arm re-run on v2 (still no detectable register effect, still near ceiling for 6 of 12 readers) | 28 |
+| 1.3 | finding 2 regraded by the registered exact-null audit (`audit/`): the fork is reported as one joint population-level pattern (exact p = 10/300), each individual "never" edge carries an informativeness threshold n* = 44–94 systems, and the tradition-blocked sensitivity (joint p = 1/3) is noted; `EXECUTIVE_SUMMARY.md` and `morphology.md` §3 aligned | 28 |
 
 ## Method and provenance
 
