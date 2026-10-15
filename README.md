@@ -65,9 +65,17 @@ all 28 of them against the prose, so the two can no longer drift apart.
 1. A universal stem — identity, origin, date, body/dispositif, authentication,
    annex — with **authentication (S12) the most universal slot** (17 of 25
    slot-coded systems).
-2. The **epistolary/normative fork is a formal negation**: the preamble (S9)
-   never co-occurs with authority-mark, addressee, reference, subject, body or
-   trace; the addressee (S6) never co-occurs with the preamble.
+2. The **epistolary/normative fork is a formal negation of the pattern, not six
+   separate laws**: the census fact is unchanged — in the 25 slot-coded systems
+   the preamble (S9) carries none of authority-mark, addressee, reference,
+   subject, body or trace, and the addressee (S6) never co-occurs with the
+   preamble — and the registered exact-null audit (`audit/RESULTS.md`,
+   2026-10-15) regrades how it counts: no individual "never" edge is surprising
+   at these margins (all BH q ≥ 0.45; each becomes informative only at 44–94
+   systems), while the joint pattern of all six rejects independence (exact
+   p = 10/300). The fork is therefore reported as ONE joint population-level
+   pattern; under a tradition-blocked null the joint pattern does not reject
+   (p = 1/3 over 6 within-block placements) — its surprise is between-tradition.
 3. **Genre, not nation**, is the main axis of variation.
 4. **Rank is a scalar, not a slot** — encoded in layout (Ottoman blank space),
    in grammar (Saudi), in type names (Senegal, Thailand).

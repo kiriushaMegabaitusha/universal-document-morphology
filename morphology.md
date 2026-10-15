@@ -65,7 +65,15 @@ two slots:
 
 Both share the stem: S1, S3, S5, S10/S11, S12, S13. The destination slot and
 the setting slot are in complementary distribution — the clearest single
-structural finding in this atlas.
+structural finding in this atlas. A registered exact-null audit (2026-10-15,
+`audit/RESULTS.md`) regrades how that finding counts: the distribution holds as
+a census fact, and as *one joint pattern* it rejects independence exactly
+(p = 10/300), while none of the six individual "never" edges is surprising on
+its own (each becomes informative only at 44–94 systems), and a
+tradition-blocked null does not reject the joint pattern (p = 1/3 over 6
+within-block placements). The fork is therefore reported as a single joint
+population-level pattern whose surprise is between-tradition — not as six
+independent laws.
 
 ## 4. Convergence matrix
 
