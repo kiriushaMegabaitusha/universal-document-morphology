@@ -1,0 +1,29 @@
+# evidence_status.tsv — post-ideation literature check, session udm-ideation-01
+# Produced by evidence-checkers E01-E04 on 2026-10-15 (bounded search, snippets-first;
+# full queries/sources/limits in raw/evidence_E0{1..4}.md). Status semantics per
+# scientific-brainstorming skill: "challenge-located" = prior/adjacent work located
+# that challenges novelty or the premise; absence from a bounded search never
+# establishes novelty.
+P01-1	support-located
+P02-1	challenge-located
+P02-2	mixed
+P02-4	challenge-located
+P02-6	challenge-located
+P03-1	mixed
+P04-1	mixed
+P04-3	challenge-located
+P05-2	mixed
+P05-6	mixed
+P06-1	challenge-located
+P06-2	challenge-located
+P06-3	mixed
+P06-4	challenge-located
+P06-5	challenge-located
+P07-1	challenge-located
+P07-3	mixed
+P07-5	challenge-located
+P08-1	mixed
+P08-2	mixed
+P08-3	mixed
+P08-5	mixed
+P08-6	mixed

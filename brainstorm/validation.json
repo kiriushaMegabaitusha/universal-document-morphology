@@ -1,0 +1,247 @@
+{
+  "errors": [],
+  "limitations": [
+    "Validation is structural and deterministic; it does not verify claims, citations, novelty, feasibility, or scientific validity.",
+    "Exact normalized-text duplicate warnings do not assert semantic equivalence.",
+    "A valid register is not ethics, biosafety, regulatory, clinical, or institutional approval."
+  ],
+  "statistics": {
+    "ai_assisted_or_mixed_ideas": 57,
+    "assumptions": 0,
+    "errors": 0,
+    "ideas": 57,
+    "participants": 11,
+    "warnings": 57
+  },
+  "valid": true,
+  "warnings": [
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[0].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[1].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[2].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[3].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[4].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[5].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[6].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[7].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[8].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[9].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[10].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[11].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[12].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[13].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[14].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[15].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[16].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[17].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[18].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[19].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[20].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[21].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[22].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[23].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[24].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[25].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[26].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[27].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[28].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[29].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[30].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[31].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[32].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[33].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[34].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[35].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[36].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[37].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[38].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[39].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[40].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[41].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[42].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[43].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[44].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[45].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[46].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[47].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[48].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[49].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[50].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[51].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[52].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[53].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[54].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[55].assumption_ids"
+    },
+    {
+      "message": "idea has no explicit linked assumptions",
+      "path": "$.ideas[56].assumption_ids"
+    }
+  ]
+}
