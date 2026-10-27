@@ -1,8 +1,8 @@
 # B3 — lineage-restricted re-derivation
 
-**Status: registered, NOT yet run.** No test statistic has been computed on the real
-matrix, and no results file exists. The registration is the commit that adds this
-directory together with the pre-registration; the run happens once after it.
+**Status: run once (2026-10-27); results in `RESULTS.md`.** No second run. The
+registration is commit `bfd6ffc`; the registered analysis executed once after it and
+its output is `results.json`.
 
 The registration text is `PREREGISTRATION.md` in this directory. The literature
 check is `brainstorm/raw/evidence_B3.md`.

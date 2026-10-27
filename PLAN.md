@@ -163,7 +163,7 @@ Nothing here starts without its trigger. Order is a recommendation, not a queue.
 | item | what | trigger |
 |---|---|---|
 | B6 | Documentation corrections: stale item counts in `experiment/PREREGISTRATION.md` §3; stale status line in `brainstorm/RESULTS.md`; `EXECUTIVE_SUMMARY.md` version header | **done 2026-10-27** — logged as Erratum 2 in `experiment/DEVIATIONS.md`; gates pass |
-| B3 | Inference follow-ons on frozen data: lineage-restricted re-derivation, prevalence bounds, compelled-requisites robustness, spec curve | **registered 2026-10-27; not yet run** — `lineage/PREREGISTRATION.md`; code self-tested, inputs frozen |
+| B3 | Inference follow-ons on frozen data: lineage-restricted re-derivation, prevalence bounds, compelled-requisites robustness, spec curve | **closed 2026-10-27** — `lineage/RESULTS.md`. Stem not lineage-universal (0/6), no descent clustering (p = 0.52), authentication rank 1, mandatory-only fork p = 0.24. Regrade required (D6) |
 | B1 | Rating wave for the 9 unrated post-check ideas (`brainstorm/RESULTS.md`, `P09`–`P11`) | owner requests the wave; criteria frozen first |
 | B2 | Human-arm follow-up: wider item sample, or a design without double exposure | blocked while W2 is paused; after W2 reports, and only as a new registration |
 | B4 | P03-1 (human subjects), P04-3 (licence/retrieval probe) | gate cleared: ethics determination, licence probe |
@@ -211,7 +211,8 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | D2 | Request the rating wave for the 9 unrated ideas (B1) | open; they stay candidates and the rating round stays frozen until you ask |
 | D3 | Pursue the three gate clearances (B4, B5) | open; those ideas stay paused, not rejected |
 | D4 | Whether a future human study needs external registration (OSF) | open, and moot while W2 is paused |
-| D5 | Next substantive track after B6: B3 (inference follow-ons) or B1 (rating wave) | **B3 drafted, awaiting approval** — `brainstorm/B3_PREREGISTRATION_DRAFT.md`; not registered, so not active. B1 stays unfrozen |
+| D5 | Next substantive track after B6: B3 (inference follow-ons) or B1 (rating wave) | **B3 registered and run** (`lineage/RESULTS.md`); B1 stays unfrozen |
+| D6 | Regrade the atlas prose after B3: R1 failed, so §8 requires "universal stem" → "system-level majority, lineage-conditional", plus the S12 majority-claim wording | open; the frozen atlas is untouched until you decide |
 
 ---
 
@@ -235,3 +236,4 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | 2026-10-27 | **B3 promotion, step 1–2**: bounded literature check run and recorded (`brainstorm/raw/evidence_B3.md`, challenge-located); lineage table coded with one citation per documented edge (`brainstorm/lineage_blocks_PROVISIONAL.csv`). Evidence check forced Revision 1 (transmission clusters not a tree; JP to broad; WA settled as non-Islamicate; variant rule rewritten: 19/18/12 blocks). No test statistic computed; nothing committed |
 | 2026-10-27 | **B3 promotion, step 3–4**: analysis code written and self-tested (`lineage/lineage_audit.py --self-test`); derived input frozen (`lineage/mandatory_only.csv`, with HN and PE empty and kept); Revision 2 recorded (holdout reduced to prevalence vs lineage, genre rule not computable). Registration commit not made; real matrix never read for analysis |
 | 2026-10-27 | **B3 registered** at the commit that adds `lineage/` together with `PREREGISTRATION.md` and `DEVIATIONS.md`; not yet run at the time of the commit. `PLAN.md` and the B6 corrections committed in the same session |
+| 2026-10-27 | **B3 run once and closed** (`bfd6ffc` registration; no deviations): stem not lineage-universal (0/6 under both readings), no descent clustering (base p = 0.518, T = −0.062), authentication rank 1 (13/18 lineages), fork not lineage-universal (2/18), mandatory-only fork p = 6/25, lineage holdout worse than prevalence. **Regrade of the atlas prose now required (D6)** |

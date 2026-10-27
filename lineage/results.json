@@ -1,0 +1,2870 @@
+{
+ "variants": {
+  "narrow": {
+   "all": {
+    "variant": "narrow",
+    "matrix": "all",
+    "n_blocks": 19,
+    "deterministic": {
+     "n_blocks": 19,
+     "slots": {
+      "S1": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 6,
+       "lineage_majority": 6
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 9,
+       "lineage_universal": 8,
+       "lineage_majority": 8
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S4": {
+       "system_n": 9,
+       "lineage_present": 6,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S6": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 4
+      },
+      "S7": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S8": {
+       "system_n": 10,
+       "lineage_present": 8,
+       "lineage_universal": 6,
+       "lineage_majority": 6
+      },
+      "S9": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 2,
+       "lineage_majority": 2
+      },
+      "S10": {
+       "system_n": 14,
+       "lineage_present": 11,
+       "lineage_universal": 9,
+       "lineage_majority": 10
+      },
+      "S11": {
+       "system_n": 4,
+       "lineage_present": 4,
+       "lineage_universal": 3,
+       "lineage_majority": 3
+      },
+      "S12": {
+       "system_n": 17,
+       "lineage_present": 14,
+       "lineage_universal": 12,
+       "lineage_majority": 13
+      },
+      "S13": {
+       "system_n": 9,
+       "lineage_present": 8,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S14": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 7,
+       "lineage_majority": 8
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 2,
+    "clustering_full": {
+     "stat": 0.375,
+     "p": {
+      "num": 35643,
+      "den": 100001,
+      "float": 0.35642643573564264
+     },
+     "draws": 100000,
+     "null_q025": -1.808219178082192,
+     "null_q500": -0.1386986301369859,
+     "null_q975": 2.1729452054794525
+    },
+    "clustering_partners": {
+     "stat": -0.06164383561643838,
+     "p": {
+      "num": 53567,
+      "den": 100001,
+      "float": 0.5356646433535664
+     },
+     "draws": 100000,
+     "null_q025": -1.089041095890411,
+     "null_q500": -0.06164383561643838,
+     "null_q975": 1.4794520547945207
+    },
+    "clustering_epistolary": {
+     "stat": -0.1763698630136986,
+     "p": {
+      "num": 91926,
+      "den": 100001,
+      "float": 0.9192508074919251
+     },
+     "draws": 100000,
+     "null_q025": -0.3047945205479452,
+     "null_q500": -0.047945205479452024,
+     "null_q975": 0.4657534246575342
+    },
+    "bh_partner_epist": [
+     {
+      "num": 91926,
+      "den": 100001,
+      "float": 0.9192508074919251
+     },
+     {
+      "num": 91926,
+      "den": 100001,
+      "float": 0.9192508074919251
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 30,
+      "float": 0.03333333333333333
+     },
+     "N": 25,
+     "K": 20,
+     "n": 2
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "floor": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "placements": 1,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 8,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 8,
+      "p": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 8,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 10,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 19,
+      "lineage_prev": 0.42105263157894735,
+      "lineage_ci": [
+       0.20252143897716263,
+       0.6650021559882646
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 9,
+      "n_blocks": 19,
+      "lineage_prev": 0.47368421052631576,
+      "lineage_ci": [
+       0.24447468946619594,
+       0.7113567520830013
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 6,
+      "n_blocks": 19,
+      "lineage_prev": 0.3157894736842105,
+      "lineage_ci": [
+       0.1257606358729833,
+       0.5655015688461509
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 19,
+      "lineage_prev": 0.3157894736842105,
+      "lineage_ci": [
+       0.1257606358729833,
+       0.5655015688461509
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 10,
+      "system_prev": 0.4,
+      "ci": [
+       0.211254806465142,
+       0.6133465037431602
+      ],
+      "lineage_n": 8,
+      "n_blocks": 19,
+      "lineage_prev": 0.42105263157894735,
+      "lineage_ci": [
+       0.20252143897716263,
+       0.6650021559882646
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 19,
+      "lineage_prev": 0.10526315789473684,
+      "lineage_ci": [
+       0.01301216437177749,
+       0.33137666445676606
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 14,
+      "system_prev": 0.56,
+      "ci": [
+       0.3492816339913357,
+       0.7559763348527919
+      ],
+      "lineage_n": 11,
+      "n_blocks": 19,
+      "lineage_prev": 0.5789473684210527,
+      "lineage_ci": [
+       0.33499784401173527,
+       0.7974785610228372
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 4,
+      "system_prev": 0.16,
+      "ci": [
+       0.04537945237170954,
+       0.36082845445927203
+      ],
+      "lineage_n": 4,
+      "n_blocks": 19,
+      "lineage_prev": 0.21052631578947367,
+      "lineage_ci": [
+       0.06052453770928973,
+       0.4556530818915058
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 17,
+      "system_prev": 0.68,
+      "ci": [
+       0.46499928250262756,
+       0.8505045773864304
+      ],
+      "lineage_n": 14,
+      "n_blocks": 19,
+      "lineage_prev": 0.7368421052631579,
+      "lineage_ci": [
+       0.48797065465412703,
+       0.9085342150923335
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 8,
+      "n_blocks": 19,
+      "lineage_prev": 0.42105263157894735,
+      "lineage_ci": [
+       0.20252143897716263,
+       0.6650021559882646
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 19,
+      "lineage_prev": 0.42105263157894735,
+      "lineage_ci": [
+       0.20252143897716263,
+       0.6650021559882646
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   },
+   "mandatory": {
+    "variant": "narrow",
+    "matrix": "mandatory",
+    "n_blocks": 19,
+    "deterministic": {
+     "n_blocks": 19,
+     "slots": {
+      "S1": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 9,
+       "lineage_universal": 8,
+       "lineage_majority": 8
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S4": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S6": {
+       "system_n": 5,
+       "lineage_present": 5,
+       "lineage_universal": 3,
+       "lineage_majority": 3
+      },
+      "S7": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 0,
+       "lineage_majority": 0
+      },
+      "S8": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 5,
+       "lineage_majority": 5
+      },
+      "S9": {
+       "system_n": 1,
+       "lineage_present": 1,
+       "lineage_universal": 1,
+       "lineage_majority": 1
+      },
+      "S10": {
+       "system_n": 13,
+       "lineage_present": 10,
+       "lineage_universal": 8,
+       "lineage_majority": 9
+      },
+      "S11": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 2,
+       "lineage_majority": 2
+      },
+      "S12": {
+       "system_n": 16,
+       "lineage_present": 13,
+       "lineage_universal": 11,
+       "lineage_majority": 12
+      },
+      "S13": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 1,
+       "lineage_majority": 1
+      },
+      "S14": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 5,
+       "lineage_majority": 6
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 1,
+    "clustering_full": {
+     "stat": -0.11986301369863028,
+     "p": {
+      "num": 56603,
+      "den": 100001,
+      "float": 0.5660243397566024
+     },
+     "draws": 100000,
+     "null_q025": -1.5325342465753433,
+     "null_q500": 0.008561643835616195,
+     "null_q975": 1.6780821917808222
+    },
+    "clustering_partners": {
+     "stat": -0.4948630136986303,
+     "p": {
+      "num": 85006,
+      "den": 100001,
+      "float": 0.8500514994850051
+     },
+     "draws": 100000,
+     "null_q025": -1.0085616438356166,
+     "null_q500": 0.018835616438356073,
+     "null_q975": 1.0462328767123288
+    },
+    "clustering_epistolary": {
+     "stat": -0.17123287671232879,
+     "p": {
+      "num": 89640,
+      "den": 100001,
+      "float": 0.8963910360896391
+     },
+     "draws": 100000,
+     "null_q025": -0.2996575342465754,
+     "null_q500": -0.042808219178082196,
+     "null_q975": 0.34246575342465757
+    },
+    "bh_partner_epist": [
+     {
+      "num": 89640,
+      "den": 100001,
+      "float": 0.8963910360896391
+     },
+     {
+      "num": 89640,
+      "den": 100001,
+      "float": 0.8963910360896391
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 6,
+      "den": 25,
+      "float": 0.24
+     },
+     "N": 25,
+     "K": 19,
+     "n": 1
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "floor": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "placements": 1,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 5,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 4,
+      "p": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 5,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 9,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 19,
+      "lineage_prev": 0.3157894736842105,
+      "lineage_ci": [
+       0.1257606358729833,
+       0.5655015688461509
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 9,
+      "n_blocks": 19,
+      "lineage_prev": 0.47368421052631576,
+      "lineage_ci": [
+       0.24447468946619594,
+       0.7113567520830013
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 19,
+      "lineage_prev": 0.3157894736842105,
+      "lineage_ci": [
+       0.1257606358729833,
+       0.5655015688461509
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 19,
+      "lineage_prev": 0.3157894736842105,
+      "lineage_ci": [
+       0.1257606358729833,
+       0.5655015688461509
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 5,
+      "system_prev": 0.2,
+      "ci": [
+       0.06831146401248406,
+       0.4070374322786773
+      ],
+      "lineage_n": 5,
+      "n_blocks": 19,
+      "lineage_prev": 0.2631578947368421,
+      "lineage_ci": [
+       0.09146578490766649,
+       0.5120293453458729
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 19,
+      "lineage_prev": 0.10526315789473684,
+      "lineage_ci": [
+       0.01301216437177749,
+       0.33137666445676606
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 1,
+      "system_prev": 0.04,
+      "ci": [
+       0.0010121996993108229,
+       0.20351691392241406
+      ],
+      "lineage_n": 1,
+      "n_blocks": 19,
+      "lineage_prev": 0.05263157894736842,
+      "lineage_ci": [
+       0.0013316288041794189,
+       0.2602806541952142
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 13,
+      "system_prev": 0.52,
+      "ci": [
+       0.3130570444570321,
+       0.7220319903300534
+      ],
+      "lineage_n": 10,
+      "n_blocks": 19,
+      "lineage_prev": 0.5263157894736842,
+      "lineage_ci": [
+       0.2886432479169988,
+       0.755525310533804
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 19,
+      "lineage_prev": 0.10526315789473684,
+      "lineage_ci": [
+       0.01301216437177749,
+       0.33137666445676606
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 16,
+      "system_prev": 0.64,
+      "ci": [
+       0.4252063495538493,
+       0.8202831794163445
+      ],
+      "lineage_n": 13,
+      "n_blocks": 19,
+      "lineage_prev": 0.6842105263157895,
+      "lineage_ci": [
+       0.4344984311538488,
+       0.8742393641270167
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 19,
+      "lineage_prev": 0.10526315789473684,
+      "lineage_ci": [
+       0.01301216437177749,
+       0.33137666445676606
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 19,
+      "lineage_prev": 0.3684210526315789,
+      "lineage_ci": [
+       0.1628858721550996,
+       0.6164220766855948
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   }
+  },
+  "base": {
+   "all": {
+    "variant": "base",
+    "matrix": "all",
+    "n_blocks": 18,
+    "deterministic": {
+     "n_blocks": 18,
+     "slots": {
+      "S1": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 5,
+       "lineage_majority": 6
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 7,
+       "lineage_majority": 7
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S4": {
+       "system_n": 9,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 5
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 5
+      },
+      "S6": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S7": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S8": {
+       "system_n": 10,
+       "lineage_present": 8,
+       "lineage_universal": 5,
+       "lineage_majority": 6
+      },
+      "S9": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 2,
+       "lineage_majority": 2
+      },
+      "S10": {
+       "system_n": 14,
+       "lineage_present": 11,
+       "lineage_universal": 8,
+       "lineage_majority": 10
+      },
+      "S11": {
+       "system_n": 4,
+       "lineage_present": 4,
+       "lineage_universal": 3,
+       "lineage_majority": 3
+      },
+      "S12": {
+       "system_n": 17,
+       "lineage_present": 13,
+       "lineage_universal": 11,
+       "lineage_majority": 12
+      },
+      "S13": {
+       "system_n": 9,
+       "lineage_present": 8,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S14": {
+       "system_n": 11,
+       "lineage_present": 7,
+       "lineage_universal": 6,
+       "lineage_majority": 7
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 2,
+    "clustering_full": {
+     "stat": -0.06206896551724128,
+     "p": {
+      "num": 51846,
+      "den": 100001,
+      "float": 0.5184548154518455
+     },
+     "draws": 100000,
+     "null_q025": -1.613793103448276,
+     "null_q500": -0.06206896551724128,
+     "null_q975": 1.9034482758620683
+    },
+    "clustering_partners": {
+     "stat": -0.37241379310344813,
+     "p": {
+      "num": 73261,
+      "den": 100001,
+      "float": 0.7326026739732603
+     },
+     "draws": 100000,
+     "null_q025": -0.9931034482758618,
+     "null_q500": -0.06206896551724128,
+     "null_q975": 1.282758620689655
+    },
+    "clustering_epistolary": {
+     "stat": -0.25517241379310346,
+     "p": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "draws": 100000,
+     "null_q025": -0.25517241379310346,
+     "null_q500": -0.0482758620689655,
+     "null_q975": 0.3655172413793104
+    },
+    "bh_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 30,
+      "float": 0.03333333333333333
+     },
+     "N": 25,
+     "K": 20,
+     "n": 2
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "floor": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "placements": 1,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 8,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 8,
+      "p": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "floor": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "placements": 27,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 8,
+      "p": {
+       "num": 2,
+       "den": 27,
+       "float": 0.07407407407407407
+      },
+      "floor": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "placements": 27,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 10,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 18,
+      "lineage_prev": 0.4444444444444444,
+      "lineage_ci": [
+       0.21530150738729975,
+       0.692428341001244
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 18,
+      "lineage_prev": 0.4444444444444444,
+      "lineage_ci": [
+       0.21530150738729975,
+       0.692428341001244
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 10,
+      "system_prev": 0.4,
+      "ci": [
+       0.211254806465142,
+       0.6133465037431602
+      ],
+      "lineage_n": 8,
+      "n_blocks": 18,
+      "lineage_prev": 0.4444444444444444,
+      "lineage_ci": [
+       0.21530150738729975,
+       0.692428341001244
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 18,
+      "lineage_prev": 0.1111111111111111,
+      "lineage_ci": [
+       0.013751215664364491,
+       0.34712043860867203
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 14,
+      "system_prev": 0.56,
+      "ci": [
+       0.3492816339913357,
+       0.7559763348527919
+      ],
+      "lineage_n": 11,
+      "n_blocks": 18,
+      "lineage_prev": 0.6111111111111112,
+      "lineage_ci": [
+       0.3574512058930627,
+       0.8270141452102482
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 4,
+      "system_prev": 0.16,
+      "ci": [
+       0.04537945237170954,
+       0.36082845445927203
+      ],
+      "lineage_n": 4,
+      "n_blocks": 18,
+      "lineage_prev": 0.2222222222222222,
+      "lineage_ci": [
+       0.06409204771766647,
+       0.47637276573648013
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 17,
+      "system_prev": 0.68,
+      "ci": [
+       0.46499928250262756,
+       0.8505045773864304
+      ],
+      "lineage_n": 13,
+      "n_blocks": 18,
+      "lineage_prev": 0.7222222222222222,
+      "lineage_ci": [
+       0.46519803441694363,
+       0.9030507874744407
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 8,
+      "n_blocks": 18,
+      "lineage_prev": 0.4444444444444444,
+      "lineage_ci": [
+       0.21530150738729975,
+       0.692428341001244
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   },
+   "mandatory": {
+    "variant": "base",
+    "matrix": "mandatory",
+    "n_blocks": 18,
+    "deterministic": {
+     "n_blocks": 18,
+     "slots": {
+      "S1": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 5
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 7,
+       "lineage_majority": 7
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S4": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 5
+      },
+      "S6": {
+       "system_n": 5,
+       "lineage_present": 5,
+       "lineage_universal": 3,
+       "lineage_majority": 3
+      },
+      "S7": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 0,
+       "lineage_majority": 0
+      },
+      "S8": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 5
+      },
+      "S9": {
+       "system_n": 1,
+       "lineage_present": 1,
+       "lineage_universal": 1,
+       "lineage_majority": 1
+      },
+      "S10": {
+       "system_n": 13,
+       "lineage_present": 10,
+       "lineage_universal": 7,
+       "lineage_majority": 9
+      },
+      "S11": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 2,
+       "lineage_majority": 2
+      },
+      "S12": {
+       "system_n": 16,
+       "lineage_present": 12,
+       "lineage_universal": 10,
+       "lineage_majority": 11
+      },
+      "S13": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 1,
+       "lineage_majority": 1
+      },
+      "S14": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 4,
+       "lineage_majority": 6
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 1,
+    "clustering_full": {
+     "stat": -0.1724137931034484,
+     "p": {
+      "num": 5422,
+      "den": 9091,
+      "float": 0.5964140358596414
+     },
+     "draws": 100000,
+     "null_q025": -1.3103448275862064,
+     "null_q500": -0.068965517241379,
+     "null_q975": 1.4827586206896566
+    },
+    "clustering_partners": {
+     "stat": -0.5241379310344825,
+     "p": {
+      "num": 88654,
+      "den": 100001,
+      "float": 0.8865311346886531
+     },
+     "draws": 100000,
+     "null_q025": -0.8344827586206898,
+     "null_q500": -0.006896551724137723,
+     "null_q975": 1.0275862068965513
+    },
+    "clustering_epistolary": {
+     "stat": -0.06896551724137934,
+     "p": {
+      "num": 79045,
+      "den": 100001,
+      "float": 0.7904420955790442
+     },
+     "draws": 100000,
+     "null_q025": -0.27586206896551724,
+     "null_q500": -0.06896551724137934,
+     "null_q975": 0.3448275862068966
+    },
+    "bh_partner_epist": [
+     {
+      "num": 88654,
+      "den": 100001,
+      "float": 0.8865311346886531
+     },
+     {
+      "num": 88654,
+      "den": 100001,
+      "float": 0.8865311346886531
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 6,
+      "den": 25,
+      "float": 0.24
+     },
+     "N": 25,
+     "K": 19,
+     "n": 1
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "floor": {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     "placements": 1,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 5,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 4,
+      "p": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "floor": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "placements": 27,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 5,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "placements": 27,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 9,
+      "p": {
+       "num": 2,
+       "den": 9,
+       "float": 0.2222222222222222
+      },
+      "floor": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "placements": 9,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 18,
+      "lineage_prev": 0.4444444444444444,
+      "lineage_ci": [
+       0.21530150738729975,
+       0.692428341001244
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 5,
+      "system_prev": 0.2,
+      "ci": [
+       0.06831146401248406,
+       0.4070374322786773
+      ],
+      "lineage_n": 5,
+      "n_blocks": 18,
+      "lineage_prev": 0.2777777777777778,
+      "lineage_ci": [
+       0.09694921252555927,
+       0.5348019655830563
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 18,
+      "lineage_prev": 0.1111111111111111,
+      "lineage_ci": [
+       0.013751215664364491,
+       0.34712043860867203
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 18,
+      "lineage_prev": 0.3888888888888889,
+      "lineage_ci": [
+       0.17298585478975176,
+       0.6425487941069374
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 1,
+      "system_prev": 0.04,
+      "ci": [
+       0.0010121996993108229,
+       0.20351691392241406
+      ],
+      "lineage_n": 1,
+      "n_blocks": 18,
+      "lineage_prev": 0.05555555555555555,
+      "lineage_ci": [
+       0.0014055561673694261,
+       0.27294359967336856
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 13,
+      "system_prev": 0.52,
+      "ci": [
+       0.3130570444570321,
+       0.7220319903300534
+      ],
+      "lineage_n": 10,
+      "n_blocks": 18,
+      "lineage_prev": 0.5555555555555556,
+      "lineage_ci": [
+       0.30757165899875594,
+       0.7846984926127001
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 18,
+      "lineage_prev": 0.1111111111111111,
+      "lineage_ci": [
+       0.013751215664364491,
+       0.34712043860867203
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 16,
+      "system_prev": 0.64,
+      "ci": [
+       0.4252063495538493,
+       0.8202831794163445
+      ],
+      "lineage_n": 12,
+      "n_blocks": 18,
+      "lineage_prev": 0.6666666666666666,
+      "lineage_ci": [
+       0.4099252381720745,
+       0.8665725974938765
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 18,
+      "lineage_prev": 0.1111111111111111,
+      "lineage_ci": [
+       0.013751215664364491,
+       0.34712043860867203
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 18,
+      "lineage_prev": 0.3333333333333333,
+      "lineage_ci": [
+       0.13342740250612356,
+       0.5900747618279256
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   }
+  },
+  "broad": {
+   "all": {
+    "variant": "broad",
+    "matrix": "all",
+    "n_blocks": 12,
+    "deterministic": {
+     "n_blocks": 12,
+     "slots": {
+      "S1": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 2,
+       "lineage_majority": 4
+      },
+      "S4": {
+       "system_n": 9,
+       "lineage_present": 6,
+       "lineage_universal": 1,
+       "lineage_majority": 4
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 1,
+       "lineage_majority": 3
+      },
+      "S6": {
+       "system_n": 8,
+       "lineage_present": 7,
+       "lineage_universal": 1,
+       "lineage_majority": 2
+      },
+      "S7": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 2,
+       "lineage_majority": 4
+      },
+      "S8": {
+       "system_n": 10,
+       "lineage_present": 8,
+       "lineage_universal": 2,
+       "lineage_majority": 4
+      },
+      "S9": {
+       "system_n": 2,
+       "lineage_present": 1,
+       "lineage_universal": 0,
+       "lineage_majority": 1
+      },
+      "S10": {
+       "system_n": 14,
+       "lineage_present": 10,
+       "lineage_universal": 4,
+       "lineage_majority": 7
+      },
+      "S11": {
+       "system_n": 4,
+       "lineage_present": 3,
+       "lineage_universal": 0,
+       "lineage_majority": 1
+      },
+      "S12": {
+       "system_n": 17,
+       "lineage_present": 10,
+       "lineage_universal": 5,
+       "lineage_majority": 8
+      },
+      "S13": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 1,
+       "lineage_majority": 3
+      },
+      "S14": {
+       "system_n": 11,
+       "lineage_present": 7,
+       "lineage_universal": 4,
+       "lineage_majority": 6
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 1,
+    "clustering_full": {
+     "stat": -0.3056752200786663,
+     "p": {
+      "num": 68745,
+      "den": 100001,
+      "float": 0.6874431255687443
+     },
+     "draws": 100000,
+     "null_q025": -1.1485296872073425,
+     "null_q500": -0.024723731035774854,
+     "null_q975": 1.3238434163701065
+    },
+    "clustering_partners": {
+     "stat": -0.17643753511893623,
+     "p": {
+      "num": 6001,
+      "den": 9091,
+      "float": 0.6601033989660103
+     },
+     "draws": 100000,
+     "null_q025": -0.73834051320472,
+     "null_q500": -0.007866641693200727,
+     "null_q975": 0.8911781232440532
+    },
+    "clustering_epistolary": {
+     "stat": -0.1341075107698071,
+     "p": {
+      "num": 94601,
+      "den": 100001,
+      "float": 0.9460005399946001
+     },
+     "draws": 100000,
+     "null_q025": -0.19029780857838546,
+     "null_q500": -0.02172691515265035,
+     "null_q975": 0.25922457389024167
+    },
+    "bh_partner_epist": [
+     {
+      "num": 94601,
+      "den": 100001,
+      "float": 0.9460005399946001
+     },
+     {
+      "num": 94601,
+      "den": 100001,
+      "float": 0.9460005399946001
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 30,
+      "float": 0.03333333333333333
+     },
+     "N": 25,
+     "K": 20,
+     "n": 2
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 1,
+      "den": 3,
+      "float": 0.3333333333333333
+     },
+     "floor": {
+      "num": 1,
+      "den": 3,
+      "float": 0.3333333333333333
+     },
+     "placements": 3,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 8,
+      "p": {
+       "num": 2,
+       "den": 27,
+       "float": 0.07407407407407407
+      },
+      "floor": {
+       "num": 1,
+       "den": 162,
+       "float": 0.006172839506172839
+      },
+      "placements": 162,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 8,
+      "p": {
+       "num": 1,
+       "den": 243,
+       "float": 0.00411522633744856
+      },
+      "floor": {
+       "num": 1,
+       "den": 486,
+       "float": 0.00205761316872428
+      },
+      "placements": 486,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 8,
+      "p": {
+       "num": 4,
+       "den": 243,
+       "float": 0.01646090534979424
+      },
+      "floor": {
+       "num": 1,
+       "den": 729,
+       "float": 0.0013717421124828531
+      },
+      "placements": 729,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 10,
+      "p": {
+       "num": 2,
+       "den": 27,
+       "float": 0.07407407407407407
+      },
+      "floor": {
+       "num": 1,
+       "den": 162,
+       "float": 0.006172839506172839
+      },
+      "placements": 162,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 12,
+      "lineage_prev": 0.6666666666666666,
+      "lineage_ci": [
+       0.34887550641881415,
+       0.9007539088504166
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 12,
+      "lineage_prev": 0.6666666666666666,
+      "lineage_ci": [
+       0.34887550641881415,
+       0.9007539088504166
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 7,
+      "n_blocks": 12,
+      "lineage_prev": 0.5833333333333334,
+      "lineage_ci": [
+       0.2766696856821059,
+       0.8483477701915698
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 12,
+      "lineage_prev": 0.5833333333333334,
+      "lineage_ci": [
+       0.2766696856821059,
+       0.8483477701915698
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 10,
+      "system_prev": 0.4,
+      "ci": [
+       0.211254806465142,
+       0.6133465037431602
+      ],
+      "lineage_n": 8,
+      "n_blocks": 12,
+      "lineage_prev": 0.6666666666666666,
+      "lineage_ci": [
+       0.34887550641881415,
+       0.9007539088504166
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 1,
+      "n_blocks": 12,
+      "lineage_prev": 0.08333333333333333,
+      "lineage_ci": [
+       0.0021075932318602164,
+       0.38479616515094406
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 14,
+      "system_prev": 0.56,
+      "ci": [
+       0.3492816339913357,
+       0.7559763348527919
+      ],
+      "lineage_n": 10,
+      "n_blocks": 12,
+      "lineage_prev": 0.8333333333333334,
+      "lineage_ci": [
+       0.5158622513140327,
+       0.9791374745399075
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 4,
+      "system_prev": 0.16,
+      "ci": [
+       0.04537945237170954,
+       0.36082845445927203
+      ],
+      "lineage_n": 3,
+      "n_blocks": 12,
+      "lineage_prev": 0.25,
+      "lineage_ci": [
+       0.05486064452799272,
+       0.5718584618781892
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 17,
+      "system_prev": 0.68,
+      "ci": [
+       0.46499928250262756,
+       0.8505045773864304
+      ],
+      "lineage_n": 10,
+      "n_blocks": 12,
+      "lineage_prev": 0.8333333333333334,
+      "lineage_ci": [
+       0.5158622513140327,
+       0.9791374745399075
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 12,
+      "lineage_prev": 0.5833333333333334,
+      "lineage_ci": [
+       0.2766696856821059,
+       0.8483477701915698
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 7,
+      "n_blocks": 12,
+      "lineage_prev": 0.5833333333333334,
+      "lineage_ci": [
+       0.2766696856821059,
+       0.8483477701915698
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   },
+   "mandatory": {
+    "variant": "broad",
+    "matrix": "mandatory",
+    "n_blocks": 12,
+    "deterministic": {
+     "n_blocks": 12,
+     "slots": {
+      "S1": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 1,
+       "lineage_majority": 3
+      },
+      "S2": {
+       "system_n": 11,
+       "lineage_present": 8,
+       "lineage_universal": 3,
+       "lineage_majority": 4
+      },
+      "S3": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 2,
+       "lineage_majority": 4
+      },
+      "S4": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 1,
+       "lineage_majority": 3
+      },
+      "S5": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 1,
+       "lineage_majority": 3
+      },
+      "S6": {
+       "system_n": 5,
+       "lineage_present": 5,
+       "lineage_universal": 1,
+       "lineage_majority": 1
+      },
+      "S7": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 0,
+       "lineage_majority": 0
+      },
+      "S8": {
+       "system_n": 9,
+       "lineage_present": 7,
+       "lineage_universal": 2,
+       "lineage_majority": 4
+      },
+      "S9": {
+       "system_n": 1,
+       "lineage_present": 1,
+       "lineage_universal": 0,
+       "lineage_majority": 0
+      },
+      "S10": {
+       "system_n": 13,
+       "lineage_present": 10,
+       "lineage_universal": 3,
+       "lineage_majority": 6
+      },
+      "S11": {
+       "system_n": 2,
+       "lineage_present": 1,
+       "lineage_universal": 0,
+       "lineage_majority": 1
+      },
+      "S12": {
+       "system_n": 16,
+       "lineage_present": 9,
+       "lineage_universal": 4,
+       "lineage_majority": 7
+      },
+      "S13": {
+       "system_n": 2,
+       "lineage_present": 2,
+       "lineage_universal": 0,
+       "lineage_majority": 0
+      },
+      "S14": {
+       "system_n": 8,
+       "lineage_present": 6,
+       "lineage_universal": 3,
+       "lineage_majority": 5
+      }
+     }
+    },
+    "stem_universal": [],
+    "s9_lineages": 1,
+    "clustering_full": {
+     "stat": -0.1947930324030711,
+     "p": {
+      "num": 65599,
+      "den": 100001,
+      "float": 0.6559834401655984
+     },
+     "draws": 100000,
+     "null_q025": -0.92526690391459,
+     "null_q500": -0.026222138977335163,
+     "null_q975": 1.0413935193856538
+    },
+    "clustering_partners": {
+     "stat": -0.14197415246300782,
+     "p": {
+      "num": 68720,
+      "den": 100001,
+      "float": 0.6871931280687193
+     },
+     "draws": 100000,
+     "null_q025": -0.5914965349316348,
+     "null_q500": -0.02959355684585141,
+     "null_q975": 0.7008803146656679
+    },
+    "clustering_epistolary": {
+     "stat": -0.03746019853905225,
+     "p": {
+      "num": 71898,
+      "den": 100001,
+      "float": 0.7189728102718973
+     },
+     "draws": 100000,
+     "null_q025": -0.20603109196478747,
+     "null_q500": 0.01873009926952618,
+     "null_q975": 0.18730099269526124
+    },
+    "bh_partner_epist": [
+     {
+      "num": 71898,
+      "den": 100001,
+      "float": 0.7189728102718973
+     },
+     {
+      "num": 71898,
+      "den": 100001,
+      "float": 0.7189728102718973
+     }
+    ],
+    "by_partner_epist": [
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     },
+     {
+      "num": 1,
+      "den": 1,
+      "float": 1.0
+     }
+    ],
+    "fork_unblocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 6,
+      "den": 25,
+      "float": 0.24
+     },
+     "N": 25,
+     "K": 19,
+     "n": 1
+    },
+    "fork_blocked": {
+     "observed_T": 0,
+     "p": {
+      "num": 2,
+      "den": 3,
+      "float": 0.6666666666666666
+     },
+     "floor": {
+      "num": 1,
+      "den": 3,
+      "float": 0.3333333333333333
+     },
+     "placements": 3,
+     "exact": true
+    },
+    "implications_blocked": [
+     {
+      "rule": "S6=>S12",
+      "observed_support": 5,
+      "p": {
+       "num": 2,
+       "den": 27,
+       "float": 0.07407407407407407
+      },
+      "floor": {
+       "num": 1,
+       "den": 162,
+       "float": 0.006172839506172839
+      },
+      "placements": 162,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S8",
+      "observed_support": 4,
+      "p": {
+       "num": 1,
+       "den": 18,
+       "float": 0.05555555555555555
+      },
+      "floor": {
+       "num": 1,
+       "den": 162,
+       "float": 0.006172839506172839
+      },
+      "placements": 162,
+      "exact": true
+     },
+     {
+      "rule": "S6=>S10",
+      "observed_support": 5,
+      "p": {
+       "num": 1,
+       "den": 27,
+       "float": 0.037037037037037035
+      },
+      "floor": {
+       "num": 1,
+       "den": 1458,
+       "float": 0.0006858710562414266
+      },
+      "placements": 1458,
+      "exact": true
+     },
+     {
+      "rule": "S8=>S12",
+      "observed_support": 9,
+      "p": {
+       "num": 1,
+       "den": 9,
+       "float": 0.1111111111111111
+      },
+      "floor": {
+       "num": 1,
+       "den": 162,
+       "float": 0.006172839506172839
+      },
+      "placements": 162,
+      "exact": true
+     }
+    ],
+    "prevalence": {
+     "S1": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S2": {
+      "system_n": 11,
+      "system_prev": 0.44,
+      "ci": [
+       0.2440236651472079,
+       0.6507183660086642
+      ],
+      "lineage_n": 8,
+      "n_blocks": 12,
+      "lineage_prev": 0.6666666666666666,
+      "lineage_ci": [
+       0.34887550641881415,
+       0.9007539088504166
+      ],
+      "majority_claim_ok": false
+     },
+     "S3": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S4": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S5": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     },
+     "S6": {
+      "system_n": 5,
+      "system_prev": 0.2,
+      "ci": [
+       0.06831146401248406,
+       0.4070374322786773
+      ],
+      "lineage_n": 5,
+      "n_blocks": 12,
+      "lineage_prev": 0.4166666666666667,
+      "lineage_ci": [
+       0.15165222980843013,
+       0.7233303143178942
+      ],
+      "majority_claim_ok": false
+     },
+     "S7": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 12,
+      "lineage_prev": 0.16666666666666666,
+      "lineage_ci": [
+       0.020862525460092318,
+       0.48413774868596715
+      ],
+      "majority_claim_ok": false
+     },
+     "S8": {
+      "system_n": 9,
+      "system_prev": 0.36,
+      "ci": [
+       0.1797168205836554,
+       0.5747936504461506
+      ],
+      "lineage_n": 7,
+      "n_blocks": 12,
+      "lineage_prev": 0.5833333333333334,
+      "lineage_ci": [
+       0.2766696856821059,
+       0.8483477701915698
+      ],
+      "majority_claim_ok": false
+     },
+     "S9": {
+      "system_n": 1,
+      "system_prev": 0.04,
+      "ci": [
+       0.0010121996993108229,
+       0.20351691392241406
+      ],
+      "lineage_n": 1,
+      "n_blocks": 12,
+      "lineage_prev": 0.08333333333333333,
+      "lineage_ci": [
+       0.0021075932318602164,
+       0.38479616515094406
+      ],
+      "majority_claim_ok": false
+     },
+     "S10": {
+      "system_n": 13,
+      "system_prev": 0.52,
+      "ci": [
+       0.3130570444570321,
+       0.7220319903300534
+      ],
+      "lineage_n": 10,
+      "n_blocks": 12,
+      "lineage_prev": 0.8333333333333334,
+      "lineage_ci": [
+       0.5158622513140327,
+       0.9791374745399075
+      ],
+      "majority_claim_ok": false
+     },
+     "S11": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 1,
+      "n_blocks": 12,
+      "lineage_prev": 0.08333333333333333,
+      "lineage_ci": [
+       0.0021075932318602164,
+       0.38479616515094406
+      ],
+      "majority_claim_ok": false
+     },
+     "S12": {
+      "system_n": 16,
+      "system_prev": 0.64,
+      "ci": [
+       0.4252063495538493,
+       0.8202831794163445
+      ],
+      "lineage_n": 9,
+      "n_blocks": 12,
+      "lineage_prev": 0.75,
+      "lineage_ci": [
+       0.4281415381218109,
+       0.9451393554720073
+      ],
+      "majority_claim_ok": false
+     },
+     "S13": {
+      "system_n": 2,
+      "system_prev": 0.08,
+      "ci": [
+       0.009839590018797473,
+       0.2603058421052141
+      ],
+      "lineage_n": 2,
+      "n_blocks": 12,
+      "lineage_prev": 0.16666666666666666,
+      "lineage_ci": [
+       0.020862525460092318,
+       0.48413774868596715
+      ],
+      "majority_claim_ok": false
+     },
+     "S14": {
+      "system_n": 8,
+      "system_prev": 0.32,
+      "ci": [
+       0.14949542261356957,
+       0.5350007174973723
+      ],
+      "lineage_n": 6,
+      "n_blocks": 12,
+      "lineage_prev": 0.5,
+      "lineage_ci": [
+       0.2109446382392966,
+       0.7890553617607032
+      ],
+      "majority_claim_ok": false
+     }
+    }
+   }
+  }
+ },
+ "inputs": {
+  "slot_sha": "c29d0234ffb657e3c3bc580816c119bd2c439b721489892383cd671a2c74a6a3",
+  "req_sha": "ab501702a4e54bab151859d686bad752e61a3938b809b6b951d07b59990a82cd"
+ },
+ "holdout": {
+  "brier_prevalence": 0.23214285714285723,
+  "brier_lineage": 0.27546130952380965,
+  "delta": 0.043318452380952416,
+  "null_median": 0.2875099206349206,
+  "p_shuffle": {
+   "num": 27,
+   "den": 91,
+   "float": 0.2967032967032967
+  },
+  "draws": 1000
+ }
+}

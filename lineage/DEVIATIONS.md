@@ -17,5 +17,7 @@ deviated analysis are reported side by side; the registered one is never replace
 - `lineage_audit.py --freeze-inputs` wrote `mandatory_only.csv` from
   `requisites.csv`. It computes no statistic; it is a frozen derived input.
 
-**Deviations from the registered analysis: none yet.** The registered run has not
-been executed at the time this file was committed.
+**Deviations from the registered analysis: none.** The registered analysis ran once,
+immediately after registration (commit `bfd6ffc`, 2026-10-27), exit 0, with both
+input-hash assertions and the mandatory-matrix regeneration check passing. Results:
+`results.json`, `RESULTS.md`.
