@@ -1,0 +1,384 @@
+{
+ "schema_version": "2.0",
+ "wave": "B1 post-check rating wave",
+ "date": "2026-10-28",
+ "method": {
+  "criteria": [
+   {
+    "name": "information_gain",
+    "weight": 3
+   },
+   {
+    "name": "feasibility",
+    "weight": 3
+   },
+   {
+    "name": "rigor_disconfirmability",
+    "weight": 2
+   },
+   {
+    "name": "synergy_relevance",
+    "weight": 2
+   },
+   {
+    "name": "coverage_breadth",
+    "weight": 1
+   }
+  ],
+  "aggregation": "median central (lower-middle), min low, max high",
+  "score": "100 * sum(w*(c-1)) / (4*sum(w))"
+ },
+ "raters": 4,
+ "results": [
+  {
+   "idea_id": "P09-1",
+   "score": 79.5,
+   "rank": 1,
+   "central": {
+    "information_gain": 4,
+    "feasibility": 5,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 1
+   },
+   "low": {
+    "information_gain": 2,
+    "feasibility": 4,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 3,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 5,
+    "feasibility": 5,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 3
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     1,
+     1
+    ],
+    "feasibility": [
+     1,
+     1
+    ],
+    "rigor_disconfirmability": [
+     1,
+     1
+    ],
+    "synergy_relevance": [
+     1,
+     1
+    ],
+    "coverage_breadth": [
+     1,
+     1
+    ]
+   }
+  },
+  {
+   "idea_id": "P10-1",
+   "score": 72.7,
+   "rank": 2,
+   "central": {
+    "information_gain": 4,
+    "feasibility": 4,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 1
+   },
+   "low": {
+    "information_gain": 3,
+    "feasibility": 3,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 4,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 5,
+    "feasibility": 5,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 2
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     3,
+     3
+    ],
+    "feasibility": [
+     3,
+     3
+    ],
+    "rigor_disconfirmability": [
+     2,
+     2
+    ],
+    "synergy_relevance": [
+     2,
+     2
+    ],
+    "coverage_breadth": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "idea_id": "P10-3",
+   "score": 72.7,
+   "rank": 3,
+   "central": {
+    "information_gain": 5,
+    "feasibility": 2,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 4
+   },
+   "low": {
+    "information_gain": 4,
+    "feasibility": 1,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 4,
+    "coverage_breadth": 3
+   },
+   "high": {
+    "information_gain": 5,
+    "feasibility": 4,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 5
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     2,
+     4
+    ],
+    "feasibility": [
+     2,
+     4
+    ],
+    "rigor_disconfirmability": [
+     3,
+     3
+    ],
+    "synergy_relevance": [
+     3,
+     3
+    ],
+    "coverage_breadth": [
+     2,
+     4
+    ]
+   }
+  },
+  {
+   "idea_id": "P11-2",
+   "score": 72.7,
+   "rank": 4,
+   "central": {
+    "information_gain": 3,
+    "feasibility": 5,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 1
+   },
+   "low": {
+    "information_gain": 2,
+    "feasibility": 3,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 3,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 4,
+    "feasibility": 5,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 2
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     2,
+     4
+    ],
+    "feasibility": [
+     2,
+     4
+    ],
+    "rigor_disconfirmability": [
+     4,
+     4
+    ],
+    "synergy_relevance": [
+     4,
+     4
+    ],
+    "coverage_breadth": [
+     3,
+     4
+    ]
+   }
+  },
+  {
+   "idea_id": "P11-1",
+   "score": 68.2,
+   "rank": 5,
+   "central": {
+    "information_gain": 4,
+    "feasibility": 3,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 2
+   },
+   "low": {
+    "information_gain": 3,
+    "feasibility": 2,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 4,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 5,
+    "feasibility": 5,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 3
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     5,
+     5
+    ],
+    "feasibility": [
+     5,
+     5
+    ],
+    "rigor_disconfirmability": [
+     5,
+     5
+    ],
+    "synergy_relevance": [
+     5,
+     5
+    ],
+    "coverage_breadth": [
+     5,
+     5
+    ]
+   }
+  },
+  {
+   "idea_id": "P10-2",
+   "score": 65.9,
+   "rank": 6,
+   "central": {
+    "information_gain": 3,
+    "feasibility": 4,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 1
+   },
+   "low": {
+    "information_gain": 2,
+    "feasibility": 3,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 3,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 4,
+    "feasibility": 5,
+    "rigor_disconfirmability": 5,
+    "synergy_relevance": 5,
+    "coverage_breadth": 3
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     6,
+     6
+    ],
+    "feasibility": [
+     6,
+     6
+    ],
+    "rigor_disconfirmability": [
+     6,
+     6
+    ],
+    "synergy_relevance": [
+     6,
+     6
+    ],
+    "coverage_breadth": [
+     6,
+     6
+    ]
+   }
+  },
+  {
+   "idea_id": "P09-3",
+   "score": 63.6,
+   "rank": 7,
+   "central": {
+    "information_gain": 3,
+    "feasibility": 5,
+    "rigor_disconfirmability": 3,
+    "synergy_relevance": 4,
+    "coverage_breadth": 1
+   },
+   "low": {
+    "information_gain": 2,
+    "feasibility": 4,
+    "rigor_disconfirmability": 2,
+    "synergy_relevance": 3,
+    "coverage_breadth": 1
+   },
+   "high": {
+    "information_gain": 4,
+    "feasibility": 5,
+    "rigor_disconfirmability": 4,
+    "synergy_relevance": 5,
+    "coverage_breadth": 2
+   },
+   "rater_spread": 1,
+   "rank_range": {
+    "information_gain": [
+     7,
+     7
+    ],
+    "feasibility": [
+     7,
+     7
+    ],
+    "rigor_disconfirmability": [
+     7,
+     7
+    ],
+    "synergy_relevance": [
+     7,
+     7
+    ],
+    "coverage_breadth": [
+     7,
+     7
+    ]
+   }
+  }
+ ],
+ "decision": null,
+ "limitations": [
+  "Four AI raters, no human expertise: consensus is not evidence.",
+  "Seven items, two resolved ideas excluded.",
+  "Scores are decision aids; the owner selects, not the matrix.",
+  "Sensitivity is one-weight-at-a-time and does not cover model-form uncertainty."
+ ]
+}

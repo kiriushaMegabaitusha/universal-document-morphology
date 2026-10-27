@@ -1,0 +1,79 @@
+[
+  {
+    "idea_id": "P09-1",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 3, "low": 3, "high": 4},
+    "synergy_relevance": {"score": 4, "low": 3, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "The reliability-to-validity pivot is the right framing and the design is unusually clean: frozen vocabulary, frozen preprocessing, fixed-margin nulls, and a reported k-curve rather than one tuned number. But the strongest form of the critique is only partly answered, because the same analyst wrote the glosses and the slot labels, so lexical recovery above chance is as consistent with gloss-writing habits as with a real deep grammar; that circularity is acknowledged but not removed. Its most valuable by-product is the free out-of-sample look at the S6/S9 split, and even a null is interpretable as the vocabulary being imposed rather than induced. Scope is internal to the atlas, so it adds no traditions.",
+    "uncertainties": "I am unsure how much credit to give a test whose likely positive result is difficult to interpret (gloss circularity) yet whose negative result is very informative. Feasibility could be even cheaper than assumed if a standard clustering stack is used unchanged.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P09-3",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 3, "low": 2, "high": 4},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "This is the only shortlisted idea that asks why documents converge rather than whether a pattern is real, and it targets findings 1 and 2 with a mechanism the repo already codes but has never used as an explanatory variable. The remaining work (leave-one-system-out mandate-share prediction, obligation-weighted ordering, mandate-level fork test) is arithmetic on frozen data, so it is the cheapest high-synergy item in the set. The problem is that obligation and presence were coded together from the same rows, so a positive result is partly definitional; leave-one-system-out limits but does not separate that alternative, and with 150/225 mandatory rows the predictor has little contrast at slot level n = 14. A null would still be informative, redirecting the universality claim toward functional or conventional accounts.",
+    "uncertainties": "The partially-executed mandatory-only result may already have fixed how the remaining tests read, and I have not seen it, so my bounds are wide on both information gain and rigor. The realized effect size is the main unknown.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-1",
+    "information_gain": {"score": 4, "low": 3, "high": 4},
+    "feasibility": {"score": 4, "low": 3, "high": 4},
+    "rigor_disconfirmability": {"score": 5, "low": 4, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Scoping re-coding to the mechanically enumerable load-bearing set converts an unfocused reliability exercise into a decision about which claims are decidable, and the per-claim verdict arrives before any null or interval is computed. The methods are deliberately textbook (propagation, tier restriction) but the scoping is the contribution and it fits the repo's gate discipline almost perfectly: mechanical cell enumeration, frozen codebook, external criterion in sources/, washout test-retest, and a stated disconfirmation with an error interval. Feasibility is high but not free, since adjudicating cells against primary texts in Cyrillic, Arabic, Han and Thai is slow single-coder work, and cells with no retrievable primary source stay permanently unadjudicable. The information gain is real but partly predictable: P2 essentially anticipates P07-5's tier result at cell granularity.",
+    "uncertainties": "Whether sources/ actually grounds enough load-bearing cells is the pivotal unknown; if coverage is thin, the study yields verdicts of undecidable rather than knowledge about documents. I could see feasibility at 3 if the primary texts turn out to be mostly secondary or translated.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-2",
+    "information_gain": {"score": 3, "low": 2, "high": 3},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 5, "low": 4, "high": 5},
+    "synergy_relevance": {"score": 4, "low": 3, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 1},
+    "qualitative_review": "Merging four separate audits into one registered specification space with a rule-enumerated spec set and a pre-committed holdout score is the right way to stop four p-values from being read as four findings, and the rigor is exemplary: enumeration rule, code hash, seed and scoring all frozen before execution. The contribution is bookkeeping of analytic degrees of freedom rather than a new question about documents, so its information gain depends heavily on the masses actually discriminating, which at n = 25-28 with many degenerate duplicates is doubtful. The embedded leave-one-tranche-out prediction is the part most likely to produce genuinely new knowledge. No new traditions are touched.",
+    "uncertainties": "If most specifications collapse to the same handful of partitions, robustness mass will sit near 1 and the study's discriminating power evaporates; the authors flag this but it is the modal outcome I expect. Residual specification space for the three unmerged families also remains unspecified.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-3",
+    "information_gain": {"score": 5, "low": 4, "high": 5},
+    "feasibility": {"score": 2, "low": 2, "high": 3},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 4},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 4, "low": 3, "high": 5},
+    "qualitative_review": "This is the only idea in the set that takes a headline universal claim out of sample, and the cheapest-bin-first sequencing is the correct asymmetry for a complementarity claim that one co-occurrence can falsify. The directional prior from diplomatics, ferman and letters patent makes bin A a genuine pre-registered prediction rather than a fishing trip, and a falsification would re-scope the fork to modern codified genres, which is a visible belief shift. It is also the broadest item here, opening pre-modern chancery and non-European deliberative material. The cost is real: three bins at 30-plus licence-clear multilingual specimens each, with coding, transcription and translation-layer auditing, is well beyond a modest collection for one person.",
+    "uncertainties": "Feasibility is the live uncertainty: early stopping means bin A alone may suffice, so an optimistic reading could reach 3, but bin B and C sourcing looks fragile. The translation confound and single-coder expectation bias at exactly the sought cell are only partly handled.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "This attacks the one conditioning assumption nothing else in the set touches: the pipeline filters to rows matching the canonical slot prefix, so 24 off-vocabulary rows in 15 of 28 systems enter no census, similarity or clustering figure, and at least one README headline rests on rows the census drops. Making absence claims either survive a bounds pass or be relabelled vocabulary-conditional is a clean, pre-registerable and genuinely falsifiable move, and the open-extraction arm with the slot list withheld is the only design here that can surface elements never entered at all. The weak point is single-coder element granularity, which re-enters upstream of every downstream reliability study; the frozen rulebook and per-script recall floor mitigate but do not remove it. Breadth is limited because the corpus is the same 28 systems.",
+    "uncertainties": "Whether the bounds turn out wide enough to be uninformative is the main risk, and the authors' own fallback ('unidentifiable from frozen data') is honest but yields less. I am also unsure how much of the open-extraction pass survives in scripts where the extracted text is noisy.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-2",
+    "information_gain": {"score": 4, "low": 3, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 1},
+    "qualitative_review": "This is the cheapest item in the wave and it protects against a specific, already-printed error: an equivalence verdict produced by instrument blindness rather than by the absence of a register effect. A positive control with a guaranteed SESOI-sized effect plus a document-absent floor, run on the frozen machine panel at roughly three cents a run, gives the TOST branch a pre-committed failure condition and forces the README v1.1/v1.2 null to be either earned or downgraded. Its information value is diagnostic rather than substantive - it decides whether finding 5 means anything - but that is exactly the kind of belief discrimination the criterion rewards. The main conceptual risk is the rubber stamp: a corruption control demonstrates gross-damage sensitivity, which is necessary but not sufficient for a subtle register-shaped effect, and the authors' scope caveat does not fully dissolve that.",
+    "uncertainties": "The outcome is fairly predictable from v1 and v2 ceiling patterns, which caps the information gain; a gate that most likely fails is valuable as a stop but not as discovery. I also cannot verify from the text alone whether item variants can be built without touching frozen stimuli during collection.",
+    "ethics_status": "not-applicable"
+  }
+]

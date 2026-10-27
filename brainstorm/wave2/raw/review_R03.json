@@ -1,0 +1,79 @@
+[
+  {
+    "idea_id": "P09-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "This is the clearest statement in the wave of a question the repo has never actually asked: whether the 14 slots are recovered by the data or imposed by the codebook. The shift from reliability to validity is well argued, and the free re-test of the S6/S9 split by a route that cannot inherit the fork is a genuine bonus. The main weakness is that the outcome is semi-predictable: glosses are analyst-written and semantically close to the slot names, so a middling ARI above nulls is the likely result and would be read either way.",
+    "uncertainties": "Whether 225 short, partly duplicated bilingual glosses carry enough signal for a stable 14-way partition versus a coarser trunk is unknown; the repo's own clustering already collapses to one trunk on presence data. I am also unsure whether any ARI value could be interpreted cleanly given that the same author wrote glosses and labels, even with the declared sensitivity.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P09-3",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 3, "low": 2, "high": 4},
+    "synergy_relevance": {"score": 4, "low": 3, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Asking why the stem converges rather than whether it does is the right kind of question, and obligation is genuinely the only frozen variable with mechanistic content. But the design's own weakest point is structural: mandate share and presence are coded from the same rows, so the leave-one-out predictor is close to a noisy re-expression of prevalence and the expected gain over the prevalence baseline is small. The obligation-weighted ordering and the mandate-level fork test are the parts most likely to produce something non-obvious; the LOO predictor is the part least likely to.",
+    "uncertainties": "I cannot tell from the text whether mandate share at 24 systems x 14 slots leaves enough between-system contrast for log-loss/AUC to discriminate at all. The bigger doubt is whether any positive result could be distinguished from definitional overlap between the obligation and presence columns.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Scoping re-coding to the cells a claim actually depends on is a real methodological improvement over uniform kappa sampling, and it is the only idea here that returns a per-claim decidable/undecidable verdict rather than another statistic. The gain is diagnostic rather than substantive: it tells you which findings survive measurement error, not what documents do. Feasibility depends on how many load-bearing cells have primary text in sources/, which the sources table suggests may be well under all of them.",
+    "uncertainties": "I am uncertain about the one-week estimate: enumerating load-bearing sets for every perfect rule and adjudicating tens of cells against extracted texts with a sole coder reads more like three or four weeks. Whether enough load-bearing cells are primary-grounded to make the verdicts non-trivial is also unresolved.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "Consolidating four audits into one enumerated specification space with a pre-committed holdout is administratively attractive and would give each headline claim a single auditable number. The risk is that the substantive conclusion is nearly fixed in advance: the fork and stem survive tier and denominator specs, the thin claims do not, which is close to what the repo already says. Counting degrees of freedom is a discipline gain more than a knowledge gain.",
+    "uncertainties": "With n = 25-28 systems, many nominal specifications will be near-duplicates, so robustness mass may be an artefact of degenerate enumeration rather than evidence of robustness; I cannot judge from the text how this is prevented. It is also unclear how much of the remaining work is genuinely open given the six-cell curve already built for one family.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-3",
+    "information_gain": {"score": 5, "low": 4, "high": 5},
+    "feasibility": {"score": 3, "low": 2, "high": 4},
+    "rigor_disconfirmability": {"score": 5, "low": 4, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 4, "low": 3, "high": 5},
+    "qualitative_review": "This is the only idea in the set that generates evidence the existing corpus cannot generate, and it targets the single most load-bearing claim (S6 perpendicular to S9) with a directional prediction rather than a neutral re-test. The sequential cheapest-bin-first structure with a frozen stopping threshold is exactly the kind of asymmetric falsification design a universal claim invites, and a survival in bin A would be worth more than any internal audit can produce. Its cost is real: three retrieval bins, translation confounds, and single-coder expectation bias on the very cell being sought.",
+    "uncertainties": "Whether bin A can actually yield around 30 licence-clear pre-modern specimens at document level, with usable translations, within a week is the crux and I cannot verify it. The translation-layer alternative (co-occurrence living in translators' conventions) may survive every mitigation and leave the falsification ambiguous.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "The observation that the recompute filter admits only S-prefixed rows, so 24 rows in 15 systems enter no derived figure, is a concrete and checkable defect rather than a hypothetical, and it bears directly on the strongest absence claims in the atlas. Framing the outcome as vocabulary-conditional reporting rather than a pass/fail verdict is disciplined and keeps the honest null informative. The bounds stage is fairly predictable; the open-extraction stage is where the real information sits and also where single-coder subjectivity is worst.",
+    "uncertainties": "The open-extraction pass depends on a defensible definition of 'one element' across five scripts with one coder and a delayed double pass, and I am not confident that the 5%/10% thresholds can be applied consistently across script strata of very unequal size. I also cannot tell whether the bounds stage alone will already settle most headline claims, making the second stage redundant.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 5, "low": 4, "high": 5},
+    "synergy_relevance": {"score": 4, "low": 3, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "As a governance move this is the strongest idea in the wave: it attaches a pre-committed failure condition to an equivalence claim that currently rests on simulation, and it runs before participants are spent. The intellectual yield is bounded, though, because a passed or failed gate changes the interpretation of one null rather than resolving a question about documents. The 'sufficient not necessary' scoping of the corruption control is a good faith attempt at the obvious objection without fully answering it.",
+    "uncertainties": "Whether a gross corruption contrast can establish sensitivity to a subtle register effect at 10 pp is the unresolved validity question, and I doubt the pre-registered scope caveat neutralises it. Feasibility could also be constrained if item variants require touching frozen v2 stimuli during the paused collection window.",
+    "ethics_status": "not-applicable"
+  }
+]

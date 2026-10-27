@@ -1,0 +1,79 @@
+[
+  {
+    "idea_id": "P09-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "This is the only remaining idea that attacks the validity rather than the repeatability of the 14-slot vocabulary, and the vocabulary is the single assumption every other audit in the round is conditioned on. The design is textbook-on-purpose and honest about its circularity: the same analyst wrote the glosses and applied the labels, so lexical recovery is a weak but non-zero external check, and the S6/S9 branch prediction is a genuine out-of-sample re-test of finding 2. Reusing 225 frozen rows on CPU makes it the cheapest high-stakes test in the set. Its weakest link is that a null ARI is confounded with 'the glosses simply do not carry lexical signal', and no positive control on lexical discriminability is proposed.",
+    "uncertainties": "I am unsure whether 225 short, multilingual, partly duplicated gloss strings carry enough signal for any clustering to be interpretable at all, which is why rigor is not higher. Whether a strong positive result would survive the same-source circularity objection is also unclear, since terminology overlap and functional overlap are not separated.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P09-3",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 3, "low": 2, "high": 4},
+    "synergy_relevance": {"score": 4, "low": 3, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Asking why the stem is universal rather than only whether it is real is a genuine gap in the round, and the obligation column is the one frozen variable that encodes a mechanism. But the predictor and the outcome were coded by the same analyst from the same rows, so a positive leave-one-system-out result is close to definitional and leave-one-out does not remove that. The obligation-weighted prevalence reordering and the mandate-level fork test are the parts most likely to yield something not already implied by the coding table. Net: a real mechanism question yielding a largely predictable answer.",
+    "uncertainties": "I am genuinely torn between 2 and 4 on information gain: the reweighted ordering could demote S7/S13 informatively, but the headline predictor test may be uninterpretable either way. Common-source bias is the main threat and I do not see a clean design fix within frozen data.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Scoping re-coding to the mechanically enumerable flip-distance-1 cells is the right economy: a random kappa sample spends effort on cells no claim depends on. The per-claim decidable/undecidable verdict before any null model is run is exactly the sequencing the round needs, and it directly targets the perfect complementarity/implication rules named in findings. The weakness is that a sole coder adjudicating against sources is still one coder, so 'adjudicated error' is a floor with unknown bias, not a measure of error.",
+    "uncertainties": "I cannot tell from the text how many load-bearing cells lack primary grounding in sources/, which determines whether most rules come back 'undecidable' rather than decided. The predicted 'at least one rule flips' is plausible but not sharply derivable in advance.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Counting analytic degrees of freedom in one registered space rather than running four audits with four p-values is the correct response to the evidence wave's 'methods are never new' finding, and the embedded holdout prediction is a real calibration check. The predicted outcome, however, is close to what the repo already suggests (fork robust to tier and denominator, fragile under tradition blocking), so most of the value is in the audit trail rather than in new belief. At n = 25-28 many nominal specifications will be degenerate duplicates, which inflates robustness mass in a way the design flags but does not solve.",
+    "uncertainties": "The main unresolved question is whether 'robustness mass' can be made a discriminating quantity at this n, or whether it will sit near 1 or near 0 for every claim. The enumeration rule and the codability denominator must be frozen tightly or the multiverse relocates the forking paths.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-3",
+    "information_gain": {"score": 5, "low": 4, "high": 5},
+    "feasibility": {"score": 2, "low": 1, "high": 3},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 5, "low": 4, "high": 5},
+    "qualitative_review": "This is the only idea in the wave that takes the atlas's headline fork out of sample, and it does so with a located directional prediction (diplomatics, ferman, letters patent combine address and recital) rather than a neutral test. Sequential cheapest-bin-first with early stopping and a threshold frozen before coding is the correct asymmetric-falsification logic, and the document-level unit answers P02-2's aggregation critique at the same time. It is also the only idea that de-centres the metropolitan axis materially, adding pre-modern chancery and Ottoman/Indian materials. The costs are real: 30 licence-clear specimens per bin across several traditions and scripts is a heavy solo retrieval and translation burden, and the translation layer remains a live alternative explanation.",
+    "uncertainties": "Feasibility is the score I am least sure of: if reliable translations exist in digitised public-domain archives this could be a 3, but a single researcher without reading competence across the relevant scripts may not reach 30 specimens per bin within the window. Rigor is also bounded by sole-coder expectation bias and by co-occurrence living in translators' conventions rather than in the instruments.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 3, "low": 2, "high": 4},
+    "rigor_disconfirmability": {"score": 5, "low": 4, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "This is the cleanest statement in the set of what would make an absence claim falsifiable: bounds on the 24 off-vocabulary rows plus a slot-blind extraction pass, with the verdict 'vocabulary-conditional' pre-declared. It identifies a concrete structural fact (the recompute filter admits only ^S\\d+- rows, so 24 rows in 15 systems enter no published figure) and shows that some headline evidence lives in exactly those rows. The two-stage design with a pre-registered unmappable-rate threshold and a recall floor is the most disciplined gate in the wave. Cost sits in the open-extraction pass, which is real multilingual coding work, not a script.",
+    "uncertainties": "The bounds stage may be so wide that most claims come back unidentifiable, which the design accepts but which reduces decision value. Element granularity in the open pass is single-coder and could drift upstream of every downstream count, and the 5%/10% thresholds are judgement calls even when frozen.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Attaching a positive control and a document-absent floor to the finding-5 instrument, before any participant is spent, is exactly the right pre-data move, and the existing harness makes it a few dollars of compute. It correctly identifies that the printed 'no detectable register effect' is currently an unfalsifiable comfort statement at ceiling. The design's own admission is also its limit: a corruption control demonstrates dynamic range for gross damage, which is necessary but not sufficient for a subtle register-shaped effect, so a pass may license an interpretation the control cannot support.",
+    "uncertainties": "I am unsure whether the gate can be made register-shaped rather than damage-shaped without new item development, which would push feasibility down. Information gain is capped because the gate cannot settle the register question itself, only whether the null is reportable.",
+    "ethics_status": "not-applicable"
+  }
+]

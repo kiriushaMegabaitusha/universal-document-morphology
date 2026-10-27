@@ -1,0 +1,79 @@
+[
+  {
+    "idea_id": "P09-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "This turns the atlas's least-examined assumption - that the 14 slots are discovered rather than imposed - into a falsifiable test using only frozen rows, and the pre-registered prediction that S6 and S9 separate into unsown branches gives it a second bite that the coding could not inherit. The design also states the right disconfirmations (null at every k; stable structure only far below k=14), so both tails carry information about the headline deep-grammar claim. The central weakness is same-source circularity: gloss_en was written by the analyst who assigned slot, so high ARI shows the labels are lexically grounded, not that the grammar is real, and this can only be flagged as a sensitivity. Cheap, CPU-only, and it directly tests findings 1-2.",
+    "uncertainties": "I am unsure whether the expected outcome is decisive: 'above null but imperfect' is the most likely result and is hard to interpret, so the most informative scenario may be the least probable. The frozen k grid and preprocessing choices also determine how much of the forking-paths critique survives the freeze, and I cannot tell from the text how much of the reported uncertainty will be about the vocabulary versus the clustering.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P09-3",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 3, "low": 2, "high": 4},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "This is the only mechanism question in the wave and it targets findings 1-2 rather than re-auditing their statistics, which is a real gap. But the predictor is close to definitional: a slot is present largely because a mandatory requisite was coded in it, so mandate share beating a prevalence-only baseline mostly demonstrates coding regularity, and the leave-one-system-out scoring limits rather than removes that. The mandatory-only re-derivation is already run, and what remains (LOO predictor, obligation-weighted ordering, mandate-level fork test) is days of work on frozen rows. The mandate-level fork test is the most interesting piece and also the thinnest, resting on 11 S6 rows and 3 S9 rows.",
+    "uncertainties": "I cannot judge from the text whether the residual (non-definitional) variance is large enough for the LOO comparison to be diagnostic; if it is not, the headline result is predetermined. The obligation column is also analyst-assigned and single-coder, so the 'normative force' mechanism may be an artefact of how mandates were entered - acknowledged, but it bounds how far the result can travel.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-1",
+    "information_gain": {"score": 4, "low": 3, "high": 5},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Well targeted: because perfect rules have flip-distance 1, the claim set rests on an enumerable handful of cells, and adjudicating exactly those against sources/ uses an external criterion rather than another agreement statistic. The predicted split into 'survives on the strong-primary subset' and 'undecidable without re-coding' would give a per-claim verdict that any later audit needs, and it is pre-registered against a frozen codebook. The week-one framing is optimistic - per-cell source adjudication across ~60 texts plus a washout re-code is more like three to four weeks - and with a sole coder the surviving-error bound will be wide. Its value is concentrated in the possibility that one flipped cell retires a headline rule.",
+    "uncertainties": "I do not know how many load-bearing cells actually have primary grounding in sources/, and if a large share are unadjudicable the study yields a map of ignorance rather than a decision. Test-retest after washout as the only human reliability number is inherently weak, so the non-trivial-error conclusion may be softer than the decidable/undecidable labels suggest.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 4, "low": 3, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "Consolidating four audits into one registered specification space with a pre-committed holdout is the right shape, and counting analytic degrees of freedom is a genuine improvement over four separate p-values. But the substantive content is largely aggregative: the predicted pattern (fork holds under tier and denominator, weakens under tradition blocking) follows closely from the repo as it stands, so the curve mostly certifies robustness rather than discriminating between explanations. Feasibility is good because the component analyses already exist, though merging them under one written enumeration rule is real engineering with the degenerate-specification trap the author himself names. The holdout prediction is what keeps it from being pure bookkeeping.",
+    "uncertainties": "With n = 25-28 systems I cannot tell how many nominally distinct specifications will be effective duplicates, and if most collapse the robustness mass is close to uninformative. I am also unclear whether the tradition-blocked specifications will be treated as a separate family or folded into the same mass, which materially changes what a high mass would mean.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P10-3",
+    "information_gain": {"score": 5, "low": 4, "high": 5},
+    "feasibility": {"score": 2, "low": 1, "high": 3},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 4, "low": 3, "high": 5},
+    "qualitative_review": "This is the only idea in the set that buys new documents and a genuine out-of-sample test of the S6/S9 fork, and sequential cheapest-falsifying-bin-first is the right ordering for an asymmetrically falsifiable claim. The bin A prediction is directional rather than decorative - diplomatics evidence says pre-modern instruments combine address and recital - so either outcome moves belief about whether the fork is universal or an artefact of modern codified genre separation. Coverage is the best here: pre-modern chancery across several traditions plus South Asian deliberative notes is a real widening beyond the 28-system core. The binding constraint is cost: three sourcing campaigns at >=30 licence-clear specimens each is a retrieval project, not a five-week study.",
+    "uncertainties": "I doubt the one-week-per-bin retrieval assumption, especially for bin B (openly posted French and Indian internal notes) and for bin A in sufficient script/genre variety. The translation-layer confound is the deepest threat: co-occurrence could be a translator's convention, and the proposed fixes (recording translation source as an exclusion) mitigate but do not resolve it.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-1",
+    "information_gain": {"score": 5, "low": 4, "high": 5},
+    "feasibility": {"score": 3, "low": 2, "high": 4},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 2, "low": 1, "high": 3},
+    "qualitative_review": "This points at a concrete and verifiable mechanical defect: 24 rows (10.7%) sit outside the ^(S\\d+)- filter that recompute.py applies, so they enter no census, similarity or clustering figure, while morphology.md asserts full vocabulary coverage - and headline 4's evidence lives in exactly those dropped rows. The bounds pass is cheap and could move presence bits in the thin, mixed systems that carry the absence claims; the open-extraction pass is the expensive and subjective half. Its strongest feature is that both outcomes are pre-specified and informative: a headline moving inside the bounds is a real finding, and a clean collapse plus sub-threshold residue is the vocabularly's first positive test.",
+    "uncertainties": "Element granularity in five scripts is the weak joint - 'what counts as one requisite' is subjective upstream of every downstream count - and a failed recall floor would leave the open pass uninterpretable. I also cannot tell in advance whether the pre-registered bounds will be too wide to be informative, in which case the disciplined output is 'unidentifiable' rather than a verdict.",
+    "ethics_status": "not-applicable"
+  },
+  {
+    "idea_id": "P11-2",
+    "information_gain": {"score": 3, "low": 2, "high": 4},
+    "feasibility": {"score": 5, "low": 4, "high": 5},
+    "rigor_disconfirmability": {"score": 4, "low": 3, "high": 5},
+    "synergy_relevance": {"score": 5, "low": 4, "high": 5},
+    "coverage_breadth": {"score": 1, "low": 1, "high": 2},
+    "qualitative_review": "This supplies a failure condition for an equivalence verdict that currently has none, and it runs pre-recruitment so no participants are spent on an instrument of unknown sensitivity - both clearly right. It is also the cheapest idea in the set, reusing machine_arm.py and the v2 stimuli at demonstrated cost. The weakness is inferential reach: a corruption control proves sensitivity to gross damage, not to a subtle register-shaped cost, so a passing gate licenses a weaker reading than the rule asserts, and the author concedes this rather than solving it. With the human arm paused, the near-term payoff is mostly how the already-printed machine null gets worded.",
+    "uncertainties": "I expect the gate to fail on the near-ceiling half of the panel, which is informative but makes the outcome fairly predictable from v1/v2 ceiling data. Whether the document-absent floor control can be made clean on the same items is unclear to me, and a floor that fires would leave the gate inconclusive rather than failed.",
+    "ethics_status": "not-applicable"
+  }
+]
