@@ -70,14 +70,14 @@ whole plan.
 
 | id | workstream | state | pointer | next action |
 |---|---|---|---|---|
-| W0 | Comparative atlas, v1.3 | **frozen** | `README.md` | maintenance only (see §5) |
+| W0 | Comparative atlas, v1.4 | **frozen** | `README.md` | maintenance only (see §5) |
 | W1 | P06-2 exact-null audit of the structural rules | **closed** | `audit/RESULTS.md` | none — do not re-run |
 | W2 | Finding-5 comprehension test, human arm | **paused — owner decision, 2026-10-27** | `experiment/PREREGISTRATION.md` | none; runbook retained in §4, no collection |
 | W3 | Forward agenda from the ideation session | **parked** | `brainstorm/DECISION_LOG.md` | on trigger only (§5) |
 
 Closed means: registered before data, run once, deviations logged, results
 committed, and the atlas prose amended where the registered decision rule required
-it (README v1.3). Nothing in W0 or W1 is reopened without a new registration.
+it (README v1.3–v1.4). Nothing in W0 or W1 is reopened without a new registration.
 
 **Consequence of pausing W2 (recorded, not softened).** Finding 5 stays
 **unmeasured**. There are no human data and none are being collected; the machine
@@ -163,7 +163,7 @@ Nothing here starts without its trigger. Order is a recommendation, not a queue.
 | item | what | trigger |
 |---|---|---|
 | B6 | Documentation corrections: stale item counts in `experiment/PREREGISTRATION.md` §3; stale status line in `brainstorm/RESULTS.md`; `EXECUTIVE_SUMMARY.md` version header | **done 2026-10-27** — logged as Erratum 2 in `experiment/DEVIATIONS.md`; gates pass |
-| B3 | Inference follow-ons on frozen data: lineage-restricted re-derivation, prevalence bounds, compelled-requisites robustness, spec curve | **closed 2026-10-27** — `lineage/RESULTS.md`. Stem not lineage-universal (0/6), no descent clustering (p = 0.52), authentication rank 1, mandatory-only fork p = 0.24. Regrade required (D6) |
+| B3 | Inference follow-ons on frozen data: lineage-restricted re-derivation, prevalence bounds, compelled-requisites robustness, spec curve | **closed 2026-10-27** — `lineage/RESULTS.md`. Stem not lineage-universal (0/6), no descent clustering (p = 0.52), authentication rank 1, mandatory-only fork p = 0.24. Regrade done in v1.4 (D6) |
 | B1 | Rating wave for the 9 unrated post-check ideas (`brainstorm/RESULTS.md`, `P09`–`P11`) | owner requests the wave; criteria frozen first |
 | B2 | Human-arm follow-up: wider item sample, or a design without double exposure | blocked while W2 is paused; after W2 reports, and only as a new registration |
 | B4 | P03-1 (human subjects), P04-3 (licence/retrieval probe) | gate cleared: ethics determination, licence probe |
@@ -212,7 +212,7 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | D3 | Pursue the three gate clearances (B4, B5) | open; those ideas stay paused, not rejected |
 | D4 | Whether a future human study needs external registration (OSF) | open, and moot while W2 is paused |
 | D5 | Next substantive track after B6: B3 (inference follow-ons) or B1 (rating wave) | **B3 registered and run** (`lineage/RESULTS.md`); B1 stays unfrozen |
-| D6 | Regrade the atlas prose after B3: R1 failed, so §8 requires "universal stem" → "system-level majority, lineage-conditional", plus the S12 majority-claim wording | open; the frozen atlas is untouched until you decide |
+| D6 | Regrade the atlas prose after B3: R1 failed, so §8 requires "universal stem" → "system-level majority, lineage-conditional", plus the S12 majority-claim wording | **done 2026-10-28** — atlas v1.4: stem regraded across `README.md`, `morphology.md`, `EXECUTIVE_SUMMARY.md`, `analysis/findings.md`, `diversity.md`; no data, claim or checked figure changed |
 
 ---
 
@@ -237,3 +237,4 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | 2026-10-27 | **B3 promotion, step 3–4**: analysis code written and self-tested (`lineage/lineage_audit.py --self-test`); derived input frozen (`lineage/mandatory_only.csv`, with HN and PE empty and kept); Revision 2 recorded (holdout reduced to prevalence vs lineage, genre rule not computable). Registration commit not made; real matrix never read for analysis |
 | 2026-10-27 | **B3 registered** at the commit that adds `lineage/` together with `PREREGISTRATION.md` and `DEVIATIONS.md`; not yet run at the time of the commit. `PLAN.md` and the B6 corrections committed in the same session |
 | 2026-10-27 | **B3 run once and closed** (`bfd6ffc` registration; no deviations): stem not lineage-universal (0/6 under both readings), no descent clustering (base p = 0.518, T = −0.062), authentication rank 1 (13/18 lineages), fork not lineage-universal (2/18), mandatory-only fork p = 6/25, lineage holdout worse than prevalence. **Regrade of the atlas prose now required (D6)** |
+| 2026-10-28 | **D6 done — atlas v1.4**: stem regraded to system-level, lineage-conditional in `README.md`, `morphology.md`, `EXECUTIVE_SUMMARY.md`, `analysis/findings.md` and `diversity.md`; authentication becomes "highest-ranked", not "most universal", with its interval quoted. Claim language only: all 28 checked figures and the gate outputs unchanged |

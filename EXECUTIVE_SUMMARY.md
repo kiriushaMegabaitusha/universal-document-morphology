@@ -1,6 +1,6 @@
 # Universal document morphology — executive summary
 
-**v1.3 · 2026-10-15 · 28 systems · 60 sources · 92 claims (88 verified)**
+**v1.4 · 2026-10-28 · 28 systems · 60 sources · 92 claims (88 verified)**
 
 ## The question
 
@@ -10,15 +10,17 @@ official information, or just a tangle of traditions?
 
 ## The answer
 
-A convergent **deep grammar** exists, across six continents and six centuries:
+A convergent **deep grammar** recurs, across six continents and six centuries:
 every operative document decomposes into the same slots — **identity, origin,
-date, body/dispositif, authentication, annex**. It is universal *because it
-encodes what law requires* (who may act, by what competence, in what form) — not
-because it is the most efficient information channel, which no standard
-measures. The surface is where traditions genuinely diverge, and the main axis
-of variation is **genre** (letter vs normative act), not nation. The claim is
-scoped to the *written* official document: two non-documentary record systems
-(the Inka khipu, Haudenosaunee wampum) fall outside it.
+date, body/dispositif, authentication, annex**. It recurs *because it encodes
+what law requires* (who may act, by what competence, in what form) — not because
+it is the most efficient information channel, which no standard measures. That
+recurrence is a **system-level regularity, not a lineage-universal**: no stem slot
+appears in every documented lineage, and no lineage clustering is detectable (B3,
+`lineage/RESULTS.md`). The surface is where traditions genuinely diverge, and the
+main axis of variation is **genre** (letter vs normative act), not nation. The
+claim is scoped to the *written* official document: two non-documentary record
+systems (the Inka khipu, Haudenosaunee wampum) fall outside it.
 
 ## The model
 
@@ -60,9 +62,11 @@ Plus three **regime dimensions** beyond the page: **trace** (Thailand, Ukraine),
 
 ## Headline findings
 
-- **Authentication (S12) is the most universal slot** — 17 of 25 slot-coded
-  systems — and the most variable in *form*: hand signature, registered seal
-  (hanko), sovereign monogram (tughra), witnessed attestation, cryptographic.
+- **Authentication (S12) is the highest-ranked slot** — 17 of 25 slot-coded
+  systems, 13 of 18 documented lineages (95 % interval 0.465–0.903, so not a
+  licensed majority claim) — and the most variable in *form*: hand signature,
+  registered seal (hanko), sovereign monogram (tughra), witnessed attestation,
+  cryptographic.
 - **Modernity is the identifier**: S2 climbs from 4/10 (1900–99) to 7/9 (2000+);
   digital signatures appear only after 2015.
 - **Genre is culturally named**, not universally categorised — five naming

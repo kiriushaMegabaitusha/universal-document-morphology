@@ -8,6 +8,12 @@ inherit from Rome, from the European chancery, or from the Westphalian state —
 and against the two endpoints of the medium, the knotted cord and the signed
 digital container.
 
+*Post-B3 note (2026-10-28).* "Universal" in this file is read as **system-level
+recurrence**. The registered B3 lineage audit (`lineage/RESULTS.md`) finds no stem
+slot present in every documented lineage and no detectable lineage clustering, so
+the stem claim is lineage-conditional; the diversity findings below are unchanged
+as census facts, but they do not establish lineage-independent universality.
+
 Sources: `cases/islamic_chancery.md`, `cases/in.md`, `cases/br.md`,
 `cases/jp.md`, `cases/ee.md`, `cases/pe.md`, `cases/za.md`.
 

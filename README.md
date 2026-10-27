@@ -1,6 +1,6 @@
 # 05.4 — Universal document morphology
 
-**Version 1.3 — frozen 2026-10-15.** A comparative atlas of how the world
+**Version 1.4 — 2026-10-28.** A comparative atlas of how the world
 formats official documents, and whether a universal document structure exists.
 
 A one-page overview is in `EXECUTIVE_SUMMARY.md`. The plan — what is finished,
@@ -16,13 +16,15 @@ most efficient carrier of official information, or just a tangle of traditions?
 ## Answer in one paragraph
 
 There is a convergent **deep grammar** (identity, origin, date, body/dispositif,
-authentication, annex) shared across six continents and six centuries; it is
-universal because it encodes what *law* requires — attribution, competence,
+authentication, annex) recurring across six continents and six centuries; it
+recurs because it encodes what *law* requires — attribution, competence,
 procedure — not because it is the most efficient information channel; the
 surface (layout, wording rituals) is where the traditions genuinely diverge; and
 the axis of variation is **genre** (letter vs normative act) more than nation.
-The universality claim is **scoped**: it holds for the written official
-document, not for record-keeping as such (two non-documentary record systems,
+The regularity is **system-level, not lineage-universal**: no stem slot is
+present in every documented lineage, and no lineage clustering is detectable
+(B3, `lineage/RESULTS.md`). The claim is also **scoped** to the written official
+document, not to record-keeping as such (two non-documentary record systems,
 the khipu and wampum, bound it). See `morphology.md`.
 
 ## Coverage
@@ -65,9 +67,11 @@ all 28 of them against the prose, so the two can no longer drift apart.
 
 ## Key findings (headline)
 
-1. A universal stem — identity, origin, date, body/dispositif, authentication,
-   annex — with **authentication (S12) the most universal slot** (17 of 25
-   slot-coded systems).
+1. A convergent stem at **system level** — identity, origin, date,
+   body/dispositif, authentication, annex — with **authentication the
+   highest-ranked slot** (17 of 25 slot-coded systems; 13 of 18 documented
+   lineages). It is **not lineage-universal**: no stem slot is present in every
+   lineage (B3, `lineage/RESULTS.md`).
 2. The **epistolary/normative fork is a formal negation of the pattern, not six
    separate laws**: the census fact is unchanged — in the 25 slot-coded systems
    the preamble (S9) carries none of authority-mark, addressee, reference,
@@ -109,6 +113,11 @@ all 28 of them against the prose, so the two can no longer drift apart.
   and hit a ceiling for 9 of 12 reader models, so it is reported as exploratory and
   says nothing about human comprehension; the human arm has not been run, and its
   current status is tracked in `PLAN.md`.
+- **The stem is system-level, not lineage-universal.** B3 (`lineage/RESULTS.md`,
+  2026-10-27) found no stem slot present in every documented lineage (0 of 6 under
+  both readings) and no detectable lineage clustering (p = 0.518); authentication
+  ranks first at 13 of 18 lineages, but its 95 % interval (0.465–0.903) does not
+  license a majority claim.
 
 ## Version history
 
@@ -126,6 +135,7 @@ all 28 of them against the prose, so the two can no longer drift apart.
 | 1.1 | finding 5 given an empirical test (`experiment/`): pre-registered design, stimuli, analysis code, machine arm run over 12 reader models (no detectable register effect; item set at ceiling for 9 of them); human instrument built and awaiting participants | 28 |
 | 1.2 | test revised to v2 before any data: 18 items instead of 12 (harder reasoning items added), and the two registers of an obligation are no longer presented consecutively; instrument bugs fixed (language switch, skip control); power at the pre-registered SESOI now 0.92 at N = 24, 0.98 at N = 36; machine arm re-run on v2 (still no detectable register effect, still near ceiling for 6 of 12 readers) | 28 |
 | 1.3 | finding 2 regraded by the registered exact-null audit (`audit/`): the fork is reported as one joint population-level pattern (exact p = 10/300), each individual "never" edge carries an informativeness threshold n* = 44–94 systems, and the tradition-blocked sensitivity (joint p = 1/3) is noted; `EXECUTIVE_SUMMARY.md` and `morphology.md` §3 aligned | 28 |
+| 1.4 | stem regraded by the registered B3 lineage audit (`lineage/`, registered `bfd6ffc`, run once): "universal stem" → **system-level, lineage-conditional** (no stem slot present in every documented lineage, 0/6); no detectable lineage clustering (base p = 0.518); authentication remains rank 1 (13 of 18 lineages) without a majority claim; README, `morphology.md`, `EXECUTIVE_SUMMARY.md` and `analysis/findings.md` wording aligned | 28 |
 
 ## Method and provenance
 

@@ -1,6 +1,6 @@
 # Universal document morphology — the analytical model
 
-Date: 2026-10-06. Companion files: `requisites.csv` (the mapping data),
+Date: 2026-10-06; revised 2026-10-28 (B3 regrade). Companion files: `requisites.csv` (the mapping data),
 `STANDARDS.md` (the standardised landscape), `cases/` (per-system detail),
 `ledger.json` (source-backed claims).
 
@@ -53,7 +53,7 @@ authentication → annex → trace. That ordering is the *syntax* of the documen
 
 ## 3. Two declensions
 
-The universal stem splits by genre into two paradigms that differ in exactly
+The stem splits by genre into two paradigms that differ in exactly
 two slots:
 
 - Epistolary (correspondence): fills **S6 destination** and **S7 reference**,
@@ -99,10 +99,15 @@ Legend: ● present and obligatory · ○ present, optional or genre-bound ·
 
 ## 5. Findings
 
-1. **Universal stem.** S1, S3, S5, S10/S11, S12, S13 appear in every system,
-   across four continents and three centuries. This is the closest thing to a
+1. **Stem, at system level.** S1, S3, S5, S10/S11, S12, S13 recur across
+   systems, four continents and three centuries. This is the closest thing to a
    universal document structure, and diplomatics (see §7) has described it
-   normatively since the 17th century.
+   normatively since the 17th century. It is **not lineage-universal**: the
+   registered B3 lineage audit (`lineage/RESULTS.md`, 2026-10-27) finds no stem
+   slot present in every documented lineage (0 of 6 under both the presence and
+   the universality reading) and no detectable lineage clustering (base p =
+   0.518). The stem is therefore reported as a **system-level regularity,
+   lineage-conditional** — not as a universal.
 
 2. **Genre, not nation, is the main axis of variation.** The biggest
    difference between a Ukrainian letter and a UN resolution is not

@@ -27,7 +27,7 @@ boundary cases with no page slots — by design).
 | S11 dispositif | 4 (EU, IN, UA, UN) |
 | S9 setting | 2 (EU, UN) |
 
-**Authentication is still the most universal slot (17/25)**; the Soviet bloc's
+**Authentication is still the highest-ranked slot (17/25)**; the Soviet bloc's
 ОКУД classifier, ГОСТ 6.38 index and type taxonomy pushed **identity (S1),
 identifier (S2) and trace (S14) into a joint third (11 each)** — the bloc is
 the only regime coded on classifier *and* requisites at once.
@@ -84,7 +84,7 @@ measures source-language terminology retained, not full script coverage.
 
 ## 7. What this supports and undercuts
 
-- **Supports:** authentication as the universal anchor (17/25); the
+- **Supports:** authentication as the leading anchor (17/25); the
   epistolary/normative fork as a hard fact (S6 ⊥ S9); convergence across
   unrelated bureaucracies (SA–UA, and BR–SU).
 - **Undercuts / cautions:** no discrete families (clustering collapses); the
