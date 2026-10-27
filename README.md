@@ -3,7 +3,9 @@
 **Version 1.3 — frozen 2026-10-15.** A comparative atlas of how the world
 formats official documents, and whether a universal document structure exists.
 
-A one-page overview is in `EXECUTIVE_SUMMARY.md`.
+A one-page overview is in `EXECUTIVE_SUMMARY.md`. The plan — what is finished,
+what is live, what comes next, and which document wins when they disagree — is in
+`PLAN.md`.
 
 ## Question
 
@@ -32,6 +34,7 @@ the khipu and wampum, bound it). See `morphology.md`.
 
 | file | what |
 |------|------|
+| `PLAN.md` | the project plan and single source of truth for status: precedence, current state, active workstream, backlog, standing rules, open decisions |
 | `EXECUTIVE_SUMMARY.md` | the whole atlas on one page |
 | `morphology.md` | the analytical model: 14 canonical slots, two declensions, convergence matrix, findings |
 | `diversity.md` | the diversity test across five tranches + the cross-cutting findings (§10–§13) |
@@ -104,7 +107,8 @@ all 28 of them against the prose, so the two can no longer drift apart.
   what an empirical test would require. That test is now designed, pre-registered
   and half-run (`experiment/`): the machine arm found no detectable register effect
   and hit a ceiling for 9 of 12 reader models, so it is reported as exploratory and
-  says nothing about human comprehension; the human arm still needs participants.
+  says nothing about human comprehension; the human arm has not been run, and its
+  current status is tracked in `PLAN.md`.
 
 ## Version history
 

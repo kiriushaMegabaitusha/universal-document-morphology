@@ -9,8 +9,10 @@ registered one is never replaced.
 
 Three entries so far: one pre-collection revision of the stimuli and presentation,
 one deviation in how the machine arm was run, and one erratum in the analysis code.
-None of them touches a hypothesis, the decision rule, the SESOI, the exclusions or
-the target N. The revision does change the stimulus set, and says so explicitly.
+A fourth (Erratum 2) records bookkeeping corrections to the v2 text and one open
+code condition; none of the four touches a hypothesis, the decision rule, the
+SESOI, the exclusions or the target N. The revision does change the stimulus set,
+and says so explicitly.
 
 ---
 
@@ -97,6 +99,38 @@ the target N. The revision does change the stimulus set, and says so explicitly.
 - **Both reported.** `results/RESULTS_registered_max40.md` is the pre-fix run
   (registered `max_tokens`, but the 5 pp margin by mistake);
   `results/RESULTS.md` is the final run (10 pp margin, deviation pass included).
+
+---
+
+## Erratum 2 — v1 item counts left in the v2 pre-registration text
+
+*Logged 2026-10-27, after registration and after the v2 machine run; no human data exists.*
+
+- **What.** Four places in `PREREGISTRATION.md` still quoted the v1 item counts after
+  Revision 1 moved the design to three items per obligation: the §1 design row
+  ("12 four-option items"), the §2 H1 statistical statement ("12 item-level
+  differences … 12 paired differences"), §3 arm M ("× 2 items = 48 … 48R
+  observations") and §3 arm H ("12 documents, 24 items"), plus the §6 primary test
+  ("all 2^12 sign patterns"). They are corrected to 18 items, 72 item-administrations
+  per model, 36 questions per participant and 2^18 sign patterns. Nothing else in
+  the file changed.
+- **Why.** Bookkeeping, not design: v2 has 3 items per obligation, 6 obligations,
+  18 items; the analysis code, `stimuli.json` (`items_per_document: 3`), the
+  simulation (18 paired units) and `README.md` all already used those counts. The
+  registration text was simply inconsistent with the registration it describes.
+- **Severity.** Unchanged. No hypothesis, decision rule, SESOI, exclusion or target N
+  is touched, and no human data exists, so no reported result depends on the fix.
+- **Validity.** Improved as a record: a pre-registration that contradicts itself on
+  the item count is a free reviewer objection.
+- **Open condition, stated rather than hidden.** `analysis_core.signflip_test` has
+  `max_exact = 16`, so at 18 paired differences the code samples 100,000 sign
+  patterns instead of enumerating all 2^18. The registered wording now promises
+  enumeration. The condition must be resolved **before any collection** — either
+  raise `max_exact` to 18 (2^18 = 262,144 patterns, cheap) or amend §6 to state the
+  seeded Monte Carlo estimator explicitly. It is recorded here, not silently fixed,
+  because it is a change to registered analysis code and the human arm is paused.
+- **Both reported.** The registered text as committed at `7f6b068` (through the v2
+  revision) is recoverable from git; this entry records every change made after it.
 
 ---
 

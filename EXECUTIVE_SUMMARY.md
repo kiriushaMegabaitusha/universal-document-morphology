@@ -1,6 +1,6 @@
 # Universal document morphology — executive summary
 
-**v1.0.1 · 2026-10-06 · 28 systems · 60 sources · 92 claims (88 verified)**
+**v1.3 · 2026-10-15 · 28 systems · 60 sources · 92 claims (88 verified)**
 
 ## The question
 

@@ -4,8 +4,15 @@
 strengthen, or productively challenge this project? · **Decision owner:** Kyrylo Yasuda ·
 **Decision (recorded same day):** **P06-2 selected** as the next research direction —
 see `DECISION_LOG.md` D002; pre-registration draft at
-`P06-2_PREREGISTRATION_DRAFT.md`, awaiting approval before any analysis runs ·
+`P06-2_PREREGISTRATION_DRAFT.md`, **registered at `2d262cf` and run once the same
+day** (results at `d6e32bd`, reported in `audit/RESULTS.md`) ·
 **Method:** scientific-brainstorming skill, all 10 workflow stages.
+
+*Status correction, appended 2026-10-27: this line originally ended "awaiting
+approval before any analysis runs". The study was approved, registered and executed
+on 2026-10-15, so the session record would otherwise misstate its own outcome. The
+authoritative account is `DECISION_LOG.md` → "Update — registered and run"; nothing
+else in this record was altered.*
 
 **Swarm deployed:** 19 subagents total — 8 independent ideators (P01–P08, blind to each
 other), 4 independent raters/adversarial reviewers (R01–R04, none an originator),

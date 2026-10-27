@@ -19,7 +19,7 @@ rather than a citation.
 | analysis code, run on simulated data first | done (`simulate_data.py`); power at the 10 pp SESOI is 0.92 at N = 24 and 0.98 at N = 36 |
 | human instrument | built, and end-to-end tested headlessly (19 checks incl. regressions for the two v1 GUI bugs); **no participants yet** |
 | machine arm (12 reader models, 864 item-administrations) | **run on v2** — exploratory; result below |
-| **human arm (N = 36 target)** | **not run — waiting on participants** |
+| **human arm (N = 36 target)** | **paused by owner decision (2026-10-27) — no collection** |
 
 ## What the machine arm found (exploratory, not evidence about people)
 
@@ -65,6 +65,11 @@ python3 experiment/analyze.py             # -> results/RESULTS.md + machine_summ
 ```
 
 ## Running the human arm
+
+**Paused by owner decision (2026-10-27): no participants are being recruited.**
+The runbook below is retained unchanged so the arm can restart without redesign.
+No human data exists; the machine arm cannot substitute for it (§7 of the
+pre-registration), so finding 5 remains untested in people.
 
 A session is 12 screens of three questions each (36 questions, 15–20 minutes). Each
 participant reads each obligation in both registers, but the two readings are placed

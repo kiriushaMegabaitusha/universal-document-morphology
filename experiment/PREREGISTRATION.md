@@ -38,7 +38,7 @@ the project's Hermes agent; the same agent is the analyst (§10).
 | project | `05.4_universal_document_morphology` (comparative atlas of official-document standards) |
 | claim under test | atlas finding 5: "Nothing in the standards is optimised for comprehension" (`morphology.md` §5, `EXECUTIVE_SUMMARY.md`), and the open thread in `morphology.md` §8: "measure comprehension of the same obligation rendered in UN/EU/UA plain vs formal register" |
 | population | human readers (convenience sample) and, separately, language models |
-| design | within-item; 6 obligations × 4 registers (2 registers × 2 languages); 12 four-option items |
+| design | within-item; 6 obligations × 4 registers (2 registers × 2 languages); 18 four-option items (3 per obligation) |
 | registration | this file at git commit (hash in the results file); no external registry |
 
 Two arms are run and reported separately, never pooled:
@@ -64,8 +64,8 @@ in formal register. Directional.
   content.
 - *operational*: difference in proportion of items answered correctly,
   plain − formal, per item, aggregated over readers.
-- *statistical*: mean of the 12 item-level differences > 0; exact sign-flip
-  randomization test on those 12 paired differences (§6).
+- *statistical*: mean of the 18 item-level differences > 0; exact sign-flip
+  randomization test on those 18 paired differences (§6).
 
 **H2 (secondary, arm H).** The register contrast does not differ between English
 and Ukrainian renderings. Tested as the register × language interaction;
@@ -115,14 +115,14 @@ trial, so the analysis can report accuracy by exposure and check that the regist
 contrast is not an artefact of reading order. Condition labels are never shown.
 
 **Arm M (machine).** Each reader model answers every item of every document: 6
-obligations × 4 registers × 2 items = 48 item-administrations per model; with R
-models, 48R observations. Reader models are fixed at registration (§8 of the
+obligations × 4 registers × 3 items = 72 item-administrations per model; with R
+models, 72R observations. Reader models are fixed at registration (§8 of the
 runner: model list), temperature 0, single completion per item, one JSON object
 requested per item.
 
 **Arm H (human).** Design B from the registered power simulation: each participant
 reads, for **each** of the 6 obligations, **both** registers of their chosen
-language — 12 documents, 24 items, ≈ 10–15 minutes. Register order within a document
+language — 12 documents, 36 questions, ≈ 10–15 minutes. Register order within a document
 is randomized per participant with a seeded permutation derived from the participant
 id, and document order is randomized the same way, so order effects cannot align
 with the register contrast. Condition labels are never shown to participants.
@@ -165,8 +165,8 @@ All code is registered and was run on simulated data before collection
 **Locked (confirmatory, arm H).**
 
 1. **Primary test.** Per item, proportion correct in plain minus in formal,
-   aggregated over participants; exact sign-flip randomization test on the 12
-   paired differences (two-sided p; all 2^12 sign patterns enumerated). Reported:
+   aggregated over participants; exact sign-flip randomization test on the 18
+   paired differences (two-sided p; all 2^18 sign patterns enumerated). Reported:
    the mean difference in percentage points with a 95% percentile bootstrap CI.
 2. **Complement (same hypothesis, different estimator).** Logistic regression with
    **item fixed effects** (`logit_fe`): `logit P(correct) = a_item + b·plain`;
