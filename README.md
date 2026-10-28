@@ -140,6 +140,12 @@ all 28 of them against the prose, so the two can no longer drift apart.
 | 1.3 | finding 2 regraded by the registered exact-null audit (`audit/`): the fork is reported as one joint population-level pattern (exact p = 10/300), each individual "never" edge carries an informativeness threshold n* = 44–94 systems, and the tradition-blocked sensitivity (joint p = 1/3) is noted; `EXECUTIVE_SUMMARY.md` and `morphology.md` §3 aligned | 28 |
 | 1.4 | stem regraded by the registered B3 lineage audit (`lineage/`, registered `bfd6ffc`, run once): "universal stem" → **system-level, lineage-conditional** (no stem slot present in every documented lineage, 0/6); no detectable lineage clustering (base p = 0.518); authentication remains rank 1 (13 of 18 lineages) without a majority claim; README, `morphology.md`, `EXECUTIVE_SUMMARY.md` and `analysis/findings.md` wording aligned | 28 |
 
+## Licence
+
+The code is **MIT** (`LICENSE`); the atlas content, coded data and teaching page
+are **CC BY 4.0** (`LICENSE-CONTENT`). Scope, attribution wording and the
+third-party exclusions are in `LICENSING.md` and `THIRD_PARTY_NOTICES.md`.
+
 ## Method and provenance
 
 Built with the reusable skill **`comparative-standards-atlas`** (research/):
