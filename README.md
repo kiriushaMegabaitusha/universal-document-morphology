@@ -48,7 +48,7 @@ the khipu and wampum, bound it). See `morphology.md`.
 | `analysis/` | `findings.md` (slot census, complementarity, similarity, evidence base) · `qualitative_analysis.md` (implication rules, thematic coding, onomastics, diachrony) · CSVs: `slot_matrix`, `slot_similarity`, `theme_matrix`, `document_types`, `evidence_base` |
 | `analysis/recompute.py` | rebuilds `slot_matrix`, `slot_similarity` and `evidence_base` from the frozen data, then fails if any figure quoted in `findings.md`, `qualitative_analysis.md` or `EXECUTIVE_SUMMARY.md` has drifted from it |
 | `experiment/` | the empirical test of finding 5: pre-registration, stimuli, analysis code, machine-arm data and the participant instrument — see `experiment/README.md` |
-| `sources/` | retrieved primary/near-primary texts (PDFs + extracted text) |
+| `sources/` | retrieved primary/near-primary texts (PDFs + extracted text); **not redistributed in this public snapshot** — see `sources/README.md`, URLs are in `ledger.json` |
 
 ## The gate
 
