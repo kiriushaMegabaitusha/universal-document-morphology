@@ -6,7 +6,8 @@ formats official documents, and whether a universal document structure exists.
 A one-page overview is in `EXECUTIVE_SUMMARY.md`. The plan — what is finished,
 what is live, what comes next, and which document wins when they disagree — is in
 `PLAN.md`. A teaching version (interactive, self-contained HTML) is in
-`education/`.
+`education/`, and is served at
+<https://kiriushaMegabaitusha.github.io/universal-document-morphology/>.
 
 ## Question
 
