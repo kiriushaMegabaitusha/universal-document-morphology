@@ -5,7 +5,8 @@ formats official documents, and whether a universal document structure exists.
 
 A one-page overview is in `EXECUTIVE_SUMMARY.md`. The plan — what is finished,
 what is live, what comes next, and which document wins when they disagree — is in
-`PLAN.md`.
+`PLAN.md`. A teaching version (interactive, self-contained HTML) is in
+`education/`.
 
 ## Question
 
@@ -37,6 +38,7 @@ the khipu and wampum, bound it). See `morphology.md`.
 | file | what |
 |------|------|
 | `PLAN.md` | the project plan and single source of truth for status: precedence, current state, active workstream, backlog, standing rules, open decisions |
+| `education/` | interactive teaching page (archify): the model, the evidence, and the regrade — open the HTML in a browser |
 | `EXECUTIVE_SUMMARY.md` | the whole atlas on one page |
 | `morphology.md` | the analytical model: 14 canonical slots, two declensions, convergence matrix, findings |
 | `diversity.md` | the diversity test across five tranches + the cross-cutting findings (§10–§13) |
