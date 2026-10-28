@@ -164,7 +164,7 @@ Nothing here starts without its trigger. Order is a recommendation, not a queue.
 |---|---|---|
 | B6 | Documentation corrections: stale item counts in `experiment/PREREGISTRATION.md` §3; stale status line in `brainstorm/RESULTS.md`; `EXECUTIVE_SUMMARY.md` version header | **done 2026-10-27** — logged as Erratum 2 in `experiment/DEVIATIONS.md`; gates pass |
 | B3 | Inference follow-ons on frozen data: lineage-restricted re-derivation, prevalence bounds, compelled-requisites robustness, spec curve | **closed 2026-10-27** — `lineage/RESULTS.md`. Stem not lineage-universal (0/6), no descent clustering (p = 0.52), authentication rank 1, mandatory-only fork p = 0.24. Regrade done in v1.4 (D6) |
-| B1 | Rating wave for the 9 unrated post-check ideas (`brainstorm/RESULTS.md`, `P09`–`P11`) | **ran 2026-10-28** — `brainstorm/wave2/RESULTS.md`; 7 rated, 2 resolved by B3; P09-1 top (79.5, stable), decision pending |
+| B1 | Rating wave for the 9 unrated post-check ideas (`brainstorm/RESULTS.md`, `P09`–`P11`) | **ran 2026-10-28** — `brainstorm/wave2/RESULTS.md`; 7 rated, 2 resolved by B3; P09-1 top (79.5, stable). **Adversarial review of P09-1: revise** (`brainstorm/wave2/ADVERSARIAL_P09-1.md`, nine conditions); not registration-ready. Decision pending |
 | B2 | Human-arm follow-up: wider item sample, or a design without double exposure | blocked while W2 is paused; after W2 reports, and only as a new registration |
 | B4 | P03-1 (human subjects), P04-3 (licence/retrieval probe) | gate cleared: ethics determination, licence probe |
 | B5 | P08-1, P08-2 (community/Indigenous record heritage) | external community/subject-matter authorisation |
@@ -208,7 +208,7 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | id | decision | state / default |
 |---|---|---|
 | D1 | Human arm: collect or not | **DECIDED 2026-10-27 — do not collect; W2 paused.** No participants recruited; the runbook stays ready if reopened |
-| D2 | Request the rating wave for the 9 unrated ideas (B1) | **ran 2026-10-28** (`brainstorm/wave2/RESULTS.md`); the owner has not selected an idea |
+| D2 | Request the rating wave for the 9 unrated ideas (B1) | **ran 2026-10-28** (`brainstorm/wave2/RESULTS.md`); P09-1 ranked first and then failed adversarial review as designed (revise). No idea selected; P10-1, P10-3, P11-2 unreviewed |
 | D3 | Pursue the three gate clearances (B4, B5) | open; those ideas stay paused, not rejected |
 | D4 | Whether a future human study needs external registration (OSF) | open, and moot while W2 is paused |
 | D5 | Next substantive track after B6: B3 (inference follow-ons) or B1 (rating wave) | **B3 registered and run** (`lineage/RESULTS.md`); B1 stays unfrozen |
@@ -239,3 +239,4 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 | 2026-10-27 | **B3 run once and closed** (`bfd6ffc` registration; no deviations): stem not lineage-universal (0/6 under both readings), no descent clustering (base p = 0.518, T = −0.062), authentication rank 1 (13/18 lineages), fork not lineage-universal (2/18), mandatory-only fork p = 6/25, lineage holdout worse than prevalence. **Regrade of the atlas prose now required (D6)** |
 | 2026-10-28 | **D6 done — atlas v1.4**: stem regraded to system-level, lineage-conditional in `README.md`, `morphology.md`, `EXECUTIVE_SUMMARY.md`, `analysis/findings.md` and `diversity.md`; authentication becomes "highest-ranked", not "most universal", with its interval quoted. Claim language only: all 28 checked figures and the gate outputs unchanged |
 | 2026-10-28 | **B1 wave 2 run** (`brainstorm/wave2/`, protocol frozen before scores): 7 of 9 ideas rated, 2 excluded as executed by B3. P09-1 rank 1 (79.5, stable under all weight perturbations); P10-1 / P10-3 / P11-2 tie at 72.7. Evidence check on the top three recorded. Decision null — no idea selected |
+| 2026-10-28 | **Adversarial review of P09-1** (two independent reviewers, both probed the frozen data): **revise**, nine conditions before any registration. The rated estimand was mislabelled (reliability not validity), ARI flips with preprocessing, the k-curve has no peak at 14, the null is too weak, and the S6/S9 by-product is a level-of-analysis error. Its decision value is now vocabulary granularity, not the stem |
