@@ -191,8 +191,8 @@ vocabulary, or a registered document's substance. B6 is that class of work.
 3. **Never invent evidence.** No source, URL, claim, citation or requisite is
    created to satisfy a gate. Unretrieved material stays labelled provisional.
 4. **Generated files are not hand-edited** — `analysis/slot_matrix.csv`,
-   `slot_similarity.csv`, `evidence_base.csv`, `experiment/human_survey.html`,
-   `posters/*`. Change the input and regenerate.
+   `slot_similarity.csv`, `evidence_base.csv`, `experiment/human_survey.html`.
+   Change the input and regenerate.
 5. **Pinned inputs stay pinned.** The audit's hashes and margins change only under
    a logged amendment, never a hash refresh.
 6. **Scope the claim.** The corpus is a convenience frame, not a random sample;
