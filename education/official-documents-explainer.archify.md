@@ -81,6 +81,8 @@ The stem splits into two declensions by genre. A letter fills the routing slots 
 | Dispositif (S11) | Rare | Filled {good:orders or grants} |
 | Examples | UA letter, DE DIN 5008, CN 信函格式 | UN resolution, EU regulation, UA наказ, CN 命令 |
 
+Six of these types are drawn as page maps, one band per coded requisite: [Six document types, six page maps](https://kiriushaMegabaitusha.github.io/universal-document-morphology/document-types.html).
+
 @callout level=warning title="One joint pattern, not six separate rules"
 The census fact is that the preamble never co-occurs with authority mark, addressee, reference, subject, body or trace. The registered audit showed that no individual "never" edge is surprising at 25 systems; each becomes informative only at 44–94 systems. The six together, however, reject independence at exact p = 10/300. Under a tradition-blocked null the joint pattern does not reject (p = 1/3 over six placements). Report it as one population-level pattern, not as six laws.[](source:audit)
 

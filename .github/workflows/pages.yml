@@ -29,7 +29,9 @@ jobs:
         run: |
           mkdir -p _site
           cp education/official-documents-explainer.html _site/index.html
+          cp education/official-documents-explainer.html _site/official-documents-explainer.html
           cp education/official-documents-explainer.archify.md _site/source.archify.md
+          cp education/document-types.html _site/document-types.html
           cp education/README.md _site/EDITORIAL.md
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
