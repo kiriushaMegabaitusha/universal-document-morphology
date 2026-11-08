@@ -26,11 +26,13 @@ switches light/dark and the editorial/clean/swiss styles; each diagram has an
 
 `document-types.html` is a second, standalone page: six document types drawn as
 page maps — a Ukrainian order and letter, a German business letter, a Chinese
-party-government document, a UN resolution and an EU legal act. Each band is one
-row of `requisites.csv`, placed in the order the standard itself fixes; colour is
-the slot family, the right-hand tag is the obligation. Clicking a family isolates
-it across all six maps; hovering or focusing a band shows its clause number, its
-original wording and its slot.
+party-government document, a UN resolution and an EU legal act. Each element is
+one row of `requisites.csv`, placed in the order the standard itself fixes and
+drawn as the kind of thing it is — a letterhead, a date, an address block, body
+rules, a signature, a seal, a margin stamp. Colour on the left edge is the slot
+family. Clicking a family isolates it across all six page maps; hovering or
+focusing an element shows its clause number, its original wording, its slot and
+its obligation.
 
 It is generated, not hand-written:
 

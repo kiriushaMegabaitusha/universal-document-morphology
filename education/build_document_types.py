@@ -13,6 +13,7 @@ Stdlib only, like the other gates in this repository.
 
 import csv
 import html
+import math
 import pathlib
 import re
 import sys
@@ -284,18 +285,213 @@ def esc(s):
     return html.escape(s, quote=True)
 
 
-def render_map(t):
+ROW_H = {
+    "S10-body": 32,
+    "S12-authentication": 32,
+    "S6-destination": 28,
+    "S9-setting": 28,
+    "S13-annex": 24,
+}
+ROW_DEFAULT = 22
+PAGE_W = 560
+X0, X1 = 30, 540
+PAD = 16
+MIN_H = 300
+
+
+def _star(cx, cy, r):
+    pts = []
+    for i in range(10):
+        ang = -math.pi / 2 + i * math.pi / 5
+        rr = r if i % 2 == 0 else r * 0.45
+        pts.append(f"{cx + rr * math.cos(ang):.1f},{cy + rr * math.sin(ang):.1f}")
+    return "M" + " L".join(pts) + " Z"
+
+
+def g_identity(b, y, h):
+    return (
+        f'<text class="g-title" x="{(X0 + X1) / 2:.0f}" y="{y + h / 2 + 4:.0f}" '
+        f'text-anchor="middle">{esc(b["gloss"]).upper()}</text>'
+    )
+
+
+def g_identifier(b, y, h):
+    w = 14 + len(b["gloss"]) * 4.7
+    x = X1 - w
+    return (
+        f'<rect class="g-chip" x="{x:.0f}" y="{y + 4}" width="{w:.0f}" '
+        f'height="{h - 8}" rx="3"/>'
+        f'<text class="g-mono" x="{x + w / 2:.0f}" y="{y + h / 2 + 3:.0f}" '
+        f'text-anchor="middle">{esc(b["gloss"])}</text>'
+    )
+
+
+def g_origin(b, y, h):
+    return (
+        f'<text class="g-letterhead" x="{X0}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + h - 2}" x2="{X1}" y2="{y + h - 2}"/>'
+    )
+
+
+def g_authority(b, y, h):
+    cy = y + h / 2
+    crest = (
+        f'<path class="g-crest" d="M{X0 + 7} {cy - 8:.0f} L{X0 + 14} {cy - 5.5:.0f} '
+        f'V{cy + 1:.0f} C{X0 + 14} {cy + 5:.0f} {X0 + 11} {cy + 7:.0f} '
+        f'{X0 + 7} {cy + 8:.0f} C{X0 + 3} {cy + 7:.0f} {X0} {cy + 5:.0f} '
+        f'{X0} {cy + 1:.0f} V{cy - 5.5:.0f} Z"/>'
+        f'<line class="g-crest-band" x1="{X0 + 2}" y1="{cy - 1:.0f}" '
+        f'x2="{X0 + 12}" y2="{cy - 1:.0f}"/>'
+    )
+    return crest + (
+        f'<text class="g-label" x="{X0 + 22}" y="{cy + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_temporal(b, y, h):
+    return (
+        f'<text class="g-mono" x="{X1}" y="{y + h / 2 + 3:.0f}" text-anchor="end">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_destination(b, y, h):
+    return (
+        f'<text class="g-label" x="{X0}" y="{y + 12}">{esc(b["gloss"])}</text>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 18}" x2="{X0 + 150}" y2="{y + 18}"/>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 24}" x2="{X0 + 108}" y2="{y + 24}"/>'
+    )
+
+
+def g_reference(b, y, h):
+    return (
+        f'<text class="g-italic" x="{X0}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_subject(b, y, h):
+    return (
+        f'<text class="g-subject" x="{X0}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_setting(b, y, h):
+    return (
+        f'<text class="g-italic" x="{X0}" y="{y + 12}">{esc(b["gloss"])}</text>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 18}" x2="{X1 - 40}" y2="{y + 18}"/>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 24}" x2="{X1 - 170}" y2="{y + 24}"/>'
+    )
+
+
+def g_body(b, y, h):
+    return (
+        f'<text class="g-label" x="{X0}" y="{y + 11}">{esc(b["gloss"])}</text>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 17}" x2="{X1}" y2="{y + 17}"/>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 23}" x2="{X1 - 30}" y2="{y + 23}"/>'
+        f'<line class="g-rule" x1="{X0}" y1="{y + 29}" x2="{X1 - 130}" y2="{y + 29}"/>'
+    )
+
+
+def g_dispositif(b, y, h):
+    return (
+        f'<rect class="g-box" x="{X0 - 6}" y="{y + 3}" width="{X1 - X0 + 12}" '
+        f'height="{h - 6}" rx="3"/>'
+        f'<text class="g-operative" x="{X0 + 2}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_auth(b, y, h):
+    cy = y + h / 2
+    sig = (
+        f'<path class="g-sign" d="M{X0} {cy + 4:.0f} C{X0 + 10} {cy - 8:.0f} '
+        f'{X0 + 16} {cy + 10:.0f} {X0 + 26} {cy:.0f} S{X0 + 40} {cy - 6:.0f} '
+        f'{X0 + 52} {cy + 2:.0f}"/>'
+    )
+    rule = f'<line class="g-rule" x1="{X0}" y1="{cy + 10:.0f}" x2="{X0 + 120}" y2="{cy + 10:.0f}"/>'
+    seal = (
+        f'<circle class="g-seal" cx="{X1 - 26}" cy="{cy:.0f}" r="13"/>'
+        f'<circle class="g-seal-in" cx="{X1 - 26}" cy="{cy:.0f}" r="9"/>'
+        f'<path class="g-seal-star" d="{_star(X1 - 26, cy, 5)}"/>'
+    )
+    label = (
+        f'<text class="g-small" x="{X0 + 128}" y="{cy + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+    return sig + rule + label + seal
+
+
+def g_annex(b, y, h):
+    return (
+        f'<rect class="g-annex-mark" x="{X0}" y="{y + h / 2 - 4:.0f}" width="8" height="8" rx="1"/>'
+        f'<text class="g-label" x="{X0 + 14}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+def g_trace(b, y, h):
+    cy = y + h / 2
+    stamp = (
+        f'<g transform="rotate(-6 15 {cy:.0f})">'
+        f'<rect class="g-stamp" x="4" y="{cy - 7:.0f}" width="22" height="14" rx="2"/>'
+        f'<line class="g-stamp-line" x1="7" y1="{cy - 2:.0f}" x2="23" y2="{cy - 2:.0f}"/>'
+        f'<line class="g-stamp-line" x1="7" y1="{cy + 2:.0f}" x2="19" y2="{cy + 2:.0f}"/>'
+        f"</g>"
+    )
+    return stamp + (
+        f'<text class="g-small" x="{X0}" y="{cy + 3:.0f}">{esc(b["gloss"])}</text>'
+    )
+
+
+def g_plain(b, y, h):
+    # GB/T 9704's red separator line is literally a line: draw it as one.
+    if "separator" in b["gloss"].lower():
+        return (
+            f'<text class="g-small" x="{X0}" y="{y + 9}">{esc(b["gloss"])}</text>'
+            f'<line class="g-redline" x1="{X0}" y1="{y + 15}" x2="{X1}" y2="{y + 15}"/>'
+        )
+    return (
+        f'<text class="g-label" x="{X0}" y="{y + h / 2 + 3:.0f}">'
+        f'{esc(b["gloss"])}</text>'
+    )
+
+
+GLYPHS = {
+    "S1-identity": g_identity,
+    "S2-identifier": g_identifier,
+    "S3-origin": g_origin,
+    "S4-authority-mark": g_authority,
+    "S5-temporal": g_temporal,
+    "S6-destination": g_destination,
+    "S7-reference": g_reference,
+    "S8-subject": g_subject,
+    "S9-setting": g_setting,
+    "S10-body": g_body,
+    "S11-dispositif": g_dispositif,
+    "S12-authentication": g_auth,
+    "S13-annex": g_annex,
+    "S14-trace": g_trace,
+}
+
+
+def render_specimen(t):
     bands = t["bands"]
-    pitch, height, top, left, width = 20, 18, 10, 16, 528
-    h = top + len(bands) * pitch + 10
+    heights = [ROW_H.get(b["slot"], ROW_DEFAULT) for b in bands]
+    content = sum(heights)
+    h = max(MIN_H, PAD + content + PAD)
+    n = len([b for b in bands if not b["gap"]])
     parts = [
-        f'<svg class="map" viewBox="0 0 560 {h}" role="list" '
+        f'<svg class="map" viewBox="0 0 {PAGE_W} {h}" role="list" '
         f'aria-label="Page map: {esc(t["name"])} ({esc(t["gloss"])}), '
-        f'{len([b for b in bands if not b["gap"]])} coded elements in clause order">',
-        f'<rect class="paper" x="0.5" y="0.5" width="559" height="{h - 1}" rx="6"/>',
+        f'{n} coded elements in clause order">',
+        f'<rect class="paper" x="0.5" y="0.5" width="{PAGE_W - 1}" height="{h - 1}" rx="4"/>',
     ]
-    for i, b in enumerate(bands):
-        y = top + i * pitch
+    y = PAD
+    for b, rh in zip(bands, heights):
         if b["gap"]:
             parts.append(
                 f'<g class="band gap" data-fam="other" data-ob="none" '
@@ -303,12 +499,15 @@ def render_map(t):
                 f'data-local="" data-slot="" data-note="{esc(b["note"])}" '
                 f'tabindex="0" role="listitem" '
                 f'aria-label="clause {esc(b["clause"])}, {esc(b["gloss"])}, not present">'
-                f'<rect class="band-bg" x="{left}" y="{y}" width="{width}" height="{height}" rx="3"/>'
-                f'<text class="band-label" x="{left + 12}" y="{y + 13}">{esc(b["gloss"])}</text>'
-                f'<text class="band-clause" x="{left + width - 8}" y="{y + 13}" '
-                f'text-anchor="end">{esc(b["clause"])}</text></g>'
+                f'<rect class="band-bg" x="0" y="{y}" width="{PAGE_W}" height="{rh}"/>'
+                f'<rect class="g-gap" x="{X0}" y="{y + 4}" width="{X1 - X0}" '
+                f'height="{rh - 8}" rx="3"/>'
+                f'<text class="g-gap-label" x="{X0 + 10}" y="{y + rh / 2 + 3:.0f}">'
+                f'{esc(b["gloss"])}</text></g>'
             )
+            y += rh
             continue
+        glyph = GLYPHS.get(b["slot"], g_plain)(b, y, rh)
         parts.append(
             f'<g class="band" data-fam="{b["fam"]}" data-ob="{b["obligation"]}" '
             f'data-clause="{esc(b["clause"])}" data-gloss="{esc(b["gloss"])}" '
@@ -317,14 +516,11 @@ def render_map(t):
             f'aria-label="clause {esc(b["clause"])}, {esc(b["gloss"])}, '
             f'{esc(b["slot"])}, {esc(b["obligation"])}" '
             f'style="--fam:var(--fam-{b["fam"]})">'
-            f'<rect class="band-bg" x="{left}" y="{y}" width="{width}" height="{height}" rx="3"/>'
-            f'<rect class="band-bar" x="{left}" y="{y}" width="4" height="{height}" rx="2"/>'
-            f'<text class="band-label" x="{left + 12}" y="{y + 13}">{esc(b["gloss"])}</text>'
-            f'<text class="band-ob" x="{left + width - 62}" y="{y + 13}" '
-            f'text-anchor="end">{OB_SHORT.get(b["obligation"], b["obligation"])}</text>'
-            f'<text class="band-clause" x="{left + width - 8}" y="{y + 13}" '
-            f'text-anchor="end">{esc(b["clause"])}</text></g>'
+            f'<rect class="band-bg" x="0" y="{y}" width="{PAGE_W}" height="{rh}"/>'
+            f'<rect class="band-edge" x="0" y="{y}" width="3" height="{rh}"/>'
+            f"{glyph}</g>"
         )
+        y += rh
     parts.append("</svg>")
     return "".join(parts)
 
@@ -338,7 +534,7 @@ def render_card(t):
         f'<h3>{esc(t["name"])} <span class="card-gloss">{esc(t["gloss"])}</span></h3>'
         f'<p class="card-meta"><span class="count" data-total="{n}">{n}</span> coded elements</p>'
         f"</header>"
-        f'<div class="map-wrap">{render_map(t)}</div>'
+        f'<div class="map-wrap">{render_specimen(t)}</div>'
         f'<p class="card-caption">{esc(t["caption"])}</p>'
         f"</article>"
     )
@@ -434,19 +630,19 @@ CSS = """
 --secondary:#2c3038;--muted:#6a707c;--faint:#9aa0aa;--rule:#e5e7eb;--rule-strong:#d3d7dd;
 --accent:#2457d6;--accent-soft:#eaf0fd;--accent-ink:#1b46b4;
 --fam-who:#2457d6;--fam-when:#6a4fc8;--fam-route:#0e7c86;--fam-act:#b26a00;
---fam-close:#13834b;--fam-other:#6a707c;
+--fam-close:#13834b;--fam-other:#6a707c;--redline:#c4321f;
 --sans:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans",sans-serif;
 --mono:"SF Mono",ui-monospace,"JetBrains Mono",Menlo,Consolas,monospace}
 :root[data-theme=dark]{color-scheme:dark;--paper:#0c0d10;--panel:#15171c;--sunk:#1b1e24;
 --ink:#f1f3f6;--secondary:#cfd3da;--muted:#8d94a1;--faint:#5f6672;--rule:#262a31;
 --rule-strong:#343943;--accent:#7aa2ff;--accent-soft:#18223a;--accent-ink:#a3bfff;
 --fam-who:#7aa2ff;--fam-when:#a994f5;--fam-route:#4fc3cd;--fam-act:#e9b04f;
---fam-close:#5cc98d;--fam-other:#8d94a1}
+--fam-close:#5cc98d;--fam-other:#8d94a1;--redline:#f2806f}
 @media(prefers-color-scheme:dark){:root:not([data-theme=light]){color-scheme:dark;
 --paper:#0c0d10;--panel:#15171c;--sunk:#1b1e24;--ink:#f1f3f6;--secondary:#cfd3da;
 --muted:#8d94a1;--faint:#5f6672;--rule:#262a31;--rule-strong:#343943;--accent:#7aa2ff;
 --accent-soft:#18223a;--accent-ink:#a3bfff;--fam-who:#7aa2ff;--fam-when:#a994f5;
---fam-route:#4fc3cd;--fam-act:#e9b04f;--fam-close:#5cc98d;--fam-other:#8d94a1}}
+--fam-route:#4fc3cd;--fam-act:#e9b04f;--fam-close:#5cc98d;--fam-other:#8d94a1;--redline:#f2806f}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--paper);color:var(--secondary);
 font:14.5px/1.7 var(--sans);-webkit-font-smoothing:antialiased}
@@ -516,21 +712,38 @@ background:var(--sunk);min-width:0}
 .count{font-variant-numeric:tabular-nums;color:var(--ink);font-weight:600}
 .card-caption{font-size:12.5px;color:var(--muted);margin-top:8px;line-height:1.55}
 .map-wrap{overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch}
-.map{display:block;width:100%;min-width:520px;height:auto}
+.map{display:block;width:100%;min-width:520px;height:auto;filter:drop-shadow(0 1px 2px rgb(16 24 40/.07))}
 .paper{fill:var(--panel);stroke:var(--rule)}
 .band{cursor:pointer}
-.band-bg{fill:var(--fam);opacity:.10;transition:opacity .12s}
-.band[data-ob=mandatory] .band-bg{opacity:.22}
-.band[data-ob=conditional] .band-bg{opacity:.16}
-.band-bar{fill:var(--fam);opacity:.5}
-.band[data-ob=mandatory] .band-bar{opacity:1}
-.band[data-ob=conditional] .band-bar{opacity:.75}
-.band:hover .band-bg,.band:focus-visible .band-bg{opacity:.34}
-.band-label{font:10px var(--sans);fill:var(--ink)}
-.band-ob,.band-clause{font:8.5px var(--mono);fill:var(--muted)}
-.band.gap .band-bg{fill:none;stroke:var(--faint);stroke-dasharray:4 3;opacity:1}
-.band.gap .band-label{fill:var(--muted);font-style:italic}
-.band.dim{opacity:.13}
+.band-bg{fill:var(--fam);opacity:0;transition:opacity .12s}
+.band:hover .band-bg,.band:focus-visible .band-bg{opacity:.07}
+.band-edge{fill:var(--fam);opacity:.45}
+.band[data-ob=mandatory] .band-edge{opacity:1}
+.band[data-ob=conditional] .band-edge{opacity:.8}
+.g-title{font:700 11px var(--sans);fill:var(--ink);letter-spacing:.06em}
+.g-letterhead{font:600 10px var(--sans);fill:var(--ink)}
+.g-subject{font:600 10px var(--sans);fill:var(--ink)}
+.g-operative{font:600 9.5px var(--sans);fill:var(--ink)}
+.g-label{font:9px var(--sans);fill:var(--secondary)}
+.g-small{font:8.5px var(--sans);fill:var(--muted)}
+.g-italic{font:italic 9px var(--sans);fill:var(--secondary)}
+.g-mono{font:8.5px var(--mono);fill:var(--secondary)}
+.g-rule{stroke:var(--rule-strong);stroke-width:1}
+.g-chip{fill:none;stroke:var(--rule-strong)}
+.g-box{fill:var(--fam);opacity:.12}
+.g-crest{fill:none;stroke:var(--fam);stroke-width:1.2}
+.g-crest-band{stroke:var(--fam);stroke-width:1;opacity:.7}
+.g-sign{fill:none;stroke:var(--ink);stroke-width:1.3;stroke-linecap:round}
+.g-seal{fill:none;stroke:var(--fam);stroke-width:1.2;opacity:.7}
+.g-seal-in{fill:none;stroke:var(--fam);stroke-width:.8;opacity:.45}
+.g-seal-star{fill:var(--fam);opacity:.5}
+.g-stamp{fill:none;stroke:var(--fam);stroke-width:1;opacity:.55}
+.g-stamp-line{stroke:var(--fam);stroke-width:.8;opacity:.4}
+.g-annex-mark{fill:none;stroke:var(--fam);stroke-width:1.2}
+.g-redline{stroke:var(--redline);stroke-width:2}
+.g-gap{fill:none;stroke:var(--faint);stroke-dasharray:4 3}
+.g-gap-label{font:italic 9px var(--sans);fill:var(--muted)}
+.band.dim{opacity:.12}
 .moves{list-style:none;padding:0;margin:0}
 .moves li{position:relative;padding:7px 0 7px 18px;font-size:13.5px;
 border-top:1px solid var(--rule)}
@@ -761,7 +974,7 @@ TEMPLATE = """<!doctype html>
   <div>
     <h1>Six document types, six page maps</h1>
     <p class="sub">An order, a letter, a business letter, a party-government document, a
-    resolution and a legal act. Every band is one requisite coded in
+    resolution and a legal act. Every element is one requisite coded in
     <code>requisites.csv</code>, placed in the order the standard itself fixes.</p>
   </div>
   <div class="tools"><button id="theme" type="button">Dark</button></div>
@@ -776,15 +989,16 @@ TEMPLATE = """<!doctype html>
 
 <section class="panel" id="how">
   <h2>How to read a page map</h2>
-  <p class="lede">Each map is one document type. Bands run top to bottom in the order the
-  standard gives its elements; colour is the slot family; the tag on the right is the
-  obligation the standard attaches to that element.</p>
+  <p class="lede">Each page map is one document type, drawn as a page. Elements run top to
+  bottom in the order the standard gives them, and each is drawn as the kind of thing it
+  is: a letterhead, a date, an address block, body text, a signature, a seal, a margin
+  stamp. The colour on the left edge is the slot family.</p>
   <div class="legend">@@LEGEND@@</div>
-  <p class="legend-note">Click a family to isolate it across all six maps. Hover or focus a
-  band for its clause number, its original wording and its slot. <code>must</code> =
-  mandatory, <code>cond</code> = conditional, <code>opt</code> = optional. A dashed band is
-  a slot the type does not carry. On a narrow screen each map scrolls sideways rather than
-  shrinking its labels.</p>
+  <p class="legend-note">Click a family to isolate it across all six page maps. Hover or
+  focus an element for its clause number, its original wording, its slot and its
+  obligation. The left edge is solid for a mandatory element and faded for an optional one;
+  a dashed row is a slot the type does not carry. On a narrow screen each page map scrolls
+  sideways rather than shrinking its labels.</p>
   <div class="controls">
     <label><input type="checkbox" id="must-only"> Show mandatory elements only</label>
     <span>@@TOTALS@@</span>
@@ -806,10 +1020,14 @@ TEMPLATE = """<!doctype html>
   <h2>What these maps are not</h2>
   <ul class="limits">
     @@DIVERGENCE@@
-    <li><strong>Not measured geometry.</strong> Band order is the standard's clause order,
-    not a position measured on a page. No page was measured for this page.</li>
-    <li><strong>Not proportional height.</strong> Every band is the same height; a document
-    with 31 elements is not drawn 31 times taller than one with 5.</li>
+    <li><strong>Wireframes, not facsimiles.</strong> Each element is drawn as the kind of
+    thing it is — a letterhead, a date, an address block, a signature, a seal, a margin
+    stamp — but the horizontal placement is schematic, the body text is drawn as rules, and
+    no page map reproduces a real document's wording.</li>
+    <li><strong>Vertical order is coded; height is not.</strong> Elements run top to bottom
+    in the standard's clause order, but a row's height is set by what it has to draw, not
+    measured from a page. A document with 31 elements is not drawn 31 times taller than one
+    with 5.</li>
     <li><strong>The Ukrainian letter is a derivation.</strong> The atlas codes one Ukrainian
     form. The letter map removes requisite 09 (clause 4.4: the document-type name is not
     written on letters) and keeps 15, which the atlas codes for correspondence. It is not a
